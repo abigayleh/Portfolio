@@ -1,0 +1,1876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abigayle Hickey - Fullstack Developer 🤓</title> 
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css"> 
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body id="main" style="overflow-x: hidden;">
+  <!-- Navbar section -->
+  <nav class="navbar navbar-expand-lg navbar-dark menu shadow fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="images/logo.png" alt="Logo image" style="width: 100px; height: auto;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#overview">Overview</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#pastProjects">Past Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#experience">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#education">Education</a>
+          </li>
+        </ul>
+        <a class="logo-button" href="https://github.com/abigayleh" target="_blank" rel="noopener noreferrer">
+          <img 
+          style="width: 40px; height: auto;"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/640px-Octicons-mark-github.svg.png" 
+            alt="GitHub Logo"
+          >
+        </a>        
+        <a class="logo-button" href="https://www.linkedin.com/in/abigayle-hickey-7582331b8/" target="_blank" rel="noopener noreferrer">
+          <img 
+            class="rounded-circle"  
+            style="width: 42px; height: auto;"
+            src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" 
+            alt="Linkdln Logo"
+          >
+        </a>        
+        <button type="button" class="mx-1 rounded-pill btn-rounded" data-bs-toggle="modal" data-bs-target="#contactModal">
+          Contact
+          <span><i class="fas fa-phone-alt"></i></span>
+        </button>
+        <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+              <div class="modal-content position-relative">
+                  <div class="position-absolute bottom-0 end-0">
+                    <img src="images/rocket.png" alt="Rocket" style="z-index: 2000; width: 300px; height: auto;">
+                  </div>
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="contactModalLabel">Let's get the conversation flowing 💬</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                      <!-- Contact Form -->
+                      <form id="contactForm">
+                          <div class="mb-3">
+                              <label for="name" class="form-label">Name</label>
+                              <input type="text" class="form-control opacity-75" id="name" placeholder="Your Name" required>
+                          </div>
+                          <div class="mb-3">
+                              <label for="email" class="form-label">Email</label>
+                              <input type="email" class="form-control opacity-75" id="email" placeholder="Your Email" required>
+                          </div>
+                          <div class="mb-3">
+                              <label for="message" class="form-label">Description</label>
+                              <textarea class="form-control opacity-75" id="message" rows="3" placeholder="Your Message" required></textarea>
+                          </div>
+                          <button type="submit" class="btn bg-white w-100">Send</button>
+                      </form>
+                  </div>
+              </div>
+          </div>
+        </div>      
+      </div>
+    </div>
+  </nav>
+  <!-- Intro section -->
+  <section id="home" class="intro-section">
+    <div class="container">
+      <div class="row align-items-center text-white">
+        <div class="col-md-6 intros">
+          <h1 class="display-2">
+            <span class="display-2--intro">Hi! I'm Abigayle </span>
+            <span class="display-2--description lh-base">
+              Fancy meeting you here! 🤭 I'm a Fullstack Developer with passion for development and design 🎨 Keep scrolling to help get us better aquainted 
+            </span>
+          </h1>
+        </div>
+        <div class="col-md-6 intros text-end">
+          <div class="video-box">
+            <img src="images/developer.png" alt="developer" class="position-absolute top-50 start-50 translate-middle">
+            <!-- <a class="position-absolute top-50 start-50 translate-middle">
+              <span>
+                <i class="fas fa-play-circle"></i>
+              </span>
+              <span class="border-animation border-animation--border-1"></span>
+              <span class="border-animation border-animation--border-2"></span>
+            </a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-container-move" style="margin-top: 8rem;">
+      <div class="fact-box">4+ years experience</div>
+      <div class="fact-box">Fullstack Developer</div>
+      <div class="fact-box">Leadership Experience</div>
+      <div class="fact-box">Vue, React, Quasar</div>
+      <div class="fact-box">JavaScript</div>
+      <div class="fact-box">C#, .NET, Node.js</div>
+      <div class="fact-box">SQL, Database Development</div>
+      <div class="fact-box">Design and Innovation</div>
+      <div class="fact-box">Flutter, XCode</div>
+      <div class="fact-box">Team Collaboration</div>
+      <div class="fact-box">4+ years experience</div>
+      <div class="fact-box">Fullstack Developer</div>
+      <div class="fact-box">Leadership Experience</div>
+      <div class="fact-box">Vue, React, Quasar</div>
+      <div class="fact-box">JavaScript</div>
+      <div class="fact-box">C#, .NET, Node.js</div>
+      <div class="fact-box">SQL, Database Development</div>
+      <div class="fact-box">Design and Innovation</div>
+      <div class="fact-box">Flutter, XCode</div>
+      <div class="fact-box">Team Collaboration</div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,224L48,213.3C96,203,192,181,288,160C384,139,480,117,576,138.7C672,160,768,224,864,240C960,256,1056,224,1152,218.7C1248,213,1344,235,1392,245.3L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+  </section>
+  <!-- Overview -->
+  <section id="overview" class="overview">
+    <div id="overview-container" class="container">
+      <div class="row text-center">
+        <h1 class="display-3 fw-bold">Overview</h1>
+        <div class="heading-line mb-2"></div>
+        <div class="mantra" style="width: 30rem; background-color: #0dcaf0;">
+          <div>
+            <span>"Effort fuels dreams; determination makes them real."</span>
+          </div>
+        </div>
+        <div id="overview-box" class="overview-box">
+          <img id="background-gif" class="overview-gif" src="images/walking-gif.gif" alt="walking">
+          <video id="scroll-video" class="overview-background" autoplay loop muted>
+            <source src="images/townBackground.mp4" type="video/mp4">
+          </video>
+          <div class="overview-text d-flex flex-column">
+            <div class="overview-text" style="margin: 0px; padding: 0px; width: 400px;">
+              <span>So, where does my story begin?</span>
+            </div>
+          </div>
+          <div class="overview-text">
+            <span>Born and raised in Newfoundland I have a love for technology, creativity and adventure!</span>
+            <div class="d-flex">
+              <div class="overview-image" style="transform: rotate(-2deg);">
+                <img src="images/overview/nl-1.jpg" alt="newfoundland">
+              </div>
+              <div class="overview-image" style="transform: rotate(4deg);">
+                <img style="object-position: 50% 75%" src="images/overview/nl-2.jpg" alt="newfoundland">  
+              </div>
+            </div>
+          </div>
+          <div class="overview-text">
+            <span>I pursued a Computer Engineering degree at Memorial University of Newfoundland, where I was able to learn a lot of experience through my co-op and capstone projects</span>
+            <div class="d-flex">
+              <div class="overview-image" style="transform: rotate(-2deg);">
+                <img style="object-position: 50% 20%" src="images/waggleTeam.jpg" alt="Waggle Team">
+              </div>
+              <div class="overview-image" style="transform: rotate(4deg);">
+                <img style="object-position: 80% 20%" src="images/KCADeutag.JPG" alt="KCA Deutag">  
+              </div>
+            </div>
+          </div>
+          <div class="overview-text">
+            <span>After graduation, my final co-op, HYKE hired me as a full time Software Developer, where I continued to grow as a Fullstack Developer</span>
+            <div class="d-flex">
+              <div class="overview-image" style="transform: rotate(-2deg);">
+                <img style="object-position: 50% 30%" src="images/gradFamily.JPG" alt="Grad with family">
+              </div>
+              <div class="overview-image" style="transform: rotate(4deg);">
+                <img style="object-fit: contain; object-position: 50% 40%" src="images/hyke.png" alt="HYKE">  
+              </div>
+            </div>
+          </div>
+          <div class="overview-text">
+            <span>Shortly after that I pursued a life long dream of adventure, and went abroad to live in South Korea, travelling Asia while continuing to work remotely.</span>
+            <div class="d-flex">
+              <div class="overview-image" style="transform: rotate(-2deg);">
+                <img style="object-position: 80% 60%; margin-top: 20px;" src="images/hanbok.JPG" alt="Korea photo">
+              </div>
+              <div class="overview-image" style="transform: rotate(4deg);">
+                <img style="width: 100%; height: 100%; object-fit: contain;" src="images/friendsInKorea.JPG" alt="Korea photo">  
+              </div>
+            </div>
+          </div>
+          <div class="overview-text">
+            <span>Missing my friends and family brought me back to Canada, where I'm now living in Toronto.</span>
+            <div class="d-flex">
+              <div class="overview-image" style="transform: rotate(-2deg);">
+                <img style="object-fit: contain; margin-left: 30px; margin-top: 50px; border-radius: 50px;" src="images/friends.JPG" alt="Friends">
+              </div>
+              <div class="overview-image" style="transform: rotate(4deg);">
+                <img style="object-fit: contain;;" src="images/family.jpg" alt="Family">  
+              </div>
+            </div>
+          </div>
+          <div class="overview-text" style="padding-right: 300px;">
+            <span>Here I continue working as a Fullstack Developer, where I thrive bringing my imagination to reality! I have a passion for creating fun, fresh designs, and love learning new techniques to advance myself even more!</span>
+            <div class="d-flex">
+              <div class="overview-image" style="transform: rotate(-2deg);">
+                <img style="object-position: 50% 35%" src="images/soloPhoto.JPG" alt="newfoundland">
+              </div>
+              <div class="overview-image" style="transform: rotate(4deg);">
+                <img style="object-position: 50% 50%" src="images/dog.jpg" alt="newfoundland">  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0dcaf0" fill-opacity="1" d="M0,224L48,213.3C96,203,192,181,288,160C384,139,480,117,576,138.7C672,160,768,224,864,240C960,256,1056,224,1152,218.7C1248,213,1344,235,1392,245.3L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg> 
+    </section>
+  <!-- Skills -->
+  <section id="skills" class="skills">
+    <div class="container text-white">
+      <div class="row text-center">
+        <h1 class="display-3 fw-bold">Skills</h1>
+        <div class="heading-line mb-2"></div>
+        <div class="mantra" style="width: 30rem;">
+          <div>
+            <span>"Success is built on lessons from failure."</span>
+          </div>
+        </div>
+        <div class="d-flex flex-column align-items-center justify-content-center">
+          <div class="d-flex flex-column align-items-center">
+            <div class="title-box">Frontend Development</div>
+            <div class="scroll-container-move">
+              <div class="skill-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1150px-React-icon.svg.png" alt="React" style="width: 100px; height: auto;" class="rounded">    
+                React
+              </div>
+              <div class="skill-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/2367px-Vue.js_Logo_2.svg.png" alt="Vue.js" style="width: 100px; height: auto;" class="rounded">    
+                Vue.js
+              </div>
+              <div class="skill-logo">
+                <img src="https://cdn.quasar.dev/logo-v2/512/logo.png" alt="Quasar" style="width: 100px; height: auto;" class="rounded">    
+                Quasar
+              </div>
+              <div class="skill-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/2048px-HTML5_logo_and_wordmark.svg.png" alt="HTML" style="width: 100px; height: auto;" class="rounded">    
+                HTML
+              </div>
+              <div class="skill-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/2048px-CSS3_logo.svg.png" alt="CSS" style="width: 100px; height: auto;" class="rounded">    
+                CSS
+              </div>
+              <div class="skill-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/640px-JavaScript-logo.png" alt="JavaScript" style="width: 100px; height: auto;" class="rounded">    
+                JavaScript
+              </div>
+              <div class="skill-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png" alt="TypeScript" style="width: 100px; height: auto;" class="rounded">    
+                TypeScript
+              </div>
+              <div class="skill-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2560px-Tailwind_CSS_Logo.svg.png" alt="TailwindCSS" style="width: 100px; height: auto;" class="rounded">    
+                TailwindCSS
+              </div>
+              <div class="skill-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/2560px-Bootstrap_logo.svg.png" alt="Bootstrap" style="width: 100px; height: auto;" class="rounded">    
+                Bootstrap
+              </div>
+              <div class="skill-logo">
+                <img src="https://sass-lang.com/assets/img/styleguide/seal-color.png" alt="Sass" style="width: 100px; height: auto;" class="rounded">    
+                Sass
+              </div>
+              <div class="skill-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma" style="width: 75px; height: auto;" class="rounded">    
+                Figma
+              </div>
+              <div class="skill-logo">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeRCZwYt5DmueaeCY3GPhsJfBhSxHZ7gXikQ&s" alt="Frill" style="width: 100px; height: auto;" class="rounded">    
+                Frill
+              </div>
+              <div class="skill-logo">
+                <img src="https://store-images.s-microsoft.com/image/apps.29332.512b1d3d-80ec-4aec-83bb-411008d2f7cd.76371b6f-9386-463f-bfb0-b75cffb86a4f.bd99f4b1-b18e-4380-aa79-93768763c90d.png" alt="Clarity" style="width: 100px; height: auto;" class="rounded">    
+                Clarity
+              </div>
+              <div class="skill-logo">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7J-t30vXlx-zzzeyho6kj1d2izADpsm_r6A&s" alt="Usetiful" style="width: 100px; height: auto;" class="rounded">    
+                Usetiful
+              </div>
+              <div class="skill-logo">
+                <img src="https://cdn-icons-png.flaticon.com/512/7759/7759656.png" alt="Design" style="width: 80px; height: auto;" class="rounded">    
+                Design and Implementation
+              </div>
+              <div class="skill-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1150px-React-icon.svg.png" alt="React" style="width: 100px; height: auto;" class="rounded">    
+                React
+              </div>
+              <div class="skill-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/2367px-Vue.js_Logo_2.svg.png" alt="Vue.js" style="width: 100px; height: auto;" class="rounded">    
+                Vue.js
+              </div>
+              <div class="skill-logo">
+                <img src="https://cdn.quasar.dev/logo-v2/512/logo.png" alt="Quasar" style="width: 100px; height: auto;" class="rounded">    
+                Quasar
+              </div>
+              <div class="skill-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/2048px-HTML5_logo_and_wordmark.svg.png" alt="HTML" style="width: 100px; height: auto;" class="rounded">    
+                HTML
+              </div>
+              <div class="skill-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/2048px-CSS3_logo.svg.png" alt="CSS" style="width: 100px; height: auto;" class="rounded">    
+                CSS
+              </div>
+              <div class="skill-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/640px-JavaScript-logo.png" alt="JavaScript" style="width: 100px; height: auto;" class="rounded">    
+                JavaScript
+              </div>
+            </div>
+          </div>
+            <div class="d-flex flex-column align-items-center">
+              <div class="title-box">Backend Development</div>
+              <div class="scroll-container-move">
+                <div class="skill-logo">
+                  <img src="https://static-00.iconduck.com/assets.00/node-js-icon-1817x2048-g8tzf91e.png" alt="node.js" style="width: 100px; height: auto;" class="rounded">    
+                  Node.js
+                </div>
+                <div class="skill-logo">
+                  <img src="https://cdn.worldvectorlogo.com/logos/c--4.svg" alt="csharp" style="width: 100px; height: auto;" class="rounded">    
+                  C#
+                </div>
+                <div class="skill-logo">
+                  <img src="https://cdn-icons-png.flaticon.com/512/10169/10169724.png" alt="api" style="width: 100px; height: auto;" class="rounded">    
+                  API Development
+                </div>
+                <div class="skill-logo">
+                  <img src="https://symbols.getvecta.com/stencil_28/61_sql-database-generic.90b41636a8.png" alt="sql" style="width: 100px; height: auto;" class="rounded">    
+                  SQL
+                </div>
+                <div class="skill-logo">
+                  <img src="https://static-00.iconduck.com/assets.00/mongodb-original-icon-921x2048-hvrb89lu.png" alt="mongodb" style="width: 50px; height: auto;" class="rounded">    
+                  MongoDB
+                </div>
+                <div class="skill-logo">
+                  <img src="https://support.datawarehouse.io/hc/article_attachments/360103555853" alt="azure" style="width: 100px; height: auto;" class="rounded">    
+                  Azure Data Studio
+                </div>
+                <div class="skill-logo">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Oauth_logo.svg/1200px-Oauth_logo.svg.png" alt="oauth" style="width: 100px; height: auto;" class="rounded">    
+                  OAuth
+                </div>
+                <div class="skill-logo">
+                  <img src="https://cdn.worldvectorlogo.com/logos/jwt-3.svg" alt="jwt" style="width: 100px; height: auto;" class="rounded">    
+                  JWT
+                </div>
+                <div class="skill-logo">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/1024px-Amazon_Web_Services_Logo.svg.png" alt="aws" style="width: 100px; height: auto;" class="rounded">    
+                  AWS
+                </div>
+                <div class="skill-logo">
+                  <img src="https://static-00.iconduck.com/assets.00/aws-ses-simple-email-service-icon-878x1024-yxzc5h6v.png" alt="notification_service" style="width: 100px; height: auto;" class="rounded">    
+                  Notification Service
+                </div>
+                <div class="skill-logo">
+                  <img src="https://images.expertmarket.co.uk/wp-content/uploads/sites/2/2021/10/clover-pos-logo.jpg" alt="clover" style="width: 100px; height: auto;" class="rounded">    
+                  Clover
+                </div>
+                <div class="skill-logo">
+                  <img src="https://logos-world.net/wp-content/uploads/2020/10/Square-Symbol.png" alt="square" style="width: 100px; height: auto;" class="rounded">    
+                  Square
+                </div>
+                <div class="skill-logo">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3CvAH4e2kaODB0ieKKma0vAtwYA8k4IRSPw&s" alt="shopify" style="width: 90px; height: auto;" class="rounded">    
+                  Shopify
+                </div>
+                <div class="skill-logo">
+                  <img src="https://cdn-icons-png.flaticon.com/512/9732/9732788.png" alt="performance_optimization" style="width: 100px; height: auto;" class="rounded">    
+                  Performance Optimization
+                </div>
+                <div class="skill-logo">
+                  <img src="https://static-00.iconduck.com/assets.00/node-js-icon-1817x2048-g8tzf91e.png" alt="node.js" style="width: 100px; height: auto;" class="rounded">    
+                  Node.js
+                </div>
+                <div class="skill-logo">
+                  <img src="https://cdn.worldvectorlogo.com/logos/c--4.svg" alt="csharp" style="width: 100px; height: auto;" class="rounded">    
+                  C#
+                </div>
+                <div class="skill-logo">
+                  <img src="https://cdn-icons-png.flaticon.com/512/10169/10169724.png" alt="api" style="width: 100px; height: auto;" class="rounded">    
+                  API Development
+                </div>
+                <div class="skill-logo">
+                  <img src="https://symbols.getvecta.com/stencil_28/61_sql-database-generic.90b41636a8.png" alt="sql" style="width: 100px; height: auto;" class="rounded">    
+                  SQL
+                </div>
+                <div class="skill-logo">
+                  <img src="https://static-00.iconduck.com/assets.00/mongodb-original-icon-921x2048-hvrb89lu.png" alt="mongodb" style="width: 50px; height: auto;" class="rounded">    
+                  MongoDB
+                </div>
+                <div class="skill-logo">
+                  <img src="https://support.datawarehouse.io/hc/article_attachments/360103555853" alt="azure" style="width: 100px; height: auto;" class="rounded">    
+                  Azure Data Studio
+                </div>
+                <div class="skill-logo">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Oauth_logo.svg/1200px-Oauth_logo.svg.png" alt="oauth" style="width: 100px; height: auto;" class="rounded">    
+                  OAuth
+                </div>
+                <div class="skill-logo">
+                  <img src="https://cdn.worldvectorlogo.com/logos/jwt-3.svg" alt="jwt" style="width: 100px; height: auto;" class="rounded">    
+                  JWT
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-column align-items-center">
+              <div class="title-box">Mobile Development</div>
+              <div class="scroll-container justify-content-center">
+                <div class="skill-logo">
+                  <img src="https://storage.googleapis.com/cms-storage-bucket/0dbfcc7a59cd1cf16282.png" alt="flutter" style="width: 80px; height: auto;" class="rounded">    
+                  Flutter
+                </div>
+                <div class="skill-logo">
+                  <img src="https://developer.apple.com/assets/elements/icons/xcode-12/xcode-12-96x96_2x.png" alt="xcode" style="width: 100px; height: auto;" class="rounded">    
+                  XCode
+                </div>
+                <div class="skill-logo">
+                  <img src="https://static.wikia.nocookie.net/logopedia/images/0/02/New_App_Store_connect_logo.png/revision/latest?cb=20210628215439" alt="app_store" style="width: 100px; height: auto;" class="rounded">    
+                  App Store Connect
+                </div>
+                <div class="skill-logo">
+                  <img src="https://static-00.iconduck.com/assets.00/google-play-icon-1024x1024-ntijeqxd.png" alt="play_store" style="width: 100px; height: auto;" class="rounded">    
+                  Google Play Store
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-column align-items-center">
+              <div class="title-box">Soft Skills</div>
+              <div class="scroll-container justify-content-center">
+                <div class="skill-logo">
+                  <img src="https://cdn-icons-png.flaticon.com/512/3663/3663457.png" alt="communication" style="width: 100px; height: auto;" class="rounded">    
+                  Communication
+                </div>
+                <div class="skill-logo">
+                  <img src="https://cdn-icons-png.flaticon.com/512/8148/8148303.png" alt="problem_solving" style="width: 100px; height: auto;" class="rounded">    
+                  Problem Solving
+                </div>
+                <div class="skill-logo">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Wikimedia-Collab-logo.svg/768px-Wikimedia-Collab-logo.svg.png" alt="collaboration" style="width: 100px; height: auto;" class="rounded">    
+                  Collaboration
+                </div>
+                <div class="skill-logo">
+                  <img src="https://media.istockphoto.com/id/1180882238/vector/success-logo.jpg?s=612x612&w=0&k=20&c=brO28PRCR_73Oj-qVIGDzYxfDwZj17t7VrLb-JiGH2Q=" alt="leadership" style="width: 100px; height: auto;" class="rounded">    
+                  Leadership
+                </div>
+                <div class="skill-logo">
+                  <img src="https://cdn-icons-png.flaticon.com/512/10108/10108220.png" alt="adaptability" style="width: 100px; height: auto;" class="rounded">    
+                  Adaptability
+                </div>
+                <div class="skill-logo">
+                  <img src="https://cdn-icons-png.flaticon.com/512/9815/9815976.png" alt="time_management" style="width: 100px; height: auto;" class="rounded">    
+                  Time Management
+                </div>
+              </div>
+            </div>
+          </div>          
+        </div>
+      </div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,224L48,213.3C96,203,192,181,288,160C384,139,480,117,576,138.7C672,160,768,224,864,240C960,256,1056,224,1152,218.7C1248,213,1344,235,1392,245.3L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg> 
+  </section>
+  <!-- Past Projects -->
+   <section id="pastProjects" class="past-projects">
+    <div class="container">
+      <div class="row text-center">
+        <h1 class="display-3 fw-bold">Past Projects</h1>
+        <div class="heading-line mb-2"></div>
+        <div class="mantra" style="width: 30rem; background-color: #0dcaf0;">
+          <div>
+            <span>"Limitations exist only where determination ends."</span>
+          </div>
+        </div>
+        <div>
+          <div class="d-flex flex-column justfy-content-center align-items-center">
+            <img src="images/JinStayLogo.png" alt="JinStay" style="width: 250px; height: auto;" class="rounded">
+            <div class="d-flex">
+              <div class="w-50 d-flex flex-column">
+                <div class="text-box">
+                  JinStay is a project I created for a friend looking to start an Airbnb business in Downtown Toronto.
+                  This was an exciting opportunity where I got to explore some of the best places to visit and eat in Toronto, while also enjoying the freedom to independently design a webpage. The combination of creativity and functionality made this project a truly enjoyable experience!                  <br />
+                  <br />
+                  <span>Click <a class="text-white" href="https://jinstay.com/home" target="_blank">here</a> to explore more of the website!</span>
+                  <img src="images/clickHere.png" alt="Click here" style="width: 50px; height: auto;" class="rounded">
+                </div>
+                <div>
+                  <span class="title-box" style="font-weight: 400; font-size: large;">Skills used:</span>
+                  <div class="d-flex justify-content-end align-items-end" style="margin-top: 2rem;">
+                    <div class="skill-logo-small">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1200px-Vue.js_Logo_2.svg.png" alt="Vue.js" style="height: 100px; width: auto;" class="rounded">    
+                      Vue.js
+                    </div>
+                    <div class="skill-logo-small">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/768px-JavaScript-logo.png" alt="JavaScript" style="height: 100px; width: auto;" class="rounded">    
+                      JavaScript
+                    </div>
+                    <div class="skill-logo-small">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2560px-Tailwind_CSS_Logo.svg.png" alt="TailwindCSS" style="height: 80px; width: auto;" class="rounded">    
+                      TailwindCSS
+                    </div>
+                    <div class="skill-logo-small">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Chart.js_logo.svg/1200px-Chart.js_logo.svg.png" alt="ChartJS" style="height: 100px; width: auto;" class="rounded">    
+                      ChartJS
+                    </div>
+                    <div class="skill-logo-small">
+                      <img src="https://cdn.builtin.com/cdn-cgi/image/f=auto,fit=contain,w=200,h=200,q=100/https://builtinla.com/sites/www.builtinla.com/files/2024-02/xlogo.png" alt="Xano" style="height: 100px; width: auto;" class="rounded">    
+                      Xano
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-50 d-flex" style="margin: 2rem 1rem;">
+                <video class="rounded secondary-border" height="400px" autoplay loop muted>
+                  <source src="images/JinStayVideo.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex flex-column justfy-content-center align-items-center" style="padding-top: 50px;">
+            <img src="images/WaggleLogo.png" alt="Waggle" style="width: 250px; height: auto;" class="rounded">
+            <div class="d-flex">
+              <div class="w-50 d-flex flex-column">
+                <div class="text-box">
+                  <div class="d-flex" style="width: 100%; height: 250px;">
+                    <div class="w-50" style="padding-right: 5px;">
+                      <img src="images/waggleTeam.jpg" alt="waggle" style="width: 100%; height: auto;" class="rounded">
+                    </div>
+                    <div class="w-50" style="padding-left: 5px;">
+                      <img src="images/waggleGraduation.jpg" alt="waggle" style="width: 100%; height: auto;" class="rounded">    
+                    </div>
+                  </div>
+                  Waggle was my Engineering capstone project, developed in collaboration with three of my classmates. We created a web application that enables users to visually program and run simulations of swarm robotics environments.
+                  <br />
+                  <br />
+                  This project allowed me to deepen my understanding of swarm robotics algorithms, enhance my skills in web design, project management, and refine my ability to collaborate effectively within a team. It’s a project I dedicated countless hours to, and I’m incredibly proud of what we achieved!
+                  <br />
+                  <br />
+                  🏆 Waggle earned 2nd place in our entire Electrical and Computer Engineering class—a recognition that makes the experience even more rewarding
+                  <br />
+                  <br />
+                  <span>To explore more about Waggle, click <a class="text-white" href="https://waggle-2-0.web.app" target="_blank">here</a></span>
+                  <img src="images/clickHere.png" alt="Click here" style="width: 50px; height: auto;" class="rounded">
+                </div>
+              </div>
+              <div class="w-50 d-flex flex-column justify-content-around" style="margin: 2rem 1rem;">
+                <video class="rounded secondary-border" height="400px" autoplay loop muted>
+                  <source src="images/waggleVideo.mov" type="video/mp4">
+                </video>
+                <div>
+                  <span class="title-box" style="font-weight: 400; font-size: large;">Skills used:</span>
+                  <div class="d-flex justify-content-end align-items-end" style="margin-top: 2rem;">
+                    <div class="skill-logo-small">
+                      <img src="https://developers.google.com/static/blockly/images/landing/blockly.png" alt="Blockly" style="height: 100px; width: auto;" class="rounded">    
+                      Blockly
+                    </div>
+                    <div class="skill-logo-small">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/768px-JavaScript-logo.png" alt="JavaScript" style="height: 100px; width: auto;" class="rounded">    
+                      JavaScript
+                    </div>
+                    <div class="skill-logo-small">
+                      <img src="https://leotronics.eu/images/blog/swarm-robots.jpg" alt="Swarm Robotics" style="height: 80px; width: auto;" class="rounded">    
+                      Swarm Robotics
+                    </div>
+                    <div class="skill-logo-small">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/2048px-HTML5_logo_and_wordmark.svg.png" alt="HTML" style="height: 100px; width: auto;" class="rounded">    
+                      HTML
+                    </div>
+                    <div class="skill-logo-small">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png" alt="CSS" style="height: 100px; width: auto;" class="rounded">    
+                      CSS
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fd7e14" fill-opacity="1" d="M0,224L48,213.3C96,203,192,181,288,160C384,139,480,117,576,138.7C672,160,768,224,864,240C960,256,1056,224,1152,218.7C1248,213,1344,235,1392,245.3L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg> 
+   </section>
+  <!-- Experience -->
+  <section id="experience" class="experience">
+    <div class="container text-white">
+      <div class="row text-center">
+        <h1 class="display-3 fw-bold">Experience</h1>
+        <div class="heading-line mb-2"></div>
+        <div class="mantra" style="width: 30rem;">
+          <div style="background-color: #0dcaf0;">
+            <span>"Small steps taken with purpose lead to monumental achievements."</span>
+          </div>
+        </div>
+        <div id="accordion" style="font-size: large;">
+          <div class="card">
+            <button class="btn border primary p-4 text-white text-lg font-bold" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <div id="headingOne">
+                <h5 class="mb-0" style="font-size: x-large;">HYKE - Software Developer</h5>
+              </div>
+            </button>
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-bs-parent="#accordion">
+              <div class="card-body primary d-flex flex-column align-items-center" style="font-size: 18px; border: white solid 10px; padding: 40px 20px;">
+                <div class="d-flex">
+                  <div class="w-50 position-relative" style="height: 410px">
+                    <div class="bg-white rounded" style="position: absolute; top: 20px; right: 20px;">
+                      <img src="https://hykeup.com/wp-content/uploads/2023/09/HYKE_Logo.webp" alt="newfoundland" style="width: 400px; height: auto;" class="rounded">
+                    </div>
+                    <div class="bg-white rounded" style="position: absolute; bottom: 20px; left: 20px;">
+                      <img src="https://www.f6s.com/content-resource/media/1388558.png" alt="hiking" style="width: 300px; height: auto;" class="rounded">    
+                    </div>
+                  </div>
+                  <div class="w-50 text-white d-flex flex-column align-items-center justify-content-center">
+                    <span>HYKE is a cutting-edge platform that simplifies business operations by integrating smart tools for managing sales, customer relationships, and marketing efforts.
+                      As a Full-Stack Developer with over 3 years of experience, I independently designed and implemented the frontend and mobile platforms, created backend API calls, integrated HYKE with AWS cloud services, and managed database operations using SQL.</span>
+                    <br />
+                    <span>To see more of my work on the mobile side you can visit the HYKER website
+                    <a href="https://hykeup.com" target="_blank" class="text-white">here</a>
+                    or to see some of my frontend work, go to our business side
+                    <a href="https://partner.hykeup.com" target="_blank" class="text-white">here!</a></span>
+                  </div>
+                </div>
+                <div class="text-white">
+                  <span class="title-box" style="background-color: transparent;" style="font-weight: 400; font-size: large;">Main skills:</span>
+                  <div class="d-flex justify-content-end align-items-end" style="margin-top: 2rem;">
+                    <div class="skill-logo-small text-white" style="background-color: transparent;">
+                      <img src="https://cdn.quasar.dev/logo-v2/512/logo.png" alt="Quasar" style="height: 100px; width: auto;" class="rounded">    
+                      Quasar
+                    </div>
+                    <div class="skill-logo-small text-white" style="background-color: transparent;">
+                      <img src="https://cdn.worldvectorlogo.com/logos/c--4.svg" alt="csharp" style="height: 80px; width: auto;" class="rounded">    
+                      C#
+                    </div>
+                    <div class="skill-logo-small text-white" style="background-color: transparent;">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHfvJQdTD8IFAUS4jNkFrVYGai1NknAbHAMA&s" alt="flutter" style="height: 100px; width: auto;" class="rounded">    
+                      Flutter
+                    </div>
+                    <div class="skill-logo-small text-white" style="background-color: transparent;">
+                      <img src="https://symbols.getvecta.com/stencil_28/61_sql-database-generic.90b41636a8.png" alt="sql" style="height: 100px; width: auto;" class="rounded">    
+                      SQL
+                    </div>
+                    <div class="skill-logo-small text-white" style="background-color: transparent;">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/1024px-Amazon_Web_Services_Logo.svg.png" alt="aws" style="width: 100px; height: auto;" class="rounded">    
+                      AWS
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Nokia -->
+          <div class="card">
+            <button class="btn border primary p-4 text-white text-lg font-bold" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <div id="headingTwo">
+                <h5 class="mb-0" style="font-size: x-large;">Nokia - A6E Customer Applications Co-op</h5>
+              </div>
+            </button>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordion">
+              <div class="card-body primary d-flex flex-column align-items-center">
+                <div class="w-100 d-flex">
+                  <div class="w-50 position-relative" style="height: 410px">
+                    <div style="position: absolute; top: 10px; left: 10px;">
+                      <img src="https://as2.ftcdn.net/v2/jpg/03/70/87/65/1000_F_370876568_bXRcuR7O10PtufQ8UsAqF1eZa3VVDhve.jpg" alt="newfoundland" style="width: 350px; height: auto;" class="rounded">
+                    </div>
+                    <div style="position: absolute; bottom: 20px; right: 20px;">
+                      <img src="https://mma.prnewswire.com/media/1922063/Nokia_Nokia_chooses_Ottawa__ON__tech_cluster_to_build_world_lead.jpg?p=facebook" alt="hiking" style="width: 250px; height: auto;" class="rounded">    
+                    </div>
+                  </div>
+                  <div class="w-50 text-white d-flex flex-column align-items-center justify-content-center" style="padding: 0 20px;">
+                    <span>Nokia is a global leader in telecommunications, providing solutions for network operators, enterprises, and governments. Their Network Services Platform (NSP) enables efficient automation, orchestration, and management of telecom networks.</span>
+                    <br />
+                    <span>During my A6E Customer Applications Co-op, I contributed to the development and testing of customer-facing applications for NSP, supported network service automation, and assisted in troubleshooting and performance analysis to enhance customer experience.</span>
+                  </div>
+                </div>
+                <div>
+                  <div class="text-white">
+                    <span class="title-box" style="background-color: transparent;" style="font-weight: 400; font-size: large;">Main skills:</span>
+                    <div class="d-flex justify-content-end align-items-end" style="margin-top: 2rem;">
+                      <div class="skill-logo-small text-white" style="background-color: transparent;">
+                        <img src="https://www.nokia.com/sites/default/files/2022-05/NSP_logo-colour.png" alt="Nokia NSP" style="height: 100px; width: auto;" class="rounded">    
+                        Nokia NSP
+                      </div>
+                      <div class="skill-logo-small text-white" style="background-color: transparent;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/1200px-Tux.svg.png" alt="Linux" style="height: 100px; width: auto;" class="rounded">    
+                        Linux
+                      </div>
+                      <div class="skill-logo-small text-white" style="background-color: transparent;">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3627/3627906.png" alt="Troubleshooting" style="height: 80px; width: auto;" class="rounded">    
+                        Troubleshooting
+                      </div>
+                      <div class="skill-logo-small text-white" style="background-color: transparent;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png" alt="Python" style="height: 100px; width: auto;" class="rounded">    
+                        Python
+                      </div>
+                    </div>
+                  </div>
+                </div>            
+              </div>
+            </div>
+          </div>
+        
+          <!-- Nalcor Energy -->
+          <div class="card">
+            <button class="btn border primary p-4 text-white text-lg font-bold" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              <div id="headingThree">
+                <h5 class="mb-0" style="font-size: x-large;">Nalcor Energy - LCP HVdc Specialities Co-op</h5>
+              </div>
+            </button>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-bs-parent="#accordion">
+              <div class="card-body primary d-flex flex-column align-items-center">
+                <div class="w-100 d-flex align-items-center">
+                  <div class="w-50 position-relative" style="height: 400px;">
+                    <div style="position: absolute; top: 20px; right: 20px;">
+                      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7f/Nalcor_Energy_Logo.svg/800px-Nalcor_Energy_Logo.svg.png" alt="newfoundland" style="width: 350px; height: auto;" class="rounded">
+                    </div>
+                    <div style="position: absolute; bottom: 15px; left: 15px;">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnQ1I9JhPVKH6G8pCg-W8KxEC6Op8wnj1RlQ&s" alt="hiking" style="width: 350px; height: auto;" class="rounded">    
+                    </div>
+                  </div>
+                  <div class="w-50 text-white d-flex flex-column justfy-content-center align-items-center" style="padding: 0 20px;">
+                    <span>Nalcor Energy is a leading energy company in Newfoundland and Labrador, focused on providing sustainable energy solutions through hydroelectric and other power generation methods.</span>
+                    <br />
+                    <span>During my LCP HVdc Specialities Co-op, I supported the development and optimization of HVdc (High Voltage Direct Current) systems for the Lower Churchill Project. My responsibilities included assisting with system analysis, troubleshooting, and ensuring the efficient operation of HVdc equipment to support the region's energy infrastructure.</span>
+                  </div>
+                </div>
+                <div class="text-white" style="padding: 20px 0;">
+                  <span class="title-box" style="padding-bottom: 10px; background-color: transparent;" style="font-weight: 400; font-size: large;">Main skills:</span>
+                  <div class="d-flex justify-content-end align-items-end" style="margin-top: 2rem;">
+                    <div class="skill-logo-small text-white" style="background-color: transparent;">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Microsoft_Office_Excel_%282019–present%29.svg/640px-Microsoft_Office_Excel_%282019–present%29.svg.png" alt="Microsoft Excel" style="height: 100px; width: auto;" class="rounded">    
+                      Microsoft Excel
+                    </div>
+                    <div class="skill-logo-small text-white" style="background-color: transparent;">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Microsoft_Office_Visio_%282019%29.svg/504px-Microsoft_Office_Visio_%282019%29.svg.png" alt="Microsoft Visio" style="height: 80px; width: auto;" class="rounded">    
+                      Microsoft Visio
+                    </div>
+                    <div class="skill-logo-small text-white" style="background-color: transparent;">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Microsoft_Office_Word_%282019–present%29.svg/1200px-Microsoft_Office_Word_%282019–present%29.svg.png" alt="Microsoft Word" style="height: 100px; width: auto;" class="rounded">    
+                      Microsoft Word
+                    </div>
+                    <div class="skill-logo-small text-white" style="background-color: transparent;">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Microsoft_Office_PowerPoint_%282019–present%29.svg/800px-Microsoft_Office_PowerPoint_%282019–present%29.svg.png" alt="Microsoft PowerPoint" style="height: 100px; width: auto;" class="rounded">    
+                      Microsoft PowerPoint
+                    </div>
+                  </div>
+                </div>            
+              </div>
+            </div>
+          </div>
+        
+          <!-- KCA Deutag -->
+          <div class="card">
+            <button class="btn border primary p-4 text-white text-lg font-bold" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              <div id="headingFour">
+                <h5 class="mb-0" style="font-size: x-large;">KCA Deutag - Project Management Co-op</h5>
+              </div>
+            </button>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-bs-parent="#accordion">
+              <div class="card-body primary d-flex flex-column align-items-center">
+                <div class="w-100 d-flex align-items-center">
+                  <div class="w-50 position-relative" style="height: 400px;">
+                    <div style="position: absolute; top: 20px; right: 20px;">
+                      <img src="https://www.kcadeutag.com/media/images/KCADeutag-logo-colour.png" alt="newfoundland" style="width: 450px; height: auto;" class="rounded">
+                    </div>
+                    <div style="position: absolute; bottom: 15px; left: 15px;">
+                      <img src="https://www.kcadeutag.com/media/images/kca-deutag-offshore-drilling.webp" alt="hiking" style="width: 400px; height: auto;" class="rounded">    
+                    </div>
+                  </div>
+                  <div class="w-50 text-white d-flex flex-column justfy-content-center align-items-center" style="padding: 0 20px;">
+                    <span>KCA Deutag is a leading global drilling and engineering company, specializing in providing drilling services for the oil and gas industry.</span>
+                    <br />
+                    <span>During my Project Management Co-op, I independently created and organized a physical and digital certification database for all machinery used. This involved managing and cataloging certifications to ensure compliance and streamline access to essential machinery information.</span>
+                  </div>
+                </div>
+                <div class="text-white" style="padding: 20px 0;">
+                  <span class="title-box" style="padding-bottom: 10px; background-color: transparent;" style="font-weight: 400; font-size: large;">Main skills:</span>
+                  <div class="d-flex justify-content-end align-items-end" style="margin-top: 2rem;">
+                    <div class="skill-logo-small text-white" style="background-color: transparent;">
+                      <img src="https://cdn-icons-png.flaticon.com/512/9730/9730481.png" alt="Project Management" style="height: 100px; width: auto;" class="rounded">    
+                      Project Management
+                    </div>
+                    <div class="skill-logo-small text-white" style="background-color: transparent;">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Microsoft_Office_Excel_%282019–present%29.svg/640px-Microsoft_Office_Excel_%282019–present%29.svg.png" alt="Microsoft Excel" style="height: 100px; width: auto;" class="rounded">    
+                      Microsoft Excel
+                    </div>
+                    <div class="skill-logo-small text-white" style="background-color: transparent;">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Microsoft_Office_Word_%282019–present%29.svg/1200px-Microsoft_Office_Word_%282019–present%29.svg.png" alt="Microsoft Word" style="height: 100px; width: auto;" class="rounded">    
+                      Microsoft Word
+                    </div>
+                  </div>
+                </div>            
+              </div>
+            </div>
+          </div>
+        </div>        
+      </div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,224L48,213.3C96,203,192,181,288,160C384,139,480,117,576,138.7C672,160,768,224,864,240C960,256,1056,224,1152,218.7C1248,213,1344,235,1392,245.3L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg> 
+   </section>
+  <!-- Education -->
+  <section id="education" class="past-projects">
+    <div class="container">
+      <div class="row text-center">
+        <h1 class="display-3 fw-bold">Education</h1>
+        <div class="heading-line mb-2"></div>
+        <div class="mantra" style="width: 30rem; background-color: #0dcaf0;">
+          <div>
+            <span>"Believe in the journey, and the destination will follow."</span>
+          </div>
+        </div>
+        <div class="d-flex flex-column">
+          <div class="row text-center" style="margin: 1.5rem 0;">
+            <div class="d-flex flex-row justify-content-between">
+              <div class="w-50">
+                <img src="images/MUN.png" alt="MUN" style="width: 100%; height: auto;" class="rounded">    
+              </div>
+              <div class="w-50 m-5 primary p-3 rounded d-flex flex-column text-white justify-content-center" style="font-size: large;">
+                <span>I graduated from Memorial University of Newfoundland with a Bachelor's degree in Computer Engineering.</span>
+                <br />
+                <span>During my time at MUN, I gained valuable experience through co-op placements and capstone projects, while deepening my knowledge of various Computer Engineering disciplines.</span>
+                <br />
+                <br />
+                <span>⭐️ I graduated with honors, achieving an overall cumulative average of 80%.</span>              
+              </div>
+            </div>
+          </div>
+          <div class="d-flex flex-column align-items-center justfy-content-center">
+            <span class="title-box">Courses</span>
+            <div class="scroll-container" style="padding: 0 2rem 4rem 4rem;">
+              <div class="course-book">
+                <div class="course-cover">
+                  <div class="d-flex flex-column">
+                    <span>CHEM-1050</span>
+                    <span>General Chemistry I</span>  
+                  </div>
+                  <img src="https://www.dentaltown.com/images/Orthotown/magimages/0819/ll01.jpg" alt="topics" class="rounded">
+                  <img src="https://www.science.edu/acellus/wp-content/uploads/2016/12/Acellus-General-Chemistry.jpg" alt="chem-1050" class="rounded">
+                </div>
+                <div class="course-content">
+                  <span>Topics covered:</span>
+                  <ul>
+                    <li>Gases</li>
+                    <li>Thermochemistry</li>
+                    <li>Quantum-Mechanical Model of the Atom</li>
+                    <li>Periodic Properties of the Elements</li>
+                    <li>Chemical Bonding</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="course-book">
+                <div class="course-cover">
+                  <div class="d-flex flex-column">
+                    <span>PHYS-1050</span>
+                    <span>Gen Physics I: Mechanics</span>  
+                  </div>
+                  <img src="https://www.dentaltown.com/images/Orthotown/magimages/0819/ll01.jpg" alt="topics" class="rounded">
+                  <img src="https://ce.byu.edu/sites/ce.byu.edu/files/program_images/10076435.jpg" alt="phys-1050">
+                </div>
+                <div class="course-content">
+                  <span>Topics covered:</span>
+                  <ul>
+                    <li>Kinematics</li>
+                    <li>Dynamics</li>
+                    <li>Work and Energy</li>
+                    <li>Momentum</li>
+                    <li>Rotational Motion</li>
+                    <li>Gravitation</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="course-book">
+                <div class="course-cover">
+                  <div class="d-flex flex-column">
+                    <span>ENGI-1040</span>
+                    <span>Mechanisms & Electric Circuits</span>  
+                  </div>
+                  <img src="https://www.dentaltown.com/images/Orthotown/magimages/0819/ll01.jpg" alt="topics" class="rounded">
+                  <img src="https://thumbs.dreamstime.com/z/concept-electrical-circuit-program-work-works-high-tech-mechanism-d-render-concept-electrical-circuit-program-269211094.jpg" alt="engi-1040" class="rounded">
+                </div>
+                <div class="course-content">
+                  <span>Topics covered:</span>
+                  <ul>
+                    <li>Analysis of mechanical systems and mechanisms</li>
+                    <li>Introduction to electric circuit components and analysis</li>
+                    <li>Application of engineering principles to solve practical problems</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="course-book">
+                <div class="course-cover">
+                  <div class="d-flex flex-column">
+                    <span>MATH-2050</span>
+                    <span>Linear Algebra I</span>  
+                  </div>
+                  <img src="https://www.dentaltown.com/images/Orthotown/magimages/0819/ll01.jpg" alt="topics" class="rounded">
+                  <img src="https://miro.medium.com/v2/resize:fit:1400/0*R_MZlGnN_FqMK4To" alt="math-2050" class="rounded">
+                </div>
+                <div class="course-content">
+                  <span>Topics covered:</span>
+                  <ul>
+                    <li>Systems of Linear Equations</li>
+                    <li>Matrix Algebra</li>
+                    <li>Vector Spaces</li>
+                    <li>Eigenvalues and Eigenvectors</li>
+                    <li>Orthogonality</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="course-book">
+                <div class="course-cover">
+                  <div class="d-flex flex-column">
+                    <span>PHYS-1051</span>
+                    <span>Gen Phys 2 Osc, Waves, Electron</span>  
+                  </div>
+                  <img src="https://www.dentaltown.com/images/Orthotown/magimages/0819/ll01.jpg" alt="topics" class="rounded">
+                  <img src="https://static.wixstatic.com/media/212df1_39fa37f94f40419096dfb5a73e0ee87b~mv2.jpg/v1/fill/w_540,h_362,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/water-1761027_1920.jpg" alt="phys-1051" class="rounded">
+                </div>
+                <div class="course-content">
+                  <span>Topics covered:</span>
+                  <ul>
+                    <li>Electric Fields and Forces</li>
+                    <li>Electric Potential</li>
+                    <li>Circuits</li>
+                    <li>Magnetism</li>
+                    <li>Electromagnetic Induction</li>
+                    <li>Waves and Optics</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="course-book">
+                <div class="course-cover">
+                  <div class="d-flex flex-column">
+                    <span>ENGI-1020</span>
+                    <span>Introduction to Programming</span>  
+                  </div>
+                  <img src="https://www.dentaltown.com/images/Orthotown/magimages/0819/ll01.jpg" alt="topics" class="rounded">
+                  <img src="https://mrs.unizik.edu.ng/wp-content/uploads/sites/49/2023/05/programming-language.png" alt="engi-1020" class="rounded">
+                </div>
+                <div class="course-content">
+                  <span>Topics covered:</span>
+                  <ul>
+                    <li>Basic program control structures: sequence, call, branch, loop</li>
+                    <li>Data representations</li>
+                    <li>Functional decomposition</li>
+                    <li>Design by contract</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="course-book">
+                <div class="course-cover">
+                  <div class="d-flex flex-column">
+                    <span>ENGI 3424</span>
+                    <span>Engineering Mathematics</span>  
+                  </div>
+                  <img src="https://www.dentaltown.com/images/Orthotown/magimages/0819/ll01.jpg" alt="topics" class="rounded">
+                  <img src="https://semesterlearning.com/wp-content/uploads/2018/10/Further-Maths.jpg" alt="engi-3424" class="rounded">
+                </div>
+                <div class="course-content">
+                  <span>Topics covered:</span>
+                  <ul>
+                    <li>Parametric vector functions</li>
+                    <li>Polar curves</li>
+                    <li>Gradient, divergence, and curl</li>
+                    <li>Multiple integration</li>
+                    <li>Vector calculus theorems: Green's, Stokes', and Gauss'</li>
+                    <li>Introduction to partial differential equations</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="course-book">
+                <div class="course-cover">
+                  <div class="d-flex flex-column">
+                    <span>PHYS-3000</span>
+                    <span>Physics of Device Materials</span>  
+                  </div>
+                  <img src="https://www.dentaltown.com/images/Orthotown/magimages/0819/ll01.jpg" alt="topics" class="rounded">
+                  <img src="https://chicagoquantum.org/sites/default/files/styles/medium/public/2024-06/istock-1468266144.jpeg?h=d1ee6398&itok=5GgjP9mv" alt="phys-3000" class="rounded">
+                </div>
+                <div class="course-content">
+                  <span>Topics covered:</span>
+                  <ul>
+                    <li>Newtonian mechanics</li>
+                    <li>Lagrangian and Hamiltonian formulations</li>
+                    <li>Oscillatory motion</li>
+                    <li>Central force problems</li>
+                    <li>Rigid body dynamics</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="course-book">
+                <div class="course-cover">
+                  <div class="d-flex flex-column">
+                    <span>ENGI-3891</span>
+                    <span>Engineering Thermodynamics</span>  
+                      </div>
+                  <img src="https://www.dentaltown.com/images/Orthotown/magimages/0819/ll01.jpg" alt="topics" class="rounded">
+                  <img src="https://nextgates.com/wp-content/uploads/2019/08/computing-programming.jpg" alt="engi-3891" class="rounded">
+                </div>
+                <div class="course-content">
+                  <span>Topics covered:</span>
+                  <ul>
+                    <li>First and second laws of thermodynamics.</li>
+                    <li>Properties of pure substances.</li>
+                    <li>Energy analysis of closed and open systems.</li>
+                    <li>Entropy and exergy analysis.</li>
+                    <li>Applications to power and refrigeration cycles.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="course-book">
+                <div class="course-cover">
+                  <div class="d-flex flex-column">
+                    <span>ENGI-3101</span>
+                    <span>Engineering Professionalism I</span>  
+                  </div>
+                  <img src="https://www.dentaltown.com/images/Orthotown/magimages/0819/ll01.jpg" alt="topics" class="rounded">
+                  <img src="https://media.licdn.com/dms/image/v2/C5112AQG37deJKAi01A/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1520195850164?e=2147483647&v=beta&t=5tpuVxaniwGyAAJblaggAJqyQzpdvUl5ipl9EgYupZg" alt="engi-3101" class="rounded">
+                </div>
+                <div class="course-content">
+                  <span>Topics covered:</span>
+                  <ul>
+                    <li>Engineering ethics and the Engineering Code of Ethics.</li>
+                    <li>Sustainable development and environmental stewardship.</li>
+                    <li>The place of technology in society.</li>
+                    <li>Nature of technological decisions.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="course-book">
+                <div class="course-cover">
+                  <div class="d-flex flex-column">
+                    <span>ENGI-3821</span>
+                    <span>Microprocessor Systems</span>  
+                  </div>
+                  <img src="https://www.dentaltown.com/images/Orthotown/magimages/0819/ll01.jpg" alt="topics" class="rounded">
+                  <img src="https://eca1.weebly.com/uploads/1/3/5/4/13541180/header_images/1379496834.jpg" alt="engi-3821" class="rounded">
+                </div>
+                <div class="course-content">
+                  <span>Topics covered:</span>
+                  <ul>
+                    <li>Microprocessor organization and operation.</li>
+                    <li>Assembly language programming.</li>
+                    <li>Interfacing and input/output techniques.</li>
+                    <li>Interrupts and peripheral devices.</li>
+                    <li>Applications in embedded systems.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="course-book">
+                <div class="course-cover">
+                  <div class="d-flex flex-column">
+                    <span>PHIL-2320</span>
+                    <span>Philosophy & Psychoanalysis</span>  
+                  </div>
+                  <img src="https://www.dentaltown.com/images/Orthotown/magimages/0819/ll01.jpg" alt="topics" class="rounded">
+                  <img src="https://www.freud.org.uk/wp-content/uploads/2023/03/frommmarcusehegel-1200x600.jpg" alt="phil-2320" class="rounded">
+                </div>
+                <div class="course-content">
+                  <span>Topics covered:</span>
+                  <ul>
+                    <li>Major ethical theories: utilitarianism, deontology, virtue ethics.</li>
+                    <li>Moral dilemmas and decision-making.</li>
+                    <li>Application of ethical principles to contemporary issues.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="course-book">
+                <div class="course-cover">
+                  <div class="d-flex flex-column">
+                    <span>ENGI-4424</span>
+                    <span>Discrete Math for Computer Eng</span>  
+                  </div>
+                  <img src="https://www.dentaltown.com/images/Orthotown/magimages/0819/ll01.jpg" alt="topics" class="rounded">
+                  <img src="https://engineering.jhu.edu/ams/wp-content/uploads/2021/06/hero-image-research-500x282.jpeg" alt="engi-4424" class="rounded">
+                </div>
+                <div class="course-content">
+                  <span>Topics covered:</span>
+                  <ul>
+                    <li>Propositional logic</li>
+                    <li>Introductory predicate logic</li>
+                    <li>Mathematical reasoning and induction</li>
+                    <li>Sets, relations, and functions</li>
+                    <li>Integers and their properties</li>
+                    <li>Graphs and trees</li>
+                    <li>Models of computation</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="course-book">
+                <div class="course-cover">
+                  <div class="d-flex flex-column">
+                    <span>ENGI-4892</span>
+                    <span>Data Structures</span>  
+                  </div>
+                  <img src="https://www.dentaltown.com/images/Orthotown/magimages/0819/ll01.jpg" alt="topics" class="rounded">
+                  <img src="https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fhrpxasryrt3lsxmaeus7.jpeg" alt="engi-4892" class="rounded">
+                </div>
+                <div class="course-content">
+                  <span>Topics covered:</span>
+                  <ul>
+                    <li>Arrays, linked lists, stacks, and queues</li>
+                    <li>Trees and binary search trees</li>
+                    <li>Heaps and priority queues</li>
+                    <li>Hash tables</li>
+                    <li>Graphs and graph algorithms</li>
+                    <li>Sorting and searching algorithms</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="course-book">
+                <div class="course-cover">
+                  <div class="d-flex flex-column">
+                    <span>ENGI-4862</span>
+                    <span>Software Design</span>  
+                  </div>
+                  <img src="https://www.dentaltown.com/images/Orthotown/magimages/0819/ll01.jpg" alt="topics" class="rounded">
+                  <img src="https://cdn.hswstatic.com/gif/microprocessor-1.jpg" alt="engi-4862" class="rounded">
+                </div>
+                <div class="course-content">
+                  <span>Topics covered:</span>
+                  <ul>
+                    <li>Software development methodologies</li>
+                    <li>Design patterns</li>
+                    <li>Object-oriented design principles</li>
+                    <li>UML modeling</li>
+                    <li>Software architecture</li>
+                    <li>Testing and quality assurance</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="course-book">
+                <div class="course-cover">
+                  <div class="d-flex flex-column">
+                    <span>ENGI-4854</span>
+                    <span>Algorithms: Correctness and Complexity</span>  
+                  </div>
+                  <img src="https://www.dentaltown.com/images/Orthotown/magimages/0819/ll01.jpg" alt="topics" class="rounded">
+                  <img src="https://www.eeeguide.com/wp-content/uploads/2024/06/Electronic-Devices-and-Circuits.jpg" alt="engi-4854" class="rounded">
+                </div>
+                <div class="course-content">
+                  <span>Topics covered:</span>
+                  <ul>
+                    <li>Algorithm design techniques</li>
+                    <li>Proofs of correctness</li>
+                    <li>Time and space complexity analysis</li>
+                    <li>NP-completeness</li>
+                    <li>Approximation algorithms</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="course-book">
+                <div class="course-cover">
+                  <div class="d-flex flex-column">
+                    <span>ENGI-4823</span>
+                    <span>Microprocessor Systems</span>  
+                  </div>
+                  <img src="https://www.dentaltown.com/images/Orthotown/magimages/0819/ll01.jpg" alt="topics" class="rounded">
+                  <img src="https://studyelectrical.com/wp-content/uploads/2021/10/MIT-Signals-and-Systems-Course.jpg" alt="engi-4823" class="rounded">
+                </div>
+                <div class="course-content">
+                  <span>Topics covered:</span>
+                  <ul>
+                    <li>Microprocessor architecture</li>
+                    <li>Assembly language programming</li>
+                    <li>Interfacing and input/output techniques</li>
+                    <li>Interrupts and peripheral devices</li>
+                    <li>Embedded systems applications</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="course-book">
+                <div class="course-cover">
+                  <div class="d-flex flex-column">
+                    <span>ENGI-4102</span>
+                    <span>Engineering Economics</span>  
+                  </div>
+                  <img src="https://www.dentaltown.com/images/Orthotown/magimages/0819/ll01.jpg" alt="topics" class="rounded">
+                  <img src="https://online.stanford.edu/sites/default/files/styles/embedded_large/public/2018-03/cee146s.jpg?itok=QZGyZW4m" alt="engi-4102" class="rounded">
+                </div>
+                <div class="course-content">
+                  <span>Topics covered:</span>
+                  <ul>
+                    <li>Roles and responsibilities of professional engineers</li>
+                    <li>Engineering Code of Ethics</li>
+                    <li>Sustainable development and environmental stewardship</li>
+                    <li>Nature of technological decisions</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="course-book">
+                <div class="course-cover">
+                  <div class="d-flex flex-column">
+                    <span>ENGI-5420</span>
+                    <span>Advanced Software Engineering</span>  
+                  </div>
+                  <img src="https://www.dentaltown.com/images/Orthotown/magimages/0819/ll01.jpg" alt="topics" class="rounded">
+                  <img src="https://img.brainkart.com/subject/91.jpg" alt="engi-5420" class="rounded">
+                </div>
+                <div class="course-content">
+                  <span>Topics covered:</span>
+                  <ul>
+                    <li>Advanced topics in software design and architecture</li>
+                    <li>Software project management</li>
+                    <li>Formal methods in software engineering</li>
+                    <li>Software maintenance and evolution</li>
+                    <li>Emerging trends in software engineering</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="course-book">
+                <div class="course-cover">
+                  <div class="d-flex flex-column">
+                    <span>ENGI-5892</span>
+                    <span>Algorithms: Correct/Complexity</span>  
+                  </div>
+                  <img src="https://www.dentaltown.com/images/Orthotown/magimages/0819/ll01.jpg" alt="topics" class="rounded">
+                  <img src="https://lh3.googleusercontent.com/hTI87LDHi81OxoA3dLJYlCavVpnWYInEWhXRuY_r20Fkn5NNyi-qQ9VOPD5w6fVsJiCUR-57C7XZ_HorcyxoI91dngIqA7wf_2cCVQkKXa9KlYjRQg=w1200-h630-n-nu" alt="engi-5892" class="rounded">
+                </div>
+                <div class="course-content">
+                  <span>Topics covered:</span>
+                  <ul>
+                    <li>Algorithm design techniques</li>
+                    <li>Proofs of correctness</li>
+                    <li>Time and space complexity analysis</li>
+                    <li>NP-completeness</li>
+                    <li>Approximation algorithms</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="course-book">
+                <div class="course-cover">
+                  <div class="d-flex flex-column">
+                    <span>ENGI-5895</span>
+                    <span>Software Design</span>  
+                  </div>
+                  <img src="https://www.dentaltown.com/images/Orthotown/magimages/0819/ll01.jpg" alt="topics" class="rounded">
+                  <img src="https://miro.medium.com/v2/resize:fit:1132/1*cyFiPYlORkVo6N75h9AXSw.png" alt="engi-5895" class="rounded">
+                </div>
+                <div class="course-content">
+                  <span>Topics covered:</span>
+                  <ul>
+                    <li>Software development methodologies</li>
+                    <li>Design patterns</li>
+                    <li>Object-oriented design principles</li>
+                    <li>UML modeling</li>
+                    <li>Software architecture</li>
+                    <li>Testing and quality assurance</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="course-book">
+                <div class="course-cover">
+                  <div class="d-flex flex-column">
+                    <span>ENGI-5865</span>
+                    <span>Advanced Computing Concepts for Engineering</span>  
+                  </div>
+                  <img src="https://www.dentaltown.com/images/Orthotown/magimages/0819/ll01.jpg" alt="topics" class="rounded">
+                  <img src="https://www.digitaltechnologieshub.edu.au/media/kywde1pe/digital-systems_digital-systems.jpg" alt="engi-5865" class="rounded">
+                </div>
+                <div class="course-content">
+                  <span>Topics covered:</span>
+                  <ul>
+                    <li>Parallel and distributed computing</li>
+                    <li>Advanced algorithms and data structures</li>
+                    <li>Computational complexity</li>
+                    <li>Emerging computing paradigms</li>
+                    <li>Applications in engineering</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="course-book">
+                <div class="course-cover">
+                  <div class="d-flex flex-column">
+                    <span>ENGI-5821</span>
+                    <span>Microprocessor Systems</span>  
+                  </div>
+                  <img src="https://www.dentaltown.com/images/Orthotown/magimages/0819/ll01.jpg" alt="topics" class="rounded">
+                  <img src="https://consystint.com/wp-content/uploads/2021/06/home_wlcm_img.jpg" alt="engi-5821" class="rounded">
+                </div>
+                <div class="course-content">
+                  <span>Topics covered:</span>
+                  <ul>
+                    <li>Microprocessor architecture</li>
+                    <li>Assembly language programming</li>
+                    <li>Interfacing and input/output techniques</li>
+                    <li>Interrupts and peripheral devices</li>
+                    <li>Embedded systems applications</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="course-book">
+                <div class="course-cover">
+                  <div class="d-flex flex-column">
+                    <span>HKR-2311</span>
+                    <span>Intro to Anatomy & Physiology</span>  
+                  </div>
+                  <img src="https://www.dentaltown.com/images/Orthotown/magimages/0819/ll01.jpg" alt="topics" class="rounded">
+                  <img src="https://www.pharmacy180.com/media/imgph04/oyXk77S.jpg" alt="hkr-2311" class="rounded">
+                </div>
+                <div class="course-content">
+                  <span>Topics covered:</span>
+                  <ul>
+                    <li>History and development of recreation and leisure</li>
+                    <li>Theories and concepts in recreation and leisure</li>
+                    <li>The role of recreation and leisure in society</li>
+                    <li>Career opportunities in the field</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="course-book">
+                <div class="course-cover">
+                  <div class="d-flex flex-column">
+                    <span>PSYC-1000</span>
+                    <span>Intro to Psychology</span>  
+                  </div>
+                  <img src="https://www.dentaltown.com/images/Orthotown/magimages/0819/ll01.jpg" alt="topics" class="rounded">
+                  <img src="https://study.com/cimages/course-image/psychology-101_100313_large.jpg" alt="psyc-1000" class="rounded">
+                </div>
+                <div class="course-content">
+                  <span>Topics covered:</span>
+                  <ul>
+                    <li>Biological bases of behavior</li>
+                    <li>Sensation and perception</li>
+                    <li>Learning and memory</li>
+                    <li>Developmental and social psychology</li>
+                    <li>Psychological disorders and therapies</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="course-book">
+                <div class="course-cover">
+                  <div class="d-flex flex-column">
+                    <span>ECE-6400</span>
+                    <span>Advanced Digital Signal Processing</span>  
+                  </div>
+                  <img src="https://www.dentaltown.com/images/Orthotown/magimages/0819/ll01.jpg" alt="topics" class="rounded">
+                  <img src="https://www.orientsoftware.com/Themes/Content/Images/blog/2021-10-13/software-engineering-practices-1.png" alt="ece-6400" class="rounded">
+                </div>
+                <div class="course-content">
+                  <span>Topics covered:</span>
+                  <ul>
+                    <li>Multirate signal processing</li>
+                    <li>Time-frequency representations</li>
+                    <li>Linear prediction and autoregressive modeling</li>
+                    <li>Inverse problems and signal reconstruction</li>
+                    <li>Optimal quantization</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="course-book">
+                <div class="course-cover">
+                  <div class="d-flex flex-column">
+                    <span>ECE-6600</span>
+                    <span>Communication Principles</span>  
+                  </div>
+                  <img src="https://www.dentaltown.com/images/Orthotown/magimages/0819/ll01.jpg" alt="topics" class="rounded">
+                  <img src="https://nimaparacollege.ac.in/assets/img/team/ECE.jpg" alt="ece-6600" class="rounded">
+                </div>
+                <div class="course-content">
+                  <span>Topics covered:</span>
+                  <ul>
+                    <li>Digital modulation techniques</li>
+                    <li>Error detection and correction</li>
+                    <li>Information theory and coding</li>
+                    <li>Multiple access techniques</li>
+                    <li>Wireless communication systems</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="course-book">
+                <div class="course-cover">
+                  <div class="d-flex flex-column">
+                    <span>ECE-6500</span>
+                    <span>Computer Architecture</span>  
+                  </div>
+                  <img src="https://www.dentaltown.com/images/Orthotown/magimages/0819/ll01.jpg" alt="topics" class="rounded">
+                  <img src="https://www.sigarch.org/wp-content/uploads/2017/03/Welcome.jpg" alt="ece-6500" class="rounded">
+                </div>
+                <div class="course-content">
+                  <span>Topics covered:</span>
+                  <ul>
+                    <li>State-space analysis and design</li>
+                    <li>Optimal control</li>
+                    <li>Robust control</li>
+                    <li>Adaptive control</li>
+                    <li>Nonlinear control systems</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="course-book">
+                <div class="course-cover">
+                  <div class="d-flex flex-column">
+                    <span>ECE-6610</span>
+                    <span>Digital Communications</span>  
+                  </div>
+                  <img src="https://www.dentaltown.com/images/Orthotown/magimages/0819/ll01.jpg" alt="topics" class="rounded">
+                  <img src="https://img.mwrf.com/files/base/ebm/mwrf/image/2019/03/mwrf_2609_promothinkstock_0.png?auto=format,compress&fit=fill&fill=blur&w=1200&h=630" alt="ece-6610" class="rounded">
+                </div>
+                <div class="course-content">
+                  <span>Topics covered:</span>
+                  <ul>
+                    <li>Microprocessor architecture and design</li>
+                    <li>Assembly language programming</li>
+                    <li>Interfacing and input/output techniques</li>
+                    <li>Interrupts and peripheral devices</li>
+                    <li>Embedded systems applications</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="course-book">
+                <div class="course-cover">
+                  <div class="d-flex flex-column">
+                    <span>PSYC-2150</span>
+                    <span>Intro to Forensic Psychology</span>  
+                  </div>
+                  <img src="https://www.dentaltown.com/images/Orthotown/magimages/0819/ll01.jpg" alt="topics" class="rounded">
+                  <img src="https://www.verywellmind.com/thmb/faGbHN32UXpr2ln1dXSi_84hAmw=/5190x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-103300237-56a7972f5f9b58b7d0ebf58d.jpg" alt="psyc-2150" class="rounded">
+                </div>
+                <div class="course-content">
+                  <span>Topics covered:</span>
+                  <ul>
+                    <li>Experimental design</li>
+                    <li>Data collection and analysis</li>
+                    <li>Ethical considerations in research</li>
+                    <li>Writing research reports</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="course-book">
+                <div class="course-cover">
+                  <div class="d-flex flex-column">
+                    <span>ECE-7600</span>
+                    <span>Intro to Digital Signal Proc</span>  
+                  </div>
+                  <img src="https://www.dentaltown.com/images/Orthotown/magimages/0819/ll01.jpg" alt="topics" class="rounded">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfoSUy0fOVq8QR7lBTyDvEYIQjhJl6f2FAbw&s" alt="ece-7600" class="rounded">
+                </div>
+                <div class="course-content">
+                  <span>Topics covered:</span>
+                  <ul>
+                    <li>Emerging technologies</li>
+                    <li>Advanced research methodologies</li>
+                    <li>Specialized topics in areas like nanotechnology, quantum computing, or photonics</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="course-book">
+                <div class="course-cover">
+                  <div class="d-flex flex-column">
+                    <span>ME-7204</span>
+                    <span>Robotics and Automation</span>  
+                  </div>
+                  <img src="https://www.dentaltown.com/images/Orthotown/magimages/0819/ll01.jpg" alt="topics" class="rounded">
+                  <img src="https://datafloq.com/wp-content/uploads/2023/08/robotics-and-automation.jpg" alt="me-7204" class="rounded">
+                </div>
+                <div class="course-content">
+                  <span>Topics covered:</span>
+                  <ul>
+                    <li>Thermodynamic cycles</li>
+                    <li>Exergy analysis</li>
+                    <li>Phase and chemical reaction equilibria</li>
+                    <li>Transport properties</li>
+                    <li>Thermodynamic modeling and simulation</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="course-book">
+                <div class="course-cover">
+                  <div class="d-flex flex-column">
+                    <span>MED-6250</span>
+                    <span>Basic Clincl Epidemiology</span>  
+                  </div>
+                  <img src="https://www.dentaltown.com/images/Orthotown/magimages/0819/ll01.jpg" alt="topics" class="rounded">
+                  <img src="https://gdce.healthsci.mcmaster.ca/wp-content/uploads/2022/12/GDCE-HOME-HERO-BANNER-1400x600.png" alt="med-6250" class="rounded">
+                </div>
+                <div class="course-content">
+                  <span>Topics covered:</span>
+                  <ul>
+                    <li>Patient autonomy and informed consent</li>
+                    <li>Confidentiality and privacy</li>
+                    <li>End-of-life decisions</li>
+                    <li>Resource allocation</li>
+                    <li>Ethical dilemmas in medical practice</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="course-book">
+                <div class="course-cover">
+                  <div class="d-flex flex-column">
+                    <span>ECE-7000</span>
+                    <span>Design Project I</span>  
+                  </div>
+                  <img src="https://www.dentaltown.com/images/Orthotown/magimages/0819/ll01.jpg" alt="topics" class="rounded">
+                  <img src="https://assets.asana.biz/transform/d2ffb5c8-a7c2-4e39-8447-f8e2501c5bdc/article-project-planning-project-design-2x" alt="ece-7000" class="rounded">
+                </div>
+                <div class="course-content">
+                  <span>Topics covered:</span>
+                  <ul>
+                    <li>Literature review and critical analysis</li>
+                    <li>Research design and methodology</li>
+                    <li>Data analysis and interpretation</li>
+                    <li>Scientific writing and presentation</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="course-book">
+                <div class="course-cover">
+                  <div class="d-flex flex-column">
+                    <span>ECE-7400</span>
+                    <span>Concurrent Programming</span>  
+                  </div>
+                  <img src="https://www.dentaltown.com/images/Orthotown/magimages/0819/ll01.jpg" alt="topics" class="rounded">
+                  <img src="https://miro.medium.com/v2/resize:fit:640/1*_AmBUVvu4j6T840bTXbCvw.jpeg" alt="ece-7400" class="rounded">
+                </div>
+                <div class="course-content">
+                  <span>Topics covered:</span>
+                  <ul>
+                    <li>AI, IoT, robotics, embedded systems</li>
+                    <li>Filtering, wavelets, 5G, wireless networks</li>
+                    <li>Control, optimization techniques</li>
+                    <li>Smart grids, renewable energy, power electronics</li>
+                    <li>High-performance circuits, parallel processing</li>
+                  </ul>                                  
+                </div>
+              </div>
+              <div class="course-book">
+                <div class="course-cover">
+                  <div class="d-flex flex-column">
+                    <span>ENGI-8103</span>
+                    <span>Engineering in Medicine</span>  
+                  </div>
+                  <img src="https://www.dentaltown.com/images/Orthotown/magimages/0819/ll01.jpg" alt="topics" class="rounded">
+                  <img src="https://assets.everspringpartners.com/dims4/default/98aeb07/2147483647/strip/true/crop/476x250+72+0/resize/1200x630!/quality/90/?url=http%3A%2F%2Feverspring-brightspot.s3.us-east-1.amazonaws.com%2F78%2Fe2%2F8280dcad4d4e980231d054ea734e%2F19941.jpg" alt="engi-8103" class="rounded">
+                </div>
+                <div class="course-content">
+                  <span>Topics covered:</span>
+                  <ul>
+                    <li>Engineering in biological systems</li>
+                    <li>Imaging techniques and processing</li>
+                    <li>Materials for implants and prosthetics</li>
+                    <li>Medical device development and regulation</li>
+                    <li>Emerging trends: AI, robotics, telemedicine</li>
+                  </ul>                                  
+                </div>
+              </div>
+              <div class="course-book">
+                <div class="course-cover">
+                  <div class="d-flex flex-column">
+                    <span>ECE-8420</span>
+                    <span>Cryptography</span>  
+                  </div>
+                  <img src="https://www.dentaltown.com/images/Orthotown/magimages/0819/ll01.jpg" alt="topics" class="rounded">
+                  <img src="https://arksolvers.com/wp-content/uploads/2024/07/What-is-Cryptography.jpeg" alt="ece-8420" class="rounded">
+                </div>
+                <div class="course-content">
+                  <span>Topics covered:</span>
+                  <ul>
+                    <li>Confidentiality, integrity, authentication</li>
+                    <li>Historical ciphers</li>
+                    <li>Symmetric & public key cryptography</li>
+                    <li>Key exchange, signatures, hashing</li>
+                    <li>Use cases & cryptanalysis</li>
+                  </ul>                                                 
+                </div>
+              </div>
+              <div class="course-book">
+                <div class="course-cover">
+                  <div class="d-flex flex-column">
+                    <span>HKR-4703</span>
+                    <span>Occupat Ergo & Sport Biomechan</span>  
+                  </div>
+                  <img src="https://www.dentaltown.com/images/Orthotown/magimages/0819/ll01.jpg" alt="topics" class="rounded">
+                  <img src="https://auptimo.com/wp-content/uploads/biomechanical-analysis_cover-photo.png" alt="hkr-4703" class="rounded">
+                </div>
+                <div class="course-content">
+                  <span>Topics covered:</span>
+                  <ul>
+                    <li>Optimizing work environments for safety and efficiency</li>
+                    <li>Body mechanics in work and sports</li>
+                    <li>Risk reduction in tasks and sports</li>
+                    <li>Motion capture, force plates, EMG</li>
+                    <li>Biomechanics for technique and productivity</li>
+                  </ul>                                 
+                </div>
+              </div>
+              <div class="course-book">
+                <div class="course-cover">
+                  <div class="d-flex flex-column">
+                    <span>ECE-8400</span>
+                    <span>Real-time Operating Systems</span>  
+                  </div>
+                  <img src="https://www.dentaltown.com/images/Orthotown/magimages/0819/ll01.jpg" alt="topics" class="rounded">
+                  <img src="https://images.blackberry.com/is/image/blackberry/rtos-it1-pillar-what-is-rtos-1?wid=612&fmt=png-alpha" alt="ece-8400" class="rounded">
+                </div>
+                <div class="course-content">
+                  <span>Topics covered:</span>
+                  <ul>
+                    <li>Real-time systems: Constraints, examples</li>
+                    <li>RTOS: Scheduling, multitasking, IPC</li>
+                    <li>Scheduling: RMS, EDF, priority</li>
+                    <li>Concurrency: Threads, semaphores, deadlock</li>
+                  </ul>                                
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class="w-100 d-flex" style="margin-top: 100px;">
+            <div class="d-flex flex-column justify-content-end position-relative" style="height: 950px; flex: 1;">
+              <div class="book" id="eim">
+                <div class="cover">
+                  <img src="images/projectCovers/EIM.png" alt="topics">
+                </div>
+                <div class="page"></div>
+                <div class="page"></div>
+                <div class="page"></div>
+                <div class="page"></div>
+                <div class="page">
+                  <span>A detailed report analyzing the effects of various MATLAB filters in isolating brain waves to develop a functional brain-computer interface algorithm.</span>
+                  <br />
+                  <span>This project provided an exciting introduction to real-world biomedical applications and was an incredibly rewarding experience!</span>                
+                </div>
+                <div class="last-page">
+                  <iframe src="./pdfs/EIMProject.pdf" title="Embedded PDF Viewer"></iframe>
+                </div>
+                <div class="back-cover">
+                  <img src="images/projectCovers/EIM.png" alt="topics">
+                </div>
+              </div>
+              <div class="book" id="insulin">
+                <div class="cover">
+                  <img src="images/projectCovers/insulin.png" alt="topics">
+                </div>
+                <div class="page"></div>
+                <div class="page"></div>
+                <div class="page"></div>
+                <div class="page"></div>
+                <div class="page">
+                  <span>Another project from my biomedical classes. For this I was required to scoure many medical research papers and get to know on up to date research taking place.</span>
+                  <br />
+                  <span>A super interesting dive into critiqueing research papers and finding flaws, great real use applications.</span>                
+                </div>
+                <div class="last-page">
+                  <iframe src="./pdfs/FinalReport.pdf" title="Embedded PDF Viewer"></iframe>
+                </div>
+                <div class="back-cover">
+                  <img src="images/projectCovers/insulin.png" alt="topics">
+                </div>
+              </div>
+              <div class="book" id="waggle">
+                <div class="cover">
+                  <img src="images/projectCovers/waggle.png" alt="topics">
+                </div>
+                <div class="page"></div>
+                <div class="page"></div>
+                <div class="page"></div>
+                <div class="page"></div>
+                <div class="page">
+                  <span>As part of the Waggle project, we developed an implementation plan and followed through on it. This was my first experience working with a client—holding progress meetings, receiving feedback, and making updates based on their requirements.</span>
+                  <br />
+                  <span>Waggle provided a fantastic, hands-on experience in teamwork, client collaboration, and completing a project within a deadline.</span>                
+                </div>
+                <div class="last-page">
+                  <iframe src="./pdfs/WaggleImplementationPlan.pdf" title="Embedded PDF Viewer"></iframe>
+                </div>
+                <div class="back-cover">
+                  <img src="images/projectCovers/waggle.png" alt="topics">
+                </div>
+              </div>
+              <div class="bookshelf"></div>
+              <div class="book" id="frontend">
+                <div class="cover">
+                  <img src="images/projectCovers/frontend.png" alt="topics">
+                </div>
+                <div class="page"></div>
+                <div class="page"></div>
+                <div class="page"></div>
+                <div class="page"></div>
+                <div class="page">
+                  <span>As part of my first co-op at HYKE, I focused extensively on backend unit testing. I also created a detailed report outlining the best practices for unit testing and explaining its importance.</span>                </div>
+                <div class="last-page">
+                  <iframe src="./pdfs/HykeFrontend.pdf" title="Embedded PDF Viewer"></iframe>
+                </div>
+                <div class="back-cover">
+                  <img src="images/projectCovers/frontend.png" alt="topics">
+                </div>
+              </div>
+              <div class="book" id="backend">
+                <div class="cover">
+                  <img src="images/projectCovers/backend.png" alt="topics">
+                </div>
+                <div class="page"></div>
+                <div class="page"></div>
+                <div class="page"></div>
+                <div class="page"></div>
+                <div class="page">
+                  <span>As part of my second co-op at HYKE, I worked on transitioning the frontend framework from React to Vue. During this process, we aimed to enhance the reusability of our code as we recreated the base project.</span>
+                  <br />
+                  <span>I also created a report outlining best practices for maintaining a sustainable and long-lasting codebase.</span>                
+                </div>
+                <div class="last-page">
+                  <iframe src="./pdfs/HYKEBackendUnitTesting.pdf" title="Embedded PDF Viewer"></iframe>
+                </div>
+                <div class="back-cover">
+                  <img src="images/projectCovers/backend.png" alt="topics">
+                </div>
+              </div>
+              <div class="bookshelf"></div>
+            </div>
+            <div class="text-box d-flex flex-column justify-content-center align-items-center" style="width: 400px; height: fit-content; padding: 30px;">
+              <span>During my Computer Engineering degree I was able to work on a lot of really interesting projects, varying from technical, website design, to biomedical topics.</span>
+              <br />
+              <span>I've compiled some of my favorites here for you to see some of the stuff I've worked on in University. Click on one to read more about it!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   </section>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container position-fixed top-0 start-50 translate-middle-x p-3" style="z-index: 1055;">
+      <div id="successToast" class="toast text-bg-success" role="alert" aria-live="assertive" aria-atomic="true">
+        Sent! Only good things to come 🚀
+      </div>
+      <div id="errorToast" class="toast text-bg-danger" role="alert" aria-live="assertive" aria-atomic="true">
+        Something went wrong, try again.
+      </div>
+  </div>
+   <!-- Scripts -->
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+       <!-- EmailJS Library -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS
+        emailjs.init("nTsW9fWVvYrfDjhpL"); // Replace with your EmailJS public key
+
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent the default form submission
+
+            // Collect form data
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Send email using EmailJS
+            emailjs.send("service_wkxy4xn", "template_wkn40cn", {
+                from_name: name,
+                from_email: email,
+                message: message,
+            })
+            .then(() => {
+                showToast('successToast');
+                document.getElementById('contactForm').reset();
+                const modalElement = document.getElementById('contactModal');
+                const modalInstance = bootstrap.Modal.getInstance(modalElement);
+                modalInstance.hide();
+            })
+            .catch((error) => {
+                showToast('errorToast');
+            });
+        });
+
+        function showToast(toastId) {
+          const toastElement = document.getElementById(toastId);
+          const toast = new bootstrap.Toast(toastElement);
+          toast.show();
+        }
+    </script>
+    <script>
+      const container = document.getElementById("overview-box");
+      const overviewBackground = document.querySelector('.overview-background');
+      const video = document.getElementById("scroll-video");
+      video.playbackRate -= 0.75;
+
+      const boxRect = overviewBackground.getBoundingClientRect();
+      const scrollTo = window.scrollY + boxRect.bottom - window.innerHeight;
+
+      function isElementVisible() {
+        const rect = container.getBoundingClientRect();
+        return rect.top >= 0;
+      }
+
+      window.addEventListener("wheel", (event) => {
+        const isAtEnd = container.scrollLeft + (container.clientWidth * 1.6) >= container.scrollWidth;
+        if (isAtEnd) {
+          overviewBackground.style.transform = 'translate(0)';
+        } else {
+          overviewBackground.style.transform = 'translate(-50%)';
+        }
+
+        // scroll down
+        if (isElementVisible() && event.deltaY >= 0 && ((container.scrollLeft + container.clientWidth) < container.scrollWidth)) {
+          window.scrollTo({
+            top: scrollTo,
+            behavior: 'smooth'
+          })
+          event.preventDefault();
+          container.scrollLeft += event.deltaY;
+        } else {
+          // scroll up
+          if (isElementVisible() && event.deltaY < 0 && container.scrollLeft > 0) {
+            window.scrollTo({
+              top: scrollTo,
+              behavior: 'smooth'
+            })
+            event.preventDefault();
+            container.scrollLeft += event.deltaY;
+          }
+        }
+      }, { passive: false });
+    </script>
+    <script>
+      function updateClass(element) {
+        if (element.classList.contains('open')) {
+          element.classList.toggle('open');
+          setTimeout(() => {
+            element.classList.toggle('center');
+          }, 2000)
+        } else {
+          element.classList.toggle('center');
+          element.classList.toggle('opening');
+          setTimeout(() => {
+            element.classList.toggle('opening');
+          }, 1900)
+          setTimeout(() => {
+            element.classList.toggle('open');
+          }, 2000)
+        }
+      }
+      document.getElementById('eim').addEventListener('click', function () {
+        updateClass(this);
+      });
+      document.getElementById('insulin').addEventListener('click', function () {
+        updateClass(this);
+      });
+      document.getElementById('waggle').addEventListener('click', function () {
+        updateClass(this);
+      });
+      document.getElementById('frontend').addEventListener('click', function () {
+        updateClass(this);
+      });
+      document.getElementById('backend').addEventListener('click', function () {
+        updateClass(this);
+      });
+    </script>
+  </body>
+</html>
