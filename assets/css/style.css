@@ -11831,9 +11831,9 @@ textarea.form-control-lg {
   border-radius: 0.1rem solid rgba(255, 255, 255, 0.6);
   background-color: #fff;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .btn-rounded {
-    padding: 0;
+    padding: 0 !important;
   }
 }
 .btn-rounded span {
@@ -12698,6 +12698,18 @@ iframe {
 }
 .border-animation--border-2 {
   animation-delay: 1.5s;
+}
+
+.mobile-menu {
+  display: none;
+}
+@media screen and (max-width: 992px) {
+  .mobile-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
