@@ -2,7 +2,6 @@
 @use '../components/mixins' as *;
 
 .menu {
-  @include gradient;
   li {
     padding: 0 0.7rem;
 

@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Abigayle Hickey - Fullstack Developer 🤓</title> 
+  <link rel="icon" type="image/png" href="./images/logo.png">
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="assets/css/style.css"> 
@@ -17,30 +18,27 @@
 </head>
 <body id="main" style="overflow-x: hidden;">
   <!-- Navbar section -->
-  <nav class="navbar navbar-expand-lg navbar-dark menu shadow fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="images/logo.png" alt="Logo image" style="width: 100px; height: auto;">
+  <nav class="navbar navbar-expand-lg navbar-dark menu shadow fixed-top" style="height: 100px; overflow: hidden; padding: 0px;">
+    <div class="w-100 h-100 d-flex justify-content-between">
+      <a class="navbar-brand d-flex justify-content-center align-items-center" style="padding-left: 10px;" href="#">
+        <img src="images/logo.png" alt="Logo image" style="width: 70px; height: auto;">
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+      <div class="collapse d-none d-lg-block navbar-collapse justify-content-end" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="#overview">Overview</a>
+            <a class="nav-link" href="#overview">Overview 📖</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#skills">Skills</a>
+            <a class="nav-link" href="#skills">Skills 💡</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#pastProjects">Past Projects</a>
+            <a class="nav-link" href="#pastProjects">Past Projects 💻</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#experience">Experience</a>
+            <a class="nav-link" href="#experience">Experience 💼</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#education">Education</a>
+            <a class="nav-link" href="#education">Education 🎓</a>
           </li>
         </ul>
         <a class="logo-button" href="https://github.com/abigayleh" target="_blank" rel="noopener noreferrer">
@@ -94,153 +92,192 @@
           </div>
         </div>      
       </div>
+      <div class="collapse d-flex flex-row d-lg-none navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <a class="logo-button" href="https://github.com/abigayleh" target="_blank" rel="noopener noreferrer">
+          <img 
+            style="width: 30px; height: auto;"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/640px-Octicons-mark-github.svg.png" 
+            alt="GitHub Logo"
+          >
+        </a>        
+        <a class="logo-button" style="margin-right: 50px;" href="https://www.linkedin.com/in/abigayle-hickey-7582331b8/" target="_blank" rel="noopener noreferrer">
+          <img 
+            class="rounded-circle"  
+            style="width: 32px; height: auto;"
+            src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" 
+            alt="Linkdln Logo"
+          >
+        </a>        
+        <button type="button" class="rounded-pill btn-rounded" data-bs-toggle="modal" data-bs-target="#contactModal">
+          <span><i class="fas fa-phone-alt"></i></span>
+        </button>
+        <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+              <div class="modal-content position-relative">
+                  <div class="position-absolute bottom-0 end-0">
+                    <img src="images/rocket.png" alt="Rocket" style="z-index: 2000; width: 300px; height: auto;">
+                  </div>
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="contactModalLabel">Let's get the conversation flowing 💬</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                      <!-- Contact Form -->
+                      <form id="contactForm">
+                          <div class="mb-3">
+                              <label for="name" class="form-label">Name</label>
+                              <input type="text" class="form-control opacity-75" id="name" placeholder="Your Name" required>
+                          </div>
+                          <div class="mb-3">
+                              <label for="email" class="form-label">Email</label>
+                              <input type="email" class="form-control opacity-75" id="email" placeholder="Your Email" required>
+                          </div>
+                          <div class="mb-3">
+                              <label for="message" class="form-label">Description</label>
+                              <textarea class="form-control opacity-75" id="message" rows="3" placeholder="Your Message" required></textarea>
+                          </div>
+                          <button type="submit" class="btn bg-white w-100">Send</button>
+                      </form>
+                  </div>
+              </div>
+          </div>
+        </div>      
+      </div>
     </div>
   </nav>
   <!-- Intro section -->
-  <section id="home" class="intro-section">
-    <div class="container">
-      <div class="row align-items-center text-white">
-        <div class="col-md-6 intros">
-          <h1 class="display-2">
-            <span class="display-2--intro">Hi! I'm Abigayle </span>
-            <span class="display-2--description lh-base">
-              Fancy meeting you here! 🤭 I'm a Fullstack Developer with passion for development and design 🎨 Keep scrolling to help get us better aquainted 
-            </span>
-          </h1>
-        </div>
-        <div class="col-md-6 intros text-end">
-          <div class="video-box">
-            <img src="images/developer.png" alt="developer" class="position-absolute top-50 start-50 translate-middle">
-            <!-- <a class="position-absolute top-50 start-50 translate-middle">
-              <span>
-                <i class="fas fa-play-circle"></i>
-              </span>
-              <span class="border-animation border-animation--border-1"></span>
-              <span class="border-animation border-animation--border-2"></span>
-            </a> -->
+  <section id="home">
+    <div>
+      <div style="height: 100px;"></div>
+      <div class="position-relative w-100 h-100">
+        <img src="images/intro-image.png" alt="developer" class="w-100 h-100 object-cover">
+        <div class="position-absolute top-0 d-flex flex-column justify-content-between w-100 h-100">
+          <div class="w-50 h-100 d-flex justify-content-end align-items-end text-black" style="text-align: center; flex-wrap: wrap;">
+            <div class="d-flex flex-column intros h-100 justify-content-center">
+              <h1 class="display-2">
+                <span class="display-2--intro">Hi! I'm Abigayle </span>
+                <span class="display-2--description lh-base">
+                  Fancy meeting you here! 🤭 I'm a Fullstack Developer with passion for development and design 🎨 Keep scrolling to help get us better acquainted
+                </span>
+              </h1>
+            </div>
           </div>
-        </div>
+          <div class="scroll-container-move">
+            <div class="fact-box">4+ years experience</div>
+            <div class="fact-box">Fullstack Developer</div>
+            <div class="fact-box">Leadership Experience</div>
+            <div class="fact-box">Vue, React, Quasar</div>
+            <div class="fact-box">JavaScript</div>
+            <div class="fact-box">C#, .NET, Node.js</div>
+            <div class="fact-box">SQL, Database Development</div>
+            <div class="fact-box">Design and Innovation</div>
+            <div class="fact-box">Flutter, XCode</div>
+            <div class="fact-box">Team Collaboration</div>
+            <div class="fact-box">4+ years experience</div>
+            <div class="fact-box">Fullstack Developer</div>
+            <div class="fact-box">Leadership Experience</div>
+            <div class="fact-box">Vue, React, Quasar</div>
+            <div class="fact-box">JavaScript</div>
+            <div class="fact-box">C#, .NET, Node.js</div>
+            <div class="fact-box">SQL, Database Development</div>
+            <div class="fact-box">Design and Innovation</div>
+            <div class="fact-box">Flutter, XCode</div>
+            <div class="fact-box">Team Collaboration</div>
+          </div>
+        </div>  
       </div>
     </div>
-    <div class="scroll-container-move" style="margin-top: 8rem;">
-      <div class="fact-box">4+ years experience</div>
-      <div class="fact-box">Fullstack Developer</div>
-      <div class="fact-box">Leadership Experience</div>
-      <div class="fact-box">Vue, React, Quasar</div>
-      <div class="fact-box">JavaScript</div>
-      <div class="fact-box">C#, .NET, Node.js</div>
-      <div class="fact-box">SQL, Database Development</div>
-      <div class="fact-box">Design and Innovation</div>
-      <div class="fact-box">Flutter, XCode</div>
-      <div class="fact-box">Team Collaboration</div>
-      <div class="fact-box">4+ years experience</div>
-      <div class="fact-box">Fullstack Developer</div>
-      <div class="fact-box">Leadership Experience</div>
-      <div class="fact-box">Vue, React, Quasar</div>
-      <div class="fact-box">JavaScript</div>
-      <div class="fact-box">C#, .NET, Node.js</div>
-      <div class="fact-box">SQL, Database Development</div>
-      <div class="fact-box">Design and Innovation</div>
-      <div class="fact-box">Flutter, XCode</div>
-      <div class="fact-box">Team Collaboration</div>
-    </div>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,224L48,213.3C96,203,192,181,288,160C384,139,480,117,576,138.7C672,160,768,224,864,240C960,256,1056,224,1152,218.7C1248,213,1344,235,1392,245.3L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
   </section>
   <!-- Overview -->
-  <section id="overview" class="overview">
-    <div id="overview-container" class="container">
+  <section id="overview" class="background overview">
+    <div id="overview-container" class="container" style="margin-top: 20px;">
       <div class="row text-center">
         <h1 class="display-3 fw-bold">Overview</h1>
         <div class="heading-line mb-2"></div>
-        <div class="mantra" style="width: 30rem; background-color: #0dcaf0;">
+        <div class="mantra" style="width: 30rem;">
           <div>
             <span>"Effort fuels dreams; determination makes them real."</span>
           </div>
         </div>
         <div id="overview-box" class="overview-box">
-          <img id="background-gif" class="overview-gif" src="images/walking-gif.gif" alt="walking">
+          <img id="background-gif" class="overview-gif" src="images/overview/walking-gif.gif" alt="walking">
           <video id="scroll-video" class="overview-background" autoplay loop muted>
-            <source src="images/townBackground.mp4" type="video/mp4">
+            <source src="images/overview/townBackground.mp4" type="video/mp4">
           </video>
-          <div class="overview-text d-flex flex-column">
-            <div class="overview-text" style="margin: 0px; padding: 0px; width: 400px;">
-              <span>So, where does my story begin?</span>
-            </div>
+          <div class="overview-text positon-relative">
+            <span>So, where does my story begin?</span>
+            <span>Swipe left to find out ➡️</span>
           </div>
-          <div class="overview-text">
+          <div class="overview-text d-flex flex-row justify-content-center align-items-center">
+            <div class="overview-image">
+              <img src="images/overview/nl-1.jpg" alt="newfoundland">
+            </div>
             <span>Born and raised in Newfoundland I have a love for technology, creativity and adventure!</span>
-            <div class="d-flex">
-              <div class="overview-image" style="transform: rotate(-2deg);">
-                <img src="images/overview/nl-1.jpg" alt="newfoundland">
-              </div>
-              <div class="overview-image" style="transform: rotate(4deg);">
-                <img style="object-position: 50% 75%" src="images/overview/nl-2.jpg" alt="newfoundland">  
-              </div>
+            <div class="overview-image">
+              <img style="object-position: 50% 75%" src="images/overview/nl-2.jpg" alt="newfoundland">  
             </div>
           </div>
-          <div class="overview-text">
+          <div class="overview-text d-flex flex-row justify-content-center align-items-center">
+            <div class="overview-image">
+              <img src="images/experience/waggleTeam.jpg" alt="Waggle Team">
+            </div>
             <span>I pursued a Computer Engineering degree at Memorial University of Newfoundland, where I was able to learn a lot of experience through my co-op and capstone projects</span>
-            <div class="d-flex">
-              <div class="overview-image" style="transform: rotate(-2deg);">
-                <img style="object-position: 50% 20%" src="images/waggleTeam.jpg" alt="Waggle Team">
-              </div>
-              <div class="overview-image" style="transform: rotate(4deg);">
-                <img style="object-position: 80% 20%" src="images/KCADeutag.JPG" alt="KCA Deutag">  
-              </div>
+            <div class="overview-image">
+              <img src="images/experience/KCADeutag.JPG" alt="KCA Deutag">  
             </div>
           </div>
-          <div class="overview-text">
+          <div class="overview-text d-flex flex-row justify-content-center align-items-center">
+            <div class="overview-image">
+              <img src="images/overview/gradFamily.JPG" alt="Grad with family">
+            </div>
             <span>After graduation, my final co-op, HYKE hired me as a full time Software Developer, where I continued to grow as a Fullstack Developer</span>
-            <div class="d-flex">
-              <div class="overview-image" style="transform: rotate(-2deg);">
-                <img style="object-position: 50% 30%" src="images/gradFamily.JPG" alt="Grad with family">
-              </div>
-              <div class="overview-image" style="transform: rotate(4deg);">
-                <img style="object-fit: contain; object-position: 50% 40%" src="images/hyke.png" alt="HYKE">  
-              </div>
+            <div class="overview-image">
+              <img src="images/overview/hyke.png" alt="HYKE">  
             </div>
           </div>
-          <div class="overview-text">
+          <div class="overview-text d-flex flex-row justify-content-center align-items-center">
+            <div class="overview-image">
+              <img src="images/overview/hanbok.JPG" alt="Korea photo">
+            </div>
             <span>Shortly after that I pursued a life long dream of adventure, and went abroad to live in South Korea, travelling Asia while continuing to work remotely.</span>
-            <div class="d-flex">
-              <div class="overview-image" style="transform: rotate(-2deg);">
-                <img style="object-position: 80% 60%; margin-top: 20px;" src="images/hanbok.JPG" alt="Korea photo">
-              </div>
-              <div class="overview-image" style="transform: rotate(4deg);">
-                <img style="width: 100%; height: 100%; object-fit: contain;" src="images/friendsInKorea.JPG" alt="Korea photo">  
-              </div>
+            <div class="overview-image">
+              <img src="images/overview/friendsInKorea.JPG" alt="Korea photo">  
             </div>
           </div>
-          <div class="overview-text">
+          <div class="overview-text d-flex flex-row justify-content-center align-items-center">
+            <div class="overview-image">
+              <img src="images/overview/friends.JPG" alt="Friends">
+            </div>
             <span>Missing my friends and family brought me back to Canada, where I'm now living in Toronto.</span>
-            <div class="d-flex">
-              <div class="overview-image" style="transform: rotate(-2deg);">
-                <img style="object-fit: contain; margin-left: 30px; margin-top: 50px; border-radius: 50px;" src="images/friends.JPG" alt="Friends">
-              </div>
-              <div class="overview-image" style="transform: rotate(4deg);">
-                <img style="object-fit: contain;;" src="images/family.jpg" alt="Family">  
-              </div>
+            <div class="overview-image">
+              <img src="images/overview/family.jpg" alt="Family">  
             </div>
           </div>
-          <div class="overview-text" style="padding-right: 300px;">
+          <div class="overview-text d-flex flex-row justify-content-center align-items-center">
+            <div class="overview-image">
+              <img src="images/overview/soloPhoto.JPG" alt="newfoundland">
+            </div>
             <span>Here I continue working as a Fullstack Developer, where I thrive bringing my imagination to reality! I have a passion for creating fun, fresh designs, and love learning new techniques to advance myself even more!</span>
-            <div class="d-flex">
-              <div class="overview-image" style="transform: rotate(-2deg);">
-                <img style="object-position: 50% 35%" src="images/soloPhoto.JPG" alt="newfoundland">
-              </div>
-              <div class="overview-image" style="transform: rotate(4deg);">
-                <img style="object-position: 50% 50%" src="images/dog.jpg" alt="newfoundland">  
-              </div>
+            <div class="overview-image" style="transform: rotate(4deg);">
+              <img src="images/overview/dog.jpg" alt="newfoundland">  
+            </div>
+          </div>
+          <div class="overview-text d-flex flex-row justify-content-center align-items-center">
+            <div class="overview-image">
+              <img src="images/overview/soloPhoto.JPG" alt="newfoundland">
+            </div>
+            <span>Here I continue working as a Fullstack Developer, where I thrive bringing my imagination to reality! I have a passion for creating fun, fresh designs, and love learning new techniques to advance myself even more!</span>
+            <div class="overview-image">
+              <img src="images/overview/dog.jpg" alt="newfoundland">  
             </div>
           </div>
         </div>
       </div>
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0dcaf0" fill-opacity="1" d="M0,224L48,213.3C96,203,192,181,288,160C384,139,480,117,576,138.7C672,160,768,224,864,240C960,256,1056,224,1152,218.7C1248,213,1344,235,1392,245.3L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg> 
-    </section>
+  </section>
   <!-- Skills -->
-  <section id="skills" class="skills">
-    <div class="container text-white">
+  <section id="skills" class="background skills">
+    <div class="container">
       <div class="row text-center">
         <h1 class="display-3 fw-bold">Skills</h1>
         <div class="heading-line mb-2"></div>
@@ -250,47 +287,47 @@
           </div>
         </div>
         <div class="d-flex flex-column align-items-center justify-content-center">
-          <div class="d-flex flex-column align-items-center">
+          <div class="d-flex flex-column align-items-center" style="padding-top: 20px;">
             <div class="title-box">Frontend Development</div>
             <div class="scroll-container-move">
               <div class="skill-logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1150px-React-icon.svg.png" alt="React" style="width: 100px; height: auto;" class="rounded">    
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1150px-React-icon.svg.png" alt="React"  class="rounded">    
                 React
               </div>
               <div class="skill-logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/2367px-Vue.js_Logo_2.svg.png" alt="Vue.js" style="width: 100px; height: auto;" class="rounded">    
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/2367px-Vue.js_Logo_2.svg.png" alt="Vue.js"  class="rounded">    
                 Vue.js
               </div>
               <div class="skill-logo">
-                <img src="https://cdn.quasar.dev/logo-v2/512/logo.png" alt="Quasar" style="width: 100px; height: auto;" class="rounded">    
+                <img src="https://cdn.quasar.dev/logo-v2/512/logo.png" alt="Quasar"  class="rounded">    
                 Quasar
               </div>
               <div class="skill-logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/2048px-HTML5_logo_and_wordmark.svg.png" alt="HTML" style="width: 100px; height: auto;" class="rounded">    
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/2048px-HTML5_logo_and_wordmark.svg.png" alt="HTML"  class="rounded">    
                 HTML
               </div>
               <div class="skill-logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/2048px-CSS3_logo.svg.png" alt="CSS" style="width: 100px; height: auto;" class="rounded">    
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/2048px-CSS3_logo.svg.png" alt="CSS"  class="rounded">    
                 CSS
               </div>
               <div class="skill-logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/640px-JavaScript-logo.png" alt="JavaScript" style="width: 100px; height: auto;" class="rounded">    
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/640px-JavaScript-logo.png" alt="JavaScript"  class="rounded">    
                 JavaScript
               </div>
               <div class="skill-logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png" alt="TypeScript" style="width: 100px; height: auto;" class="rounded">    
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png" alt="TypeScript"  class="rounded">    
                 TypeScript
               </div>
               <div class="skill-logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2560px-Tailwind_CSS_Logo.svg.png" alt="TailwindCSS" style="width: 100px; height: auto;" class="rounded">    
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2560px-Tailwind_CSS_Logo.svg.png" alt="TailwindCSS"  class="rounded">    
                 TailwindCSS
               </div>
               <div class="skill-logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/2560px-Bootstrap_logo.svg.png" alt="Bootstrap" style="width: 100px; height: auto;" class="rounded">    
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/2560px-Bootstrap_logo.svg.png" alt="Bootstrap"  class="rounded">    
                 Bootstrap
               </div>
               <div class="skill-logo">
-                <img src="https://sass-lang.com/assets/img/styleguide/seal-color.png" alt="Sass" style="width: 100px; height: auto;" class="rounded">    
+                <img src="https://sass-lang.com/assets/img/styleguide/seal-color.png" alt="Sass"  class="rounded">    
                 Sass
               </div>
               <div class="skill-logo">
@@ -298,15 +335,15 @@
                 Figma
               </div>
               <div class="skill-logo">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeRCZwYt5DmueaeCY3GPhsJfBhSxHZ7gXikQ&s" alt="Frill" style="width: 100px; height: auto;" class="rounded">    
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeRCZwYt5DmueaeCY3GPhsJfBhSxHZ7gXikQ&s" alt="Frill"  class="rounded">    
                 Frill
               </div>
               <div class="skill-logo">
-                <img src="https://store-images.s-microsoft.com/image/apps.29332.512b1d3d-80ec-4aec-83bb-411008d2f7cd.76371b6f-9386-463f-bfb0-b75cffb86a4f.bd99f4b1-b18e-4380-aa79-93768763c90d.png" alt="Clarity" style="width: 100px; height: auto;" class="rounded">    
+                <img src="https://store-images.s-microsoft.com/image/apps.29332.512b1d3d-80ec-4aec-83bb-411008d2f7cd.76371b6f-9386-463f-bfb0-b75cffb86a4f.bd99f4b1-b18e-4380-aa79-93768763c90d.png" alt="Clarity"  class="rounded">    
                 Clarity
               </div>
               <div class="skill-logo">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7J-t30vXlx-zzzeyho6kj1d2izADpsm_r6A&s" alt="Usetiful" style="width: 100px; height: auto;" class="rounded">    
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7J-t30vXlx-zzzeyho6kj1d2izADpsm_r6A&s" alt="Usetiful"  class="rounded">    
                 Usetiful
               </div>
               <div class="skill-logo">
@@ -314,170 +351,170 @@
                 Design and Implementation
               </div>
               <div class="skill-logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1150px-React-icon.svg.png" alt="React" style="width: 100px; height: auto;" class="rounded">    
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1150px-React-icon.svg.png" alt="React"  class="rounded">    
                 React
               </div>
               <div class="skill-logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/2367px-Vue.js_Logo_2.svg.png" alt="Vue.js" style="width: 100px; height: auto;" class="rounded">    
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/2367px-Vue.js_Logo_2.svg.png" alt="Vue.js"  class="rounded">    
                 Vue.js
               </div>
               <div class="skill-logo">
-                <img src="https://cdn.quasar.dev/logo-v2/512/logo.png" alt="Quasar" style="width: 100px; height: auto;" class="rounded">    
+                <img src="https://cdn.quasar.dev/logo-v2/512/logo.png" alt="Quasar"  class="rounded">    
                 Quasar
               </div>
               <div class="skill-logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/2048px-HTML5_logo_and_wordmark.svg.png" alt="HTML" style="width: 100px; height: auto;" class="rounded">    
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/2048px-HTML5_logo_and_wordmark.svg.png" alt="HTML"  class="rounded">    
                 HTML
               </div>
               <div class="skill-logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/2048px-CSS3_logo.svg.png" alt="CSS" style="width: 100px; height: auto;" class="rounded">    
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/2048px-CSS3_logo.svg.png" alt="CSS"  class="rounded">    
                 CSS
               </div>
               <div class="skill-logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/640px-JavaScript-logo.png" alt="JavaScript" style="width: 100px; height: auto;" class="rounded">    
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/640px-JavaScript-logo.png" alt="JavaScript"  class="rounded">    
                 JavaScript
               </div>
             </div>
           </div>
-            <div class="d-flex flex-column align-items-center">
+            <div class="d-flex flex-column align-items-center" style="padding-top: 20px;">
               <div class="title-box">Backend Development</div>
               <div class="scroll-container-move">
                 <div class="skill-logo">
-                  <img src="https://static-00.iconduck.com/assets.00/node-js-icon-1817x2048-g8tzf91e.png" alt="node.js" style="width: 100px; height: auto;" class="rounded">    
+                  <img src="https://static-00.iconduck.com/assets.00/node-js-icon-1817x2048-g8tzf91e.png" alt="node.js"  class="rounded">    
                   Node.js
                 </div>
                 <div class="skill-logo">
-                  <img src="https://cdn.worldvectorlogo.com/logos/c--4.svg" alt="csharp" style="width: 100px; height: auto;" class="rounded">    
+                  <img src="https://cdn.worldvectorlogo.com/logos/c--4.svg" alt="csharp"  class="rounded">    
                   C#
                 </div>
                 <div class="skill-logo">
-                  <img src="https://cdn-icons-png.flaticon.com/512/10169/10169724.png" alt="api" style="width: 100px; height: auto;" class="rounded">    
+                  <img src="https://cdn-icons-png.flaticon.com/512/10169/10169724.png" alt="api"  class="rounded">    
                   API Development
                 </div>
                 <div class="skill-logo">
-                  <img src="https://symbols.getvecta.com/stencil_28/61_sql-database-generic.90b41636a8.png" alt="sql" style="width: 100px; height: auto;" class="rounded">    
+                  <img src="https://symbols.getvecta.com/stencil_28/61_sql-database-generic.90b41636a8.png" alt="sql"  class="rounded">    
                   SQL
                 </div>
                 <div class="skill-logo">
-                  <img src="https://static-00.iconduck.com/assets.00/mongodb-original-icon-921x2048-hvrb89lu.png" alt="mongodb" style="width: 50px; height: auto;" class="rounded">    
+                  <img src="https://static-00.iconduck.com/assets.00/mongodb-original-icon-921x2048-hvrb89lu.png" alt="mongodb" class="rounded">    
                   MongoDB
                 </div>
                 <div class="skill-logo">
-                  <img src="https://support.datawarehouse.io/hc/article_attachments/360103555853" alt="azure" style="width: 100px; height: auto;" class="rounded">    
+                  <img src="https://static.macupdate.com/products/62342/l/azure-data-studio-logo.png?v=1587492209" alt="azure"  class="rounded">    
                   Azure Data Studio
                 </div>
                 <div class="skill-logo">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Oauth_logo.svg/1200px-Oauth_logo.svg.png" alt="oauth" style="width: 100px; height: auto;" class="rounded">    
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Oauth_logo.svg/1200px-Oauth_logo.svg.png" alt="oauth"  class="rounded">    
                   OAuth
                 </div>
                 <div class="skill-logo">
-                  <img src="https://cdn.worldvectorlogo.com/logos/jwt-3.svg" alt="jwt" style="width: 100px; height: auto;" class="rounded">    
+                  <img src="https://cdn.worldvectorlogo.com/logos/jwt-3.svg" alt="jwt"  class="rounded">    
                   JWT
                 </div>
                 <div class="skill-logo">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/1024px-Amazon_Web_Services_Logo.svg.png" alt="aws" style="width: 100px; height: auto;" class="rounded">    
+                  <img src="https://logos-world.net/wp-content/uploads/2021/08/Amazon-Web-Services-AWS-Logo.png" alt="aws"  class="rounded">    
                   AWS
                 </div>
                 <div class="skill-logo">
-                  <img src="https://static-00.iconduck.com/assets.00/aws-ses-simple-email-service-icon-878x1024-yxzc5h6v.png" alt="notification_service" style="width: 100px; height: auto;" class="rounded">    
+                  <img src="https://static-00.iconduck.com/assets.00/aws-ses-simple-email-service-icon-878x1024-yxzc5h6v.png" alt="notification_service"  class="rounded">    
                   Notification Service
                 </div>
                 <div class="skill-logo">
-                  <img src="https://images.expertmarket.co.uk/wp-content/uploads/sites/2/2021/10/clover-pos-logo.jpg" alt="clover" style="width: 100px; height: auto;" class="rounded">    
+                  <img src="https://images.expertmarket.co.uk/wp-content/uploads/sites/2/2021/10/clover-pos-logo.jpg" alt="clover"  class="rounded">    
                   Clover
                 </div>
                 <div class="skill-logo">
-                  <img src="https://logos-world.net/wp-content/uploads/2020/10/Square-Symbol.png" alt="square" style="width: 100px; height: auto;" class="rounded">    
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/Square%2C_Inc_-_Square_Logo.jpg" alt="square"  class="rounded">    
                   Square
                 </div>
                 <div class="skill-logo">
-                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3CvAH4e2kaODB0ieKKma0vAtwYA8k4IRSPw&s" alt="shopify" style="width: 90px; height: auto;" class="rounded">    
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3CvAH4e2kaODB0ieKKma0vAtwYA8k4IRSPw&s" alt="shopify" class="rounded">    
                   Shopify
                 </div>
                 <div class="skill-logo">
-                  <img src="https://cdn-icons-png.flaticon.com/512/9732/9732788.png" alt="performance_optimization" style="width: 100px; height: auto;" class="rounded">    
+                  <img src="https://cdn-icons-png.flaticon.com/512/9732/9732788.png" alt="performance_optimization"  class="rounded">    
                   Performance Optimization
                 </div>
                 <div class="skill-logo">
-                  <img src="https://static-00.iconduck.com/assets.00/node-js-icon-1817x2048-g8tzf91e.png" alt="node.js" style="width: 100px; height: auto;" class="rounded">    
+                  <img src="https://static-00.iconduck.com/assets.00/node-js-icon-1817x2048-g8tzf91e.png" alt="node.js"  class="rounded">    
                   Node.js
                 </div>
                 <div class="skill-logo">
-                  <img src="https://cdn.worldvectorlogo.com/logos/c--4.svg" alt="csharp" style="width: 100px; height: auto;" class="rounded">    
+                  <img src="https://cdn.worldvectorlogo.com/logos/c--4.svg" alt="csharp"  class="rounded">    
                   C#
                 </div>
                 <div class="skill-logo">
-                  <img src="https://cdn-icons-png.flaticon.com/512/10169/10169724.png" alt="api" style="width: 100px; height: auto;" class="rounded">    
+                  <img src="https://cdn-icons-png.flaticon.com/512/10169/10169724.png" alt="api"  class="rounded">    
                   API Development
                 </div>
                 <div class="skill-logo">
-                  <img src="https://symbols.getvecta.com/stencil_28/61_sql-database-generic.90b41636a8.png" alt="sql" style="width: 100px; height: auto;" class="rounded">    
+                  <img src="https://symbols.getvecta.com/stencil_28/61_sql-database-generic.90b41636a8.png" alt="sql"  class="rounded">    
                   SQL
                 </div>
                 <div class="skill-logo">
-                  <img src="https://static-00.iconduck.com/assets.00/mongodb-original-icon-921x2048-hvrb89lu.png" alt="mongodb" style="width: 50px; height: auto;" class="rounded">    
+                  <img src="https://static-00.iconduck.com/assets.00/mongodb-original-icon-921x2048-hvrb89lu.png" alt="mongodb" class="rounded">    
                   MongoDB
                 </div>
                 <div class="skill-logo">
-                  <img src="https://support.datawarehouse.io/hc/article_attachments/360103555853" alt="azure" style="width: 100px; height: auto;" class="rounded">    
+                  <img src="https://support.datawarehouse.io/hc/article_attachments/360103555853" alt="azure"  class="rounded">    
                   Azure Data Studio
                 </div>
                 <div class="skill-logo">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Oauth_logo.svg/1200px-Oauth_logo.svg.png" alt="oauth" style="width: 100px; height: auto;" class="rounded">    
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Oauth_logo.svg/1200px-Oauth_logo.svg.png" alt="oauth"  class="rounded">    
                   OAuth
                 </div>
                 <div class="skill-logo">
-                  <img src="https://cdn.worldvectorlogo.com/logos/jwt-3.svg" alt="jwt" style="width: 100px; height: auto;" class="rounded">    
+                  <img src="https://cdn.worldvectorlogo.com/logos/jwt-3.svg" alt="jwt"  class="rounded">    
                   JWT
                 </div>
               </div>
             </div>
-            <div class="d-flex flex-column align-items-center">
+            <div class="d-flex flex-column align-items-center" style="padding-top: 20px;">
               <div class="title-box">Mobile Development</div>
-              <div class="scroll-container justify-content-center">
+              <div class="scroll-container">
                 <div class="skill-logo">
-                  <img src="https://storage.googleapis.com/cms-storage-bucket/0dbfcc7a59cd1cf16282.png" alt="flutter" style="width: 80px; height: auto;" class="rounded">    
+                  <img src="https://storage.googleapis.com/cms-storage-bucket/0dbfcc7a59cd1cf16282.png" alt="flutter" class="rounded">    
                   Flutter
                 </div>
                 <div class="skill-logo">
-                  <img src="https://developer.apple.com/assets/elements/icons/xcode-12/xcode-12-96x96_2x.png" alt="xcode" style="width: 100px; height: auto;" class="rounded">    
+                  <img src="https://developer.apple.com/assets/elements/icons/xcode-12/xcode-12-96x96_2x.png" alt="xcode"  class="rounded">    
                   XCode
                 </div>
                 <div class="skill-logo">
-                  <img src="https://static.wikia.nocookie.net/logopedia/images/0/02/New_App_Store_connect_logo.png/revision/latest?cb=20210628215439" alt="app_store" style="width: 100px; height: auto;" class="rounded">    
+                  <img src="https://static.wikia.nocookie.net/logopedia/images/0/02/New_App_Store_connect_logo.png/revision/latest?cb=20210628215439" alt="app_store"  class="rounded">    
                   App Store Connect
                 </div>
                 <div class="skill-logo">
-                  <img src="https://static-00.iconduck.com/assets.00/google-play-icon-1024x1024-ntijeqxd.png" alt="play_store" style="width: 100px; height: auto;" class="rounded">    
+                  <img src="https://static-00.iconduck.com/assets.00/google-play-icon-1024x1024-ntijeqxd.png" alt="play_store"  class="rounded">    
                   Google Play Store
                 </div>
               </div>
             </div>
-            <div class="d-flex flex-column align-items-center">
+            <div class="d-flex flex-column align-items-center" style="padding-top: 20px;">
               <div class="title-box">Soft Skills</div>
-              <div class="scroll-container justify-content-center">
+              <div class="scroll-container">
                 <div class="skill-logo">
-                  <img src="https://cdn-icons-png.flaticon.com/512/3663/3663457.png" alt="communication" style="width: 100px; height: auto;" class="rounded">    
+                  <img src="https://cdn-icons-png.flaticon.com/512/3663/3663457.png" alt="communication"  class="rounded">    
                   Communication
                 </div>
                 <div class="skill-logo">
-                  <img src="https://cdn-icons-png.flaticon.com/512/8148/8148303.png" alt="problem_solving" style="width: 100px; height: auto;" class="rounded">    
+                  <img src="https://cdn-icons-png.flaticon.com/512/6487/6487594.png" alt="problem_solving"  class="rounded">    
                   Problem Solving
                 </div>
                 <div class="skill-logo">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Wikimedia-Collab-logo.svg/768px-Wikimedia-Collab-logo.svg.png" alt="collaboration" style="width: 100px; height: auto;" class="rounded">    
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Wikimedia-Collab-logo.svg/768px-Wikimedia-Collab-logo.svg.png" alt="collaboration"  class="rounded">    
                   Collaboration
                 </div>
                 <div class="skill-logo">
-                  <img src="https://media.istockphoto.com/id/1180882238/vector/success-logo.jpg?s=612x612&w=0&k=20&c=brO28PRCR_73Oj-qVIGDzYxfDwZj17t7VrLb-JiGH2Q=" alt="leadership" style="width: 100px; height: auto;" class="rounded">    
+                  <img src="https://media.istockphoto.com/id/1180882238/vector/success-logo.jpg?s=612x612&w=0&k=20&c=brO28PRCR_73Oj-qVIGDzYxfDwZj17t7VrLb-JiGH2Q=" alt="leadership"  class="rounded">    
                   Leadership
                 </div>
                 <div class="skill-logo">
-                  <img src="https://cdn-icons-png.flaticon.com/512/10108/10108220.png" alt="adaptability" style="width: 100px; height: auto;" class="rounded">    
+                  <img src="https://cdn-icons-png.flaticon.com/512/10108/10108220.png" alt="adaptability"  class="rounded">    
                   Adaptability
                 </div>
                 <div class="skill-logo">
-                  <img src="https://cdn-icons-png.flaticon.com/512/9815/9815976.png" alt="time_management" style="width: 100px; height: auto;" class="rounded">    
+                  <img src="https://cdn-icons-png.flaticon.com/512/9815/9815976.png" alt="time_management"  class="rounded">    
                   Time Management
                 </div>
               </div>
@@ -486,189 +523,191 @@
         </div>
       </div>
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,224L48,213.3C96,203,192,181,288,160C384,139,480,117,576,138.7C672,160,768,224,864,240C960,256,1056,224,1152,218.7C1248,213,1344,235,1392,245.3L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg> 
   </section>
   <!-- Past Projects -->
-   <section id="pastProjects" class="past-projects">
+   <section id="pastProjects" class="background past-projects">
     <div class="container">
       <div class="row text-center">
         <h1 class="display-3 fw-bold">Past Projects</h1>
         <div class="heading-line mb-2"></div>
-        <div class="mantra" style="width: 30rem; background-color: #0dcaf0;">
+        <div class="mantra" style="width: 30rem">
           <div>
             <span>"Limitations exist only where determination ends."</span>
           </div>
         </div>
         <div>
           <div class="d-flex flex-column justfy-content-center align-items-center">
-            <img src="images/JinStayLogo.png" alt="JinStay" style="width: 250px; height: auto;" class="rounded">
-            <div class="d-flex">
-              <div class="w-50 d-flex flex-column">
-                <div class="text-box">
+            <div class="d-flex flex-column justify-content-end align-items-center">
+              <div class="text-box d-flex flex-column align-items-center" style="padding-bottom: 20px;">
+                <img src="images/experience/JinStayLogo.png" alt="JinStay" style="width: 250px; height: auto;" class="rounded">
+                <span style="margin-top: 10px;">
                   JinStay is a project I created for a friend looking to start an Airbnb business in Downtown Toronto.
-                  This was an exciting opportunity where I got to explore some of the best places to visit and eat in Toronto, while also enjoying the freedom to independently design a webpage. The combination of creativity and functionality made this project a truly enjoyable experience!                  <br />
-                  <br />
-                  <span>Click <a class="text-white" href="https://jinstay.com/home" target="_blank">here</a> to explore more of the website!</span>
-                  <img src="images/clickHere.png" alt="Click here" style="width: 50px; height: auto;" class="rounded">
-                </div>
-                <div>
-                  <span class="title-box" style="font-weight: 400; font-size: large;">Skills used:</span>
-                  <div class="d-flex justify-content-end align-items-end" style="margin-top: 2rem;">
-                    <div class="skill-logo-small">
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1200px-Vue.js_Logo_2.svg.png" alt="Vue.js" style="height: 100px; width: auto;" class="rounded">    
-                      Vue.js
-                    </div>
-                    <div class="skill-logo-small">
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/768px-JavaScript-logo.png" alt="JavaScript" style="height: 100px; width: auto;" class="rounded">    
-                      JavaScript
-                    </div>
-                    <div class="skill-logo-small">
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2560px-Tailwind_CSS_Logo.svg.png" alt="TailwindCSS" style="height: 80px; width: auto;" class="rounded">    
-                      TailwindCSS
-                    </div>
-                    <div class="skill-logo-small">
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Chart.js_logo.svg/1200px-Chart.js_logo.svg.png" alt="ChartJS" style="height: 100px; width: auto;" class="rounded">    
-                      ChartJS
-                    </div>
-                    <div class="skill-logo-small">
-                      <img src="https://cdn.builtin.com/cdn-cgi/image/f=auto,fit=contain,w=200,h=200,q=100/https://builtinla.com/sites/www.builtinla.com/files/2024-02/xlogo.png" alt="Xano" style="height: 100px; width: auto;" class="rounded">    
-                      Xano
-                    </div>
-                  </div>
-                </div>
+                  This was an exciting opportunity where I got to explore some of the best places to visit and eat in Toronto, while also enjoying the freedom to independently design a webpage. The combination of creativity and functionality made this project a truly enjoyable experience!
+                </span>
               </div>
-              <div class="w-50 d-flex" style="margin: 2rem 1rem;">
-                <video class="rounded secondary-border" height="400px" autoplay loop muted>
-                  <source src="images/JinStayVideo.mp4" type="video/mp4">
+            </div>
+            <div class="d-flex align-items-center" style="padding-left: 1rem;">
+              <a href="https://jinstay.com/home" target="_blank">
+                <video class="rounded w-100" autoplay loop muted>
+                  <source src="images/experience/JinStayVideo.mp4" type="video/mp4">
                 </video>
+              </a>
+              <div class="d-flex flex-row flex-md-column">
+                <div class="skill-logo-small">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1200px-Vue.js_Logo_2.svg.png" alt="Vue.js" class="rounded">    
+                  Vue.js
+                </div>
+                <div class="skill-logo-small">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/768px-JavaScript-logo.png" alt="JavaScript" class="rounded">    
+                  JavaScript
+                </div>
+                <div class="skill-logo-small">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2560px-Tailwind_CSS_Logo.svg.png" alt="TailwindCSS" class="rounded">    
+                  TailwindCSS
+                </div>
+                <div class="skill-logo-small">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Chart.js_logo.svg/1200px-Chart.js_logo.svg.png" alt="ChartJS" class="rounded">    
+                  ChartJS
+                </div>
               </div>
             </div>
           </div>
           <div class="d-flex flex-column justfy-content-center align-items-center" style="padding-top: 50px;">
-            <img src="images/WaggleLogo.png" alt="Waggle" style="width: 250px; height: auto;" class="rounded">
-            <div class="d-flex">
-              <div class="w-50 d-flex flex-column">
-                <div class="text-box">
-                  <div class="d-flex" style="width: 100%; height: 250px;">
-                    <div class="w-50" style="padding-right: 5px;">
-                      <img src="images/waggleTeam.jpg" alt="waggle" style="width: 100%; height: auto;" class="rounded">
-                    </div>
-                    <div class="w-50" style="padding-left: 5px;">
-                      <img src="images/waggleGraduation.jpg" alt="waggle" style="width: 100%; height: auto;" class="rounded">    
-                    </div>
-                  </div>
-                  Waggle was my Engineering capstone project, developed in collaboration with three of my classmates. We created a web application that enables users to visually program and run simulations of swarm robotics environments.
-                  <br />
-                  <br />
-                  This project allowed me to deepen my understanding of swarm robotics algorithms, enhance my skills in web design, project management, and refine my ability to collaborate effectively within a team. It’s a project I dedicated countless hours to, and I’m incredibly proud of what we achieved!
-                  <br />
-                  <br />
-                  🏆 Waggle earned 2nd place in our entire Electrical and Computer Engineering class—a recognition that makes the experience even more rewarding
-                  <br />
-                  <br />
-                  <span>To explore more about Waggle, click <a class="text-white" href="https://waggle-2-0.web.app" target="_blank">here</a></span>
-                  <img src="images/clickHere.png" alt="Click here" style="width: 50px; height: auto;" class="rounded">
-                </div>
+            <div class="w-100">
+              <div class="text-box d-flex flex-column align-items-center">
+                <img src="images/experience/WaggleLogo.png" alt="Waggle" style="width: 250px; height: auto; margin-bottom: 10px;" class="rounded">
+                Waggle was my Engineering capstone project, developed in collaboration with three of my classmates. We created a web application that enables users to visually program and run simulations of swarm robotics environments.
+                <br />
+                <br />
+                This project allowed me to deepen my understanding of swarm robotics algorithms, enhance my skills in web design, project management, and refine my ability to collaborate effectively within a team. It’s a project I dedicated countless hours to, and I’m incredibly proud of what we achieved!
+                <br />
+                <br />
+                🏆 Waggle earned 2nd place in our entire Electrical and Computer Engineering class—a recognition that makes the experience even more rewarding
               </div>
-              <div class="w-50 d-flex flex-column justify-content-around" style="margin: 2rem 1rem;">
-                <video class="rounded secondary-border" height="400px" autoplay loop muted>
-                  <source src="images/waggleVideo.mov" type="video/mp4">
+            </div>
+            <div class="d-flex w-100"  style="padding-left: 1rem;">
+              <a class="text-white" href="https://waggle-2-0.web.app" target="_blank">
+                <video class="rounded w-100" autoplay loop muted>
+                  <source src="images/experience/waggleVideo.mov" type="video/mp4">
                 </video>
-                <div>
-                  <span class="title-box" style="font-weight: 400; font-size: large;">Skills used:</span>
-                  <div class="d-flex justify-content-end align-items-end" style="margin-top: 2rem;">
-                    <div class="skill-logo-small">
-                      <img src="https://developers.google.com/static/blockly/images/landing/blockly.png" alt="Blockly" style="height: 100px; width: auto;" class="rounded">    
-                      Blockly
-                    </div>
-                    <div class="skill-logo-small">
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/768px-JavaScript-logo.png" alt="JavaScript" style="height: 100px; width: auto;" class="rounded">    
-                      JavaScript
-                    </div>
-                    <div class="skill-logo-small">
-                      <img src="https://leotronics.eu/images/blog/swarm-robots.jpg" alt="Swarm Robotics" style="height: 80px; width: auto;" class="rounded">    
-                      Swarm Robotics
-                    </div>
-                    <div class="skill-logo-small">
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/2048px-HTML5_logo_and_wordmark.svg.png" alt="HTML" style="height: 100px; width: auto;" class="rounded">    
-                      HTML
-                    </div>
-                    <div class="skill-logo-small">
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png" alt="CSS" style="height: 100px; width: auto;" class="rounded">    
-                      CSS
-                    </div>
-                  </div>
+              </a>
+              <div class="d-flex flex-row flex-md-column">
+                <div class="skill-logo-small">
+                  <img src="https://developers.google.com/static/blockly/images/landing/blockly.png" alt="Blockly" class="rounded">    
+                  Blockly
+                </div>
+                <div class="skill-logo-small">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/768px-JavaScript-logo.png" alt="JavaScript" class="rounded">    
+                  JavaScript
+                </div>
+                <div class="skill-logo-small">
+                  <img src="https://leotronics.eu/images/blog/swarm-robots.jpg" alt="Swarm Robotics" class="rounded">    
+                  Swarm Robotics
+                </div>
+                <div class="skill-logo-small">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/2048px-HTML5_logo_and_wordmark.svg.png" alt="HTML" class="rounded">    
+                  HTML
                 </div>
               </div>
+            </div>
+          </div>
+          <div class="d-flex flex-column justfy-content-center align-items-center" style="padding-top: 50px;">
+            <div class="text-box d-flex flex-column align-items-center">
+              <div class="d-flex justify-content-center align-items-center" style="width: fit-content; background-color: #662d91;margin-bottom: 20px; padding: 10px; color: white; border-radius: 10px;">
+                <span style="font-size: 34px; font-weight: 500;">Abigayles Cookbook</span>
+                <img style="width: 55px" src="https://png.pngtree.com/png-vector/20231015/ourmid/pngtree-cute-hamster-chef-cartoon-style-png-image_10162529.png" alt="Hamster Chef">
+              </div>
+              Abigayles Cookbook is a project I created out of my love for cooking and baking. I wanted an easier way to keep track of all my favorite recipes and experiments in the kitchen.
+              This project allowed me to combine my passion for food with my skills in web design, resulting in a functional and visually appealing website! It was a delightful experience to bring creativity and practicality together in a way that reflects my personal love for culinary adventures!               
+              <br />
+            </div>
+            <div class="w-100 d-flex flex-wrap justify-content-center" style="padding-left: 1rem;">
+              <a class="text-white" href="https://abigaylescookbook.netlify.app" target="_blank">
+                <video class="rounded w-100" autoplay loop muted>
+                  <source src="images/experience/cookbookVideo.mov" type="video/mp4">
+                </video>
+              </a>
+              <div class="d-flex flex-row flex-md-column">
+                <div class="skill-logo-small">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" alt="React" class="rounded">    
+                  React
+                </div>
+                <div class="skill-logo-small">
+                  <img src="https://static-00.iconduck.com/assets.00/material-ui-icon-2048x1626-on580ia9.png" alt="Material-UI" class="rounded">    
+                  Material-UI
+                </div>
+                <div class="skill-logo-small">
+                  <img src="https://static-00.iconduck.com/assets.00/netlify-icon-511x512-idkvcd89.png" alt="Netlify" class="rounded">    
+                  Netlify
+                </div>
+              </div>
+            </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fd7e14" fill-opacity="1" d="M0,224L48,213.3C96,203,192,181,288,160C384,139,480,117,576,138.7C672,160,768,224,864,240C960,256,1056,224,1152,218.7C1248,213,1344,235,1392,245.3L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg> 
    </section>
   <!-- Experience -->
-  <section id="experience" class="experience">
-    <div class="container text-white">
+  <section id="experience" class="background experience">
+    <div class="container">
       <div class="row text-center">
         <h1 class="display-3 fw-bold">Experience</h1>
         <div class="heading-line mb-2"></div>
         <div class="mantra" style="width: 30rem;">
-          <div style="background-color: #0dcaf0;">
+          <div>
             <span>"Small steps taken with purpose lead to monumental achievements."</span>
           </div>
         </div>
         <div id="accordion" style="font-size: large;">
-          <div class="card">
-            <button class="btn border primary p-4 text-white text-lg font-bold" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              <div id="headingOne">
-                <h5 class="mb-0" style="font-size: x-large;">HYKE - Software Developer</h5>
+          <div class="card w-100">
+            <button class="btn border primary p-4 text-white text-lg font-bold d-flex justify-content-center" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <div class="d-flex flex-column align-items-center bg-white rounded" style="width: 325px; height: 100px;" id="headingOne">
+                <img src="https://hykeup.com/wp-content/uploads/2023/09/HYKE_Logo.webp" alt="hyke" class="w-100 h-100" style="object-fit: contain;">
               </div>
             </button>
             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-bs-parent="#accordion">
-              <div class="card-body primary d-flex flex-column align-items-center" style="font-size: 18px; border: white solid 10px; padding: 40px 20px;">
-                <div class="d-flex">
-                  <div class="w-50 position-relative" style="height: 410px">
-                    <div class="bg-white rounded" style="position: absolute; top: 20px; right: 20px;">
-                      <img src="https://hykeup.com/wp-content/uploads/2023/09/HYKE_Logo.webp" alt="newfoundland" style="width: 400px; height: auto;" class="rounded">
-                    </div>
-                    <div class="bg-white rounded" style="position: absolute; bottom: 20px; left: 20px;">
-                      <img src="https://www.f6s.com/content-resource/media/1388558.png" alt="hiking" style="width: 300px; height: auto;" class="rounded">    
-                    </div>
+              <div class="card-body primary d-flex flex-column align-items-center rounded" style="font-size: 18px; background-color: #484848 !important; border: #202020 solid 10px; padding: 20px;">
+                <div class="d-flex flex-column align-items-center" style="padding-top: 20px;">
+                  <div class="d-flex" style="font-weight: 600; font-size: larger;">
+                    <span class="text-white" style="margin-right: 40px;">👩‍💻 Software Developer </span>
+                    <span class="text-white">📆 3 years</span>
                   </div>
-                  <div class="w-50 text-white d-flex flex-column align-items-center justify-content-center">
-                    <span>HYKE is a cutting-edge platform that simplifies business operations by integrating smart tools for managing sales, customer relationships, and marketing efforts.
-                      As a Full-Stack Developer with over 3 years of experience, I independently designed and implemented the frontend and mobile platforms, created backend API calls, integrated HYKE with AWS cloud services, and managed database operations using SQL.</span>
-                    <br />
-                    <span>To see more of my work on the mobile side you can visit the HYKER website
-                    <a href="https://hykeup.com" target="_blank" class="text-white">here</a>
-                    or to see some of my frontend work, go to our business side
-                    <a href="https://partner.hykeup.com" target="_blank" class="text-white">here!</a></span>
+                  <div class="d-flex flex-wrap" style="margin-top: 40px;">
+                    <div class="col-sm-12 col-md-6 rounded d-flex justify-content-center">
+                      <img src="https://www.f6s.com/content-resource/media/1388558.png" alt="hyke" style="width: 100%; max-width: 400px; height: auto;" class="rounded">    
+                    </div>
+                    <div class="col-sm-12 col-md-6 d-flex flex-column align-items-center justify-content-center rounded" style="color: white;">
+                      <span>HYKE is a cutting-edge platform that simplifies business operations by integrating smart tools for managing sales, customer relationships, and marketing efforts.
+                        As a Full-Stack Developer with over 3 years of experience, I independently designed and implemented the frontend and mobile platforms, created backend API calls, integrated HYKE with AWS cloud services, and managed database operations using SQL.</span>
+                      <br />
+                      <span>To see more of my work on the mobile side you can visit the HYKER website
+                      <a href="https://hykeup.com" target="_blank" class="text-white">here</a>
+                      or to see some of my frontend work, go to our business side
+                      <a href="https://partner.hykeup.com" target="_blank" class="text-white">here!</a></span>
+                    </div>
                   </div>
                 </div>
-                <div class="text-white">
-                  <span class="title-box" style="background-color: transparent;" style="font-weight: 400; font-size: large;">Main skills:</span>
-                  <div class="d-flex justify-content-end align-items-end" style="margin-top: 2rem;">
-                    <div class="skill-logo-small text-white" style="background-color: transparent;">
-                      <img src="https://cdn.quasar.dev/logo-v2/512/logo.png" alt="Quasar" style="height: 100px; width: auto;" class="rounded">    
-                      Quasar
-                    </div>
-                    <div class="skill-logo-small text-white" style="background-color: transparent;">
-                      <img src="https://cdn.worldvectorlogo.com/logos/c--4.svg" alt="csharp" style="height: 80px; width: auto;" class="rounded">    
-                      C#
-                    </div>
-                    <div class="skill-logo-small text-white" style="background-color: transparent;">
-                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHfvJQdTD8IFAUS4jNkFrVYGai1NknAbHAMA&s" alt="flutter" style="height: 100px; width: auto;" class="rounded">    
-                      Flutter
-                    </div>
-                    <div class="skill-logo-small text-white" style="background-color: transparent;">
-                      <img src="https://symbols.getvecta.com/stencil_28/61_sql-database-generic.90b41636a8.png" alt="sql" style="height: 100px; width: auto;" class="rounded">    
-                      SQL
-                    </div>
-                    <div class="skill-logo-small text-white" style="background-color: transparent;">
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/1024px-Amazon_Web_Services_Logo.svg.png" alt="aws" style="width: 100px; height: auto;" class="rounded">    
-                      AWS
-                    </div>
+                <div class="d-flex flex-wrap justify-content-center align-items-end" style="margin: 2rem 0;">
+                  <div class="skill-logo-small text-white" style="background-color: transparent; margin-bottom: 10px;">
+                    <img src="https://cdn.quasar.dev/logo-v2/512/logo.png" alt="Quasar" style="height: 100px; width: auto;" class="rounded">    
+                    Quasar
+                  </div>
+                  <div class="skill-logo-small text-white" style="background-color: transparent; margin-bottom: 10px;">
+                    <img src="https://cdn.worldvectorlogo.com/logos/c--4.svg" alt="csharp" style="height: 80px; width: auto;" class="rounded">    
+                    C#
+                  </div>
+                  <div class="skill-logo-small text-white" style="background-color: transparent; margin-bottom: 10px;">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHfvJQdTD8IFAUS4jNkFrVYGai1NknAbHAMA&s" alt="flutter" style="height: 100px; width: auto;" class="rounded">    
+                    Flutter
+                  </div>
+                  <div class="skill-logo-small text-white" style="background-color: transparent; margin-bottom: 10px;">
+                    <img src="https://symbols.getvecta.com/stencil_28/61_sql-database-generic.90b41636a8.png" alt="sql" style="height: 100px; width: auto;" class="rounded">    
+                    SQL
+                  </div>
+                  <div class="skill-logo-small text-white" style="background-color: transparent; margin-bottom: 10px;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/1024px-Amazon_Web_Services_Logo.svg.png" alt="aws"  class="rounded">    
+                    AWS
                   </div>
                 </div>
               </div>
@@ -677,177 +716,170 @@
         
           <!-- Nokia -->
           <div class="card">
-            <button class="btn border primary p-4 text-white text-lg font-bold" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              <div id="headingTwo">
-                <h5 class="mb-0" style="font-size: x-large;">Nokia - A6E Customer Applications Co-op</h5>
+            <button class="btn border primary p-4 text-white text-lg font-bold d-flex justify-content-center" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <div class="d-flex flex-column align-items-center bg-white rounded" style="width: 325px; height: 100px;" id="headingTwo">
+                <img src="https://mma.prnewswire.com/media/1922063/Nokia_Nokia_chooses_Ottawa__ON__tech_cluster_to_build_world_lead.jpg?p=facebook" alt="nokia" class="w-100 h-100" style="object-fit: contain;">    
               </div>
             </button>
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordion">
-              <div class="card-body primary d-flex flex-column align-items-center">
-                <div class="w-100 d-flex">
-                  <div class="w-50 position-relative" style="height: 410px">
-                    <div style="position: absolute; top: 10px; left: 10px;">
-                      <img src="https://as2.ftcdn.net/v2/jpg/03/70/87/65/1000_F_370876568_bXRcuR7O10PtufQ8UsAqF1eZa3VVDhve.jpg" alt="newfoundland" style="width: 350px; height: auto;" class="rounded">
-                    </div>
-                    <div style="position: absolute; bottom: 20px; right: 20px;">
-                      <img src="https://mma.prnewswire.com/media/1922063/Nokia_Nokia_chooses_Ottawa__ON__tech_cluster_to_build_world_lead.jpg?p=facebook" alt="hiking" style="width: 250px; height: auto;" class="rounded">    
-                    </div>
+              <div class="card-body primary d-flex flex-column align-items-center rounded" style="font-size: 18px; background-color: #484848 !important; border: #202020 solid 10px; padding: 20px;">
+                <div class="d-flex flex-column align-items-center" style="padding-top: 20px;">
+                  <div class="d-flex" style="font-weight: 600; font-size: larger;">
+                    <span class="text-white" style="margin-right: 40px;">👩‍💻 A6E Customer Applications Co-op </span>
+                    <span class="text-white">📆 4 months</span>
                   </div>
-                  <div class="w-50 text-white d-flex flex-column align-items-center justify-content-center" style="padding: 0 20px;">
-                    <span>Nokia is a global leader in telecommunications, providing solutions for network operators, enterprises, and governments. Their Network Services Platform (NSP) enables efficient automation, orchestration, and management of telecom networks.</span>
-                    <br />
-                    <span>During my A6E Customer Applications Co-op, I contributed to the development and testing of customer-facing applications for NSP, supported network service automation, and assisted in troubleshooting and performance analysis to enhance customer experience.</span>
+                  <div class="d-flex flex-wrap" style="margin-top: 30px;">
+                    <div class="col-sm-12 col-md-6 rounded d-flex justify-content-center">
+                      <img src="https://as2.ftcdn.net/v2/jpg/03/70/87/65/1000_F_370876568_bXRcuR7O10PtufQ8UsAqF1eZa3VVDhve.jpg" alt="nokia" style="width: 325px; height: 100px;" class="rounded">
+                    </div>
+                    <div class="col-sm-12 col-md-6 d-flex flex-column align-items-center justify-content-center rounded" style="color: white;">
+                      <span>Nokia is a global leader in telecommunications, providing solutions for network operators, enterprises, and governments. Their Network Services Platform (NSP) enables efficient automation, orchestration, and management of telecom networks.</span>
+                      <br />
+                      <span>During my A6E Customer Applications Co-op, I contributed to the development and testing of customer-facing applications for NSP, supported network service automation, and assisted in troubleshooting and performance analysis to enhance customer experience.</span>  
+                    </div>
                   </div>
                 </div>
-                <div>
-                  <div class="text-white">
-                    <span class="title-box" style="background-color: transparent;" style="font-weight: 400; font-size: large;">Main skills:</span>
-                    <div class="d-flex justify-content-end align-items-end" style="margin-top: 2rem;">
-                      <div class="skill-logo-small text-white" style="background-color: transparent;">
-                        <img src="https://www.nokia.com/sites/default/files/2022-05/NSP_logo-colour.png" alt="Nokia NSP" style="height: 100px; width: auto;" class="rounded">    
-                        Nokia NSP
-                      </div>
-                      <div class="skill-logo-small text-white" style="background-color: transparent;">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/1200px-Tux.svg.png" alt="Linux" style="height: 100px; width: auto;" class="rounded">    
-                        Linux
-                      </div>
-                      <div class="skill-logo-small text-white" style="background-color: transparent;">
-                        <img src="https://cdn-icons-png.flaticon.com/512/3627/3627906.png" alt="Troubleshooting" style="height: 80px; width: auto;" class="rounded">    
-                        Troubleshooting
-                      </div>
-                      <div class="skill-logo-small text-white" style="background-color: transparent;">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png" alt="Python" style="height: 100px; width: auto;" class="rounded">    
-                        Python
-                      </div>
-                    </div>
+                <div class="d-flex flex-wrap justify-content-center align-items-end" style="margin: 2rem 0;">
+                  <div class="skill-logo-small text-white" style="background-color: transparent;">
+                    <img src="https://www.nokia.com/sites/default/files/2022-05/NSP_logo-colour.png" alt="Nokia NSP" style="height: 100px; width: auto;" class="rounded">    
+                    Nokia NSP
                   </div>
-                </div>            
+                  <div class="skill-logo-small text-white" style="background-color: transparent;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/1200px-Tux.svg.png" alt="Linux" style="height: 100px; width: auto;" class="rounded">    
+                    Linux
+                  </div>
+                  <div class="skill-logo-small text-white" style="background-color: transparent;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3627/3627906.png" alt="Troubleshooting" style="height: 80px; width: auto;" class="rounded">    
+                    Troubleshooting
+                  </div>
+                  <div class="skill-logo-small text-white" style="background-color: transparent;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png" alt="Python" style="height: 100px; width: auto;" class="rounded">    
+                    Python
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         
           <!-- Nalcor Energy -->
           <div class="card">
-            <button class="btn border primary p-4 text-white text-lg font-bold" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-              <div id="headingThree">
-                <h5 class="mb-0" style="font-size: x-large;">Nalcor Energy - LCP HVdc Specialities Co-op</h5>
+            <button class="btn border primary p-4 text-white text-lg font-bold d-flex justify-content-center" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              <div class="d-flex flex-column align-items-center bg-white rounded" style="width: 325px; height: 100px;" id="headingThree">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7f/Nalcor_Energy_Logo.svg/800px-Nalcor_Energy_Logo.svg.png" alt="Nalcor" class="w-100 h-100" style="object-fit: contain;">
               </div>
             </button>
             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-bs-parent="#accordion">
-              <div class="card-body primary d-flex flex-column align-items-center">
-                <div class="w-100 d-flex align-items-center">
-                  <div class="w-50 position-relative" style="height: 400px;">
-                    <div style="position: absolute; top: 20px; right: 20px;">
-                      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7f/Nalcor_Energy_Logo.svg/800px-Nalcor_Energy_Logo.svg.png" alt="newfoundland" style="width: 350px; height: auto;" class="rounded">
-                    </div>
-                    <div style="position: absolute; bottom: 15px; left: 15px;">
+              <div class="card-body primary d-flex flex-column align-items-center rounded" style="font-size: 18px; background-color: #484848 !important; border: #202020 solid 10px; padding: 20px;">
+                <div class="d-flex flex-column align-items-center" style="padding-top: 20px;">
+                  <div class="d-flex" style="font-weight: 600; font-size: larger;">
+                    <span class="text-white" style="margin-right: 40px;">👩‍💻 LCP HVdc Specialities Co-op </span>
+                    <span class="text-white">📆 4 months</span>
+                  </div>
+                  <div class="d-flex flex-wrap" style="margin-top: 30px;">
+                    <div class="col-sm-12 col-md-6 rounded d-flex justify-content-center">
                       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnQ1I9JhPVKH6G8pCg-W8KxEC6Op8wnj1RlQ&s" alt="hiking" style="width: 350px; height: auto;" class="rounded">    
                     </div>
-                  </div>
-                  <div class="w-50 text-white d-flex flex-column justfy-content-center align-items-center" style="padding: 0 20px;">
-                    <span>Nalcor Energy is a leading energy company in Newfoundland and Labrador, focused on providing sustainable energy solutions through hydroelectric and other power generation methods.</span>
-                    <br />
-                    <span>During my LCP HVdc Specialities Co-op, I supported the development and optimization of HVdc (High Voltage Direct Current) systems for the Lower Churchill Project. My responsibilities included assisting with system analysis, troubleshooting, and ensuring the efficient operation of HVdc equipment to support the region's energy infrastructure.</span>
+                    <div class="col-sm-12 col-md-6 d-flex flex-column align-items-center justify-content-center rounded" style="color: white;">
+                      <span>Nalcor Energy is a leading energy company in Newfoundland and Labrador, focused on providing sustainable energy solutions through hydroelectric and other power generation methods.</span>
+                      <br />
+                      <span>During my LCP HVdc Specialities Co-op, I supported the development and optimization of HVdc (High Voltage Direct Current) systems for the Lower Churchill Project. My responsibilities included assisting with system analysis, troubleshooting, and ensuring the efficient operation of HVdc equipment to support the region's energy infrastructure.</span>
+                      </div>
                   </div>
                 </div>
-                <div class="text-white" style="padding: 20px 0;">
-                  <span class="title-box" style="padding-bottom: 10px; background-color: transparent;" style="font-weight: 400; font-size: large;">Main skills:</span>
-                  <div class="d-flex justify-content-end align-items-end" style="margin-top: 2rem;">
-                    <div class="skill-logo-small text-white" style="background-color: transparent;">
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Microsoft_Office_Excel_%282019–present%29.svg/640px-Microsoft_Office_Excel_%282019–present%29.svg.png" alt="Microsoft Excel" style="height: 100px; width: auto;" class="rounded">    
-                      Microsoft Excel
-                    </div>
-                    <div class="skill-logo-small text-white" style="background-color: transparent;">
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Microsoft_Office_Visio_%282019%29.svg/504px-Microsoft_Office_Visio_%282019%29.svg.png" alt="Microsoft Visio" style="height: 80px; width: auto;" class="rounded">    
-                      Microsoft Visio
-                    </div>
-                    <div class="skill-logo-small text-white" style="background-color: transparent;">
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Microsoft_Office_Word_%282019–present%29.svg/1200px-Microsoft_Office_Word_%282019–present%29.svg.png" alt="Microsoft Word" style="height: 100px; width: auto;" class="rounded">    
-                      Microsoft Word
-                    </div>
-                    <div class="skill-logo-small text-white" style="background-color: transparent;">
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Microsoft_Office_PowerPoint_%282019–present%29.svg/800px-Microsoft_Office_PowerPoint_%282019–present%29.svg.png" alt="Microsoft PowerPoint" style="height: 100px; width: auto;" class="rounded">    
-                      Microsoft PowerPoint
-                    </div>
+                <div class="d-flex flex-wrap justify-content-center align-items-end" style="margin: 2rem 0;">
+                  <div class="skill-logo-small text-white" style="background-color: transparent;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Microsoft_Office_Excel_%282019–present%29.svg/640px-Microsoft_Office_Excel_%282019–present%29.svg.png" alt="Microsoft Excel" style="height: 100px; width: auto;" class="rounded">    
+                    Microsoft Excel
                   </div>
-                </div>            
+                  <div class="skill-logo-small text-white" style="background-color: transparent;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Microsoft_Office_Visio_%282019%29.svg/504px-Microsoft_Office_Visio_%282019%29.svg.png" alt="Microsoft Visio" style="height: 80px; width: auto;" class="rounded">    
+                    Microsoft Visio
+                  </div>
+                  <div class="skill-logo-small text-white" style="background-color: transparent;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Microsoft_Office_Word_%282019–present%29.svg/1200px-Microsoft_Office_Word_%282019–present%29.svg.png" alt="Microsoft Word" style="height: 100px; width: auto;" class="rounded">    
+                    Microsoft Word
+                  </div>
+                  <div class="skill-logo-small text-white" style="background-color: transparent;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Microsoft_Office_PowerPoint_%282019–present%29.svg/800px-Microsoft_Office_PowerPoint_%282019–present%29.svg.png" alt="Microsoft PowerPoint" style="height: 100px; width: auto;" class="rounded">    
+                    Microsoft PowerPoint
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         
           <!-- KCA Deutag -->
           <div class="card">
-            <button class="btn border primary p-4 text-white text-lg font-bold" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-              <div id="headingFour">
-                <h5 class="mb-0" style="font-size: x-large;">KCA Deutag - Project Management Co-op</h5>
+            <button class="btn border primary p-4 text-white text-lg font-bold d-flex justify-content-center" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              <div class="d-flex align-items-center bg-white rounded" style="width: 325px; height: 100px;" id="headingFour">
+                <img src="https://www.kcadeutag.com/media/images/KCADeutag-logo-colour.png" alt="KCA Deutag" class="w-100 h-100" style="object-fit: contain;">
               </div>
             </button>
             <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-bs-parent="#accordion">
-              <div class="card-body primary d-flex flex-column align-items-center">
-                <div class="w-100 d-flex align-items-center">
-                  <div class="w-50 position-relative" style="height: 400px;">
-                    <div style="position: absolute; top: 20px; right: 20px;">
-                      <img src="https://www.kcadeutag.com/media/images/KCADeutag-logo-colour.png" alt="newfoundland" style="width: 450px; height: auto;" class="rounded">
-                    </div>
-                    <div style="position: absolute; bottom: 15px; left: 15px;">
-                      <img src="https://www.kcadeutag.com/media/images/kca-deutag-offshore-drilling.webp" alt="hiking" style="width: 400px; height: auto;" class="rounded">    
-                    </div>
+              <div class="card-body primary d-flex flex-column align-items-center rounded" style="font-size: 18px; background-color: #484848 !important; border: #202020 solid 10px; padding: 20px;">
+                <div class="d-flex flex-column align-items-center" style="padding-top: 20px;">
+                  <div class="d-flex" style="font-weight: 600; font-size: larger;">
+                    <span class="text-white" style="margin-right: 40px;">👩‍💻 Project Management Co-op </span>
+                    <span class="text-white">📆 4 months</span>
                   </div>
-                  <div class="w-50 text-white d-flex flex-column justfy-content-center align-items-center" style="padding: 0 20px;">
-                    <span>KCA Deutag is a leading global drilling and engineering company, specializing in providing drilling services for the oil and gas industry.</span>
-                    <br />
-                    <span>During my Project Management Co-op, I independently created and organized a physical and digital certification database for all machinery used. This involved managing and cataloging certifications to ensure compliance and streamline access to essential machinery information.</span>
+                  <div class="d-flex flex-wrap" style="margin-top: 30px;">
+                    <div class="col-sm-12 col-md-6 rounded d-flex justify-content-center">
+                      <img src="https://www.kcadeutag.com/media/images/kca-deutag-offshore-drilling.webp" alt="Oil Drill" style="width: 400px; height: auto;" class="rounded">    
+                    </div>
+                    <div class="col-sm-12 col-md-6 d-flex flex-column align-items-center justify-content-center rounded" style="color: white;">
+                      <span>KCA Deutag is a leading global drilling and engineering company, specializing in providing drilling services for the oil and gas industry.</span>
+                      <br />
+                      <span>During my Project Management Co-op, I independently created and organized a physical and digital certification database for all machinery used. This involved managing and cataloging certifications to ensure compliance and streamline access to essential machinery information.</span>
+                      </div>
                   </div>
                 </div>
-                <div class="text-white" style="padding: 20px 0;">
-                  <span class="title-box" style="padding-bottom: 10px; background-color: transparent;" style="font-weight: 400; font-size: large;">Main skills:</span>
-                  <div class="d-flex justify-content-end align-items-end" style="margin-top: 2rem;">
-                    <div class="skill-logo-small text-white" style="background-color: transparent;">
-                      <img src="https://cdn-icons-png.flaticon.com/512/9730/9730481.png" alt="Project Management" style="height: 100px; width: auto;" class="rounded">    
-                      Project Management
-                    </div>
-                    <div class="skill-logo-small text-white" style="background-color: transparent;">
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Microsoft_Office_Excel_%282019–present%29.svg/640px-Microsoft_Office_Excel_%282019–present%29.svg.png" alt="Microsoft Excel" style="height: 100px; width: auto;" class="rounded">    
-                      Microsoft Excel
-                    </div>
-                    <div class="skill-logo-small text-white" style="background-color: transparent;">
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Microsoft_Office_Word_%282019–present%29.svg/1200px-Microsoft_Office_Word_%282019–present%29.svg.png" alt="Microsoft Word" style="height: 100px; width: auto;" class="rounded">    
-                      Microsoft Word
-                    </div>
+                <div class="d-flex flex-wrap justify-content-center align-items-end" style="margin: 2rem 0;">
+                  <div class="skill-logo-small text-white" style="background-color: transparent;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/9730/9730481.png" alt="Project Management" style="height: 100px; width: auto;" class="rounded">    
+                    Project Management
                   </div>
-                </div>            
+                  <div class="skill-logo-small text-white" style="background-color: transparent;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Microsoft_Office_Excel_%282019–present%29.svg/640px-Microsoft_Office_Excel_%282019–present%29.svg.png" alt="Microsoft Excel" style="height: 100px; width: auto;" class="rounded">    
+                    Microsoft Excel
+                  </div>
+                  <div class="skill-logo-small text-white" style="background-color: transparent;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Microsoft_Office_Word_%282019–present%29.svg/1200px-Microsoft_Office_Word_%282019–present%29.svg.png" alt="Microsoft Word" style="height: 100px; width: auto;" class="rounded">    
+                    Microsoft Word
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>        
       </div>
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,224L48,213.3C96,203,192,181,288,160C384,139,480,117,576,138.7C672,160,768,224,864,240C960,256,1056,224,1152,218.7C1248,213,1344,235,1392,245.3L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg> 
    </section>
   <!-- Education -->
-  <section id="education" class="past-projects">
+  <section id="education" class="background">
     <div class="container">
       <div class="row text-center">
         <h1 class="display-3 fw-bold">Education</h1>
         <div class="heading-line mb-2"></div>
-        <div class="mantra" style="width: 30rem; background-color: #0dcaf0;">
+        <div class="mantra" style="width: 30rem;">
           <div>
             <span>"Believe in the journey, and the destination will follow."</span>
           </div>
         </div>
         <div class="d-flex flex-column">
           <div class="row text-center" style="margin: 1.5rem 0;">
-            <div class="d-flex flex-row justify-content-between">
-              <div class="w-50">
+            <div class="d-flex flex-wrap align-items-center justify-content-center">
+              <div class="col-sm-12 col-md-6" style="margin-bottom: 20px;">
                 <img src="images/MUN.png" alt="MUN" style="width: 100%; height: auto;" class="rounded">    
               </div>
-              <div class="w-50 m-5 primary p-3 rounded d-flex flex-column text-white justify-content-center" style="font-size: large;">
-                <span>I graduated from Memorial University of Newfoundland with a Bachelor's degree in Computer Engineering.</span>
-                <br />
-                <span>During my time at MUN, I gained valuable experience through co-op placements and capstone projects, while deepening my knowledge of various Computer Engineering disciplines.</span>
-                <br />
-                <br />
-                <span>⭐️ I graduated with honors, achieving an overall cumulative average of 80%.</span>              
+              <div class="col-sm-12 col-md-6 d-flex flex-column text-white justify-content-center" style="font-size: large;">
+                <div class="primary p-3 rounded" style="margin: 0 30px;">
+                  <span>I graduated from Memorial University of Newfoundland with a Bachelor's degree in Computer Engineering.</span>
+                  <br />
+                  <span>During my time at MUN, I gained valuable experience through co-op placements and capstone projects, while deepening my knowledge of various Computer Engineering disciplines.</span>
+                  <br />
+                  <br />
+                  <span>⭐️ I graduated with honors, achieving an overall cumulative average of 80%.</span>                
+                </div>
               </div>
             </div>
           </div>
@@ -1361,7 +1393,7 @@
                     <span>Advanced Digital Signal Processing</span>  
                   </div>
                   <img src="https://www.dentaltown.com/images/Orthotown/magimages/0819/ll01.jpg" alt="topics" class="rounded">
-                  <img src="https://www.orientsoftware.com/Themes/Content/Images/blog/2021-10-13/software-engineering-practices-1.png" alt="ece-6400" class="rounded">
+                  <img src="https://gauge.fly.dev/content/images/size/w1200/2023/04/USASIC---DSP-1920w--1-.png" alt="ece-6400" class="rounded">
                 </div>
                 <div class="course-content">
                   <span>Topics covered:</span>
@@ -1381,7 +1413,7 @@
                     <span>Communication Principles</span>  
                   </div>
                   <img src="https://www.dentaltown.com/images/Orthotown/magimages/0819/ll01.jpg" alt="topics" class="rounded">
-                  <img src="https://nimaparacollege.ac.in/assets/img/team/ECE.jpg" alt="ece-6600" class="rounded">
+                  <img src="https://static.vecteezy.com/system/resources/previews/036/039/834/non_2x/transmission-tower-technology-signal-antenna-that-goes-into-smartphones-that-receive-internet-signals-give-your-mobile-phone-access-to-communications-and-cyber-data-at-all-times-vector.jpg" alt="ece-6600" class="rounded">
                 </div>
                 <div class="course-content">
                   <span>Topics covered:</span>
@@ -1632,8 +1664,15 @@
             </div>
           </div>
           </div>
-          <div class="w-100 d-flex" style="margin-top: 100px;">
-            <div class="d-flex flex-column justify-content-end position-relative" style="height: 950px; flex: 1;">
+          <div class="w-100 d-flex flex-column align-items-center" style="margin-top: 10px;">
+            <span class="title-box">University Projects</span>
+            <div class="text-box d-flex flex-column justify-content-center align-items-center" style="padding: 20px; margin: 0;">
+              <span>
+                During my Computer Engineering degree I was able to work on a lot of really interesting projects, varying from technical, website design, to biomedical topics.
+                Here are some of my favorites for you to see some of the stuff I've worked on in University. Click on one to read more about it! 🤓
+              </span>
+            </div>
+            <div class="d-flex flex-wrap w-100 justify-content-evenly" style="margin: 40px 0;">
               <div class="book" id="eim">
                 <div class="cover">
                   <img src="images/projectCovers/EIM.png" alt="topics">
@@ -1694,7 +1733,6 @@
                   <img src="images/projectCovers/waggle.png" alt="topics">
                 </div>
               </div>
-              <div class="bookshelf"></div>
               <div class="book" id="frontend">
                 <div class="cover">
                   <img src="images/projectCovers/frontend.png" alt="topics">
@@ -1732,13 +1770,8 @@
                   <img src="images/projectCovers/backend.png" alt="topics">
                 </div>
               </div>
-              <div class="bookshelf"></div>
             </div>
-            <div class="text-box d-flex flex-column justify-content-center align-items-center" style="width: 400px; height: fit-content; padding: 30px;">
-              <span>During my Computer Engineering degree I was able to work on a lot of really interesting projects, varying from technical, website design, to biomedical topics.</span>
-              <br />
-              <span>I've compiled some of my favorites here for you to see some of the stuff I've worked on in University. Click on one to read more about it!</span>
-            </div>
+            <div style="height: 100px;"></div>
           </div>
         </div>
       </div>
@@ -1797,46 +1830,29 @@
     </script>
     <script>
       const container = document.getElementById("overview-box");
-      const overviewBackground = document.querySelector('.overview-background');
       const video = document.getElementById("scroll-video");
       video.playbackRate -= 0.75;
-
-      const boxRect = overviewBackground.getBoundingClientRect();
-      const scrollTo = window.scrollY + boxRect.bottom - window.innerHeight;
-
-      function isElementVisible() {
-        const rect = container.getBoundingClientRect();
-        return rect.top >= 0;
+      if (window.innerWidth < 768) {
+        container.scrollLeft = 855;
+      } else {
+        container.scrollLeft = 1345;
       }
-
-      window.addEventListener("wheel", (event) => {
-        const isAtEnd = container.scrollLeft + (container.clientWidth * 1.6) >= container.scrollWidth;
-        if (isAtEnd) {
-          overviewBackground.style.transform = 'translate(0)';
+      container.addEventListener('scroll', () => {
+        // mobile screen
+        if (window.innerWidth < 768) {
+          if (container.scrollLeft < 855) {
+            container.scrollLeft = 855;
+          } else if (container.scrollLeft > 8002) {
+            container.scrollLeft = 8002
+          }
         } else {
-          overviewBackground.style.transform = 'translate(-50%)';
-        }
-
-        // scroll down
-        if (isElementVisible() && event.deltaY >= 0 && ((container.scrollLeft + container.clientWidth) < container.scrollWidth)) {
-          window.scrollTo({
-            top: scrollTo,
-            behavior: 'smooth'
-          })
-          event.preventDefault();
-          container.scrollLeft += event.deltaY;
-        } else {
-          // scroll up
-          if (isElementVisible() && event.deltaY < 0 && container.scrollLeft > 0) {
-            window.scrollTo({
-              top: scrollTo,
-              behavior: 'smooth'
-            })
-            event.preventDefault();
-            container.scrollLeft += event.deltaY;
+          if (container.scrollLeft < 1345) {
+            container.scrollLeft = 1345;
+          } else if (container.scrollLeft > 12207) {
+            container.scrollLeft = 12207
           }
         }
-      }, { passive: false });
+      });
     </script>
     <script>
       function updateClass(element) {

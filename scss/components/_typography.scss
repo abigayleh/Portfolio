@@ -140,6 +140,10 @@ html::-webkit-scrollbar {
   border-radius: 0.2rem;
   position: relative;
   margin-bottom: 2rem;
+  @media screen and (max-width: 768px) {
+    width: 20rem !important;
+    height: 3rem;
+  }
   div {
     font-family: "Markazi Text", serif;
     font-size: larger;
@@ -154,6 +158,11 @@ html::-webkit-scrollbar {
     height: 4rem;
     width: 30rem;
     border-radius: 0.2rem;
+    @media screen and (max-width: 768px) {
+      width: 20rem;
+      height: 3rem;
+      font-size: medium;
+    }
   }
 }
 
@@ -176,7 +185,6 @@ html::-webkit-scrollbar {
 }
 
 .text-box {
-  width: fit-content;
   color: $white;
   background-color: $secondary;
   font-size: large;
@@ -197,6 +205,16 @@ html::-webkit-scrollbar {
   margin: 0 1rem;
   border-radius: 0.5rem;
   white-space: normal;
+  img {
+    object-fit: cover;
+    width: 50%;
+    height: 50%;
+  }
+  @media screen and (max-width: 768px) {
+    min-width: 100px;
+    height: 100px;
+    font-size: small;
+  }
 }
 
 .skill-logo-small {
@@ -210,16 +228,34 @@ html::-webkit-scrollbar {
   color: black;
   margin: 0 1rem;
   border-radius: 0.5rem;
+  flex-wrap: nowrap;
+  margin-top: 2rem;
+  img {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+  }
+  @media screen and (max-width: 768px) {
+    margin-top: 0.25rem;
+  }
 }
 
 .scroll-container {
   display: flex;
+  justify-content: center;
   max-width: 100vw;
   width: 100vw;
   overflow-x: auto;
   white-space: nowrap;
   position: relative;
   padding: 0 1rem;
+  @media screen and (max-width: 768px) {
+    width: unset;
+    justify-content: unset;
+    max-width: 100vw;
+    overflow-x: visible;
+    animation: scroll-logos 15s linear infinite;
+  }
 }
 
 .scroll-container-move {
@@ -229,6 +265,7 @@ html::-webkit-scrollbar {
   white-space: nowrap;
   position: relative;
   padding: 0 1rem;
+  animation: scroll-logos 15s linear infinite;
 }
 
 @keyframes scroll-logos {
@@ -240,12 +277,65 @@ html::-webkit-scrollbar {
   }
 }
 
-.scroll-container-move {
-  animation: scroll-logos 15s linear infinite;
-}
-
 .scroll-container-move:hover {
   animation-play-state: paused;
+}
+
+.past-project-container {
+  display: flex;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.past-project {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+  @media screen and (max-width: 768px) {
+    width: 50%;
+    margin: 0px;
+  }
+}
+
+.experience-container {
+  display: flex;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.experience {
+  width: 50%;
+  @media screen and (max-width: 768px) {
+    width: 80%;
+  }
+}
+
+.skills-used {
+  @media screen and (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+  }
+  div:nth-child(2):not(.skill-logo-small) {
+    @media screen and (max-width: 768px) {
+      display: flex;
+      flex-direction: row !important;
+      width: 100%;
+      flex-wrap: nowrap;
+      overflow-x: scroll;
+    }
+  }
 }
 
 .overview-box {
@@ -277,6 +367,10 @@ html::-webkit-scrollbar {
   pointer-events: none;
   width: 500px;
   margin-top: 250px;
+  @media screen and (max-width: 768px) {
+    width: 150px;
+    margin-top: 300px;
+  }
 }
 
 .overview-text {
@@ -290,6 +384,9 @@ html::-webkit-scrollbar {
   justify-content: center;
   height: fit-content;
   margin: 0 20rem;
+  @media screen and (max-width: 768px) {
+    font-size: small !important;
+  }
   span {
     max-width: 600px;
     background-color: #baebfb;
@@ -309,6 +406,10 @@ html::-webkit-scrollbar {
   align-items: center;
   background-color: $white;
   margin: 1rem 0.5rem;
+  @media screen and (max-width: 768px) {
+    height: 50px;
+    width: 200px;
+  }
   img {
     width: 100%;
     height: 100%;
@@ -317,8 +418,9 @@ html::-webkit-scrollbar {
 }
 
 .fact-box {
-  @include oppositeGradient;
-  color: $white;
+  background: url('https://www.witf.io/wp-content/uploads/2020/11/iStock-1159238834-1628x1080.jpg') no-repeat center center !important;
+  background-size: cover !important;
+  color: white;
   width: fit-content;
   border-radius: 1rem;
   padding: 0.5rem;
@@ -354,6 +456,10 @@ iframe {
   transform: perspective(2000px);
   transform-style: preserve-3d;
   transition: all 1s ease;
+  @media screen and (max-width: 768px) {
+    min-width: 200px;
+    height: 290px;
+  }
 }
 
 .course-cover {
@@ -430,6 +536,10 @@ iframe {
   font-size: 12px;
   text-wrap: wrap;
   padding: 0 3rem;
+  @media screen and (max-width: 768px) {
+    font-size: 8px;
+    padding: 0;
+  }
 
   span {
     color: black;
@@ -437,6 +547,9 @@ iframe {
     font-size: 16px;
     margin-bottom: 0.5rem;
     text-decoration: underline;
+    @media screen and (max-width: 768px) {
+      font-size: 12px;
+    }
   }
   ul {
     text-align: start;
@@ -471,6 +584,9 @@ iframe {
   border-right: 20px solid transparent;
   pointer-events: all;
   margin-bottom: 350px;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 
   &::before {
     content: "";
@@ -482,6 +598,9 @@ iframe {
     box-shadow: 0px -1px 6px rgba(0, 0, 0, 0.05),
       0px 4px 16px rgba(0, 0, 0, 0.25);
     z-index: 2;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
 
   &::after {
@@ -498,6 +617,9 @@ iframe {
     );
     clip-path: polygon(0% 0%, 100% 0%, 97% 100%, 3% 100%);
     z-index: -1;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
 }
 
