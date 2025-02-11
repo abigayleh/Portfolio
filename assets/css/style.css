@@ -5427,7 +5427,7 @@ textarea.form-control-lg {
   width: 100%;
   color: var(--bs-modal-color);
   pointer-events: auto;
-  background-color: var(--bs-modal-bg);
+  background-color: black;
   background-clip: padding-box;
   border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
   border-radius: var(--bs-modal-border-radius);
@@ -5444,7 +5444,7 @@ textarea.form-control-lg {
   z-index: var(--bs-backdrop-zindex);
   width: 100vw;
   height: 100vh;
-  background-color: var(--bs-backdrop-bg);
+  background-color: black;
 }
 .modal-backdrop.fade {
   opacity: 0;
@@ -11875,7 +11875,7 @@ html::-webkit-scrollbar {
 }
 
 .modal-content {
-  background-color: #640aa8 !important;
+  background-color: #202020 !important;
 }
 .modal-content .btn {
   color: #640aa8;
@@ -11904,7 +11904,7 @@ html::-webkit-scrollbar {
 }
 
 .modal-header {
-  background-color: #640aa8;
+  background-color: #202020;
   color: #fff;
 }
 .modal-header .btn-close {
