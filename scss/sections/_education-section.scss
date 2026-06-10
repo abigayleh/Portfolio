@@ -1,0 +1,136 @@
+@use '../custom' as *;
+
+.blogs-overview {
+	padding: 4rem 0;
+}
+
+.blogs-subtitle {
+	max-width: 760px;
+	margin: 0.5rem auto 0;
+	font-size: 1.02rem;
+	line-height: 1.7;
+	color: #1f1f1f;
+}
+
+.blogs-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 1.25rem;
+	margin-top: 2rem;
+
+	@media (max-width: 992px) {
+		grid-template-columns: 1fr;
+	}
+}
+
+.blog-card {
+	display: block;
+	text-decoration: none;
+	background: rgba(255, 255, 255, 0.92);
+	border: 1px solid rgba(0, 0, 0, 0.12);
+	border-radius: 0.85rem;
+	padding: 1.15rem 1.15rem 1.25rem;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+	color: #1f1f1f;
+
+	&:hover,
+	&:focus-visible {
+		transform: translateY(-3px);
+		box-shadow: 0 12px 26px rgba(0, 0, 0, 0.16);
+		outline: none;
+	}
+
+	h3 {
+		font-size: 1.15rem;
+		line-height: 1.4;
+		margin: 0.6rem 0 0.65rem;
+		color: #121212;
+	}
+
+	p {
+		font-size: 0.97rem;
+		line-height: 1.65;
+		margin: 0;
+		color: #2a2a2a;
+	}
+}
+
+.blog-card-button {
+	width: 100%;
+	text-align: left;
+	border: 1px solid rgba(0, 0, 0, 0.12);
+	cursor: pointer;
+}
+
+.blog-tag {
+	display: inline-block;
+	font-size: 0.78rem;
+	font-weight: 700;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	color: #fff;
+	background: #202020;
+	padding: 0.28rem 0.55rem;
+	border-radius: 999px;
+}
+
+.blog-link {
+	display: inline-block;
+	margin-top: 0.9rem;
+	font-weight: 700;
+	font-size: 0.92rem;
+	color: #fd7e14;
+}
+
+.blogs-cta-wrap {
+	margin-top: 1.5rem;
+	text-align: center;
+}
+
+.blog-modal-body {
+	p {
+		line-height: 1.75;
+		margin-bottom: 0.85rem;
+		color: #f2f2f2;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.blogs-page {
+	min-height: 100vh;
+}
+
+.blog-article-list {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1.25rem;
+	margin-top: 1.75rem;
+}
+
+.blog-article-card {
+	background: rgba(255, 255, 255, 0.94);
+	border: 1px solid rgba(0, 0, 0, 0.12);
+	border-radius: 0.95rem;
+	padding: 1.3rem;
+
+	h2 {
+		font-size: 1.35rem;
+		margin: 0.65rem 0 0.9rem;
+		line-height: 1.35;
+		color: #131313;
+	}
+
+	p {
+		font-size: 1rem;
+		line-height: 1.75;
+		margin: 0 0 0.85rem;
+		color: #222;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

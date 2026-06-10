@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abigayle Hickey - Blogs</title>
+  <link rel="icon" type="image/png" href="./images/logo.png">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark menu shadow fixed-top" style="height: 100px; overflow: hidden; padding: 0;">
+    <div class="w-100 h-100 d-flex justify-content-between">
+      <a class="navbar-brand d-flex justify-content-center align-items-center" style="padding-left: 10px;" href="index.html">
+        <img src="images/logo.png" alt="Logo image" style="width: 70px; height: auto;">
+      </a>
+      <div class="collapse d-none d-lg-block navbar-collapse justify-content-end">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#overview">Overview</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#pastProjects">Past Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#experience">Experience + Education</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#blogs">Blogs</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="background blogs-page">
+    <div style="height: 100px;"></div>
+
+    <section class="container py-5">
+      <div class="row text-center">
+        <h1 class="display-3 fw-bold">Blog Articles</h1>
+        <div class="heading-line mb-2"></div>
+        <p class="blogs-subtitle">Deep dives from practical development work, patterns, and frontend architecture decisions.</p>
+      </div>
+
+      <div class="blog-article-list">
+        <article id="isopen-refresh" class="blog-article-card">
+          <span class="blog-tag">React State</span>
+          <h2>Benefits of using isOpen &amp;&amp; to refresh state</h2>
+          <p>
+            One of the simplest ways to keep UI state fresh in React is conditional rendering with
+            isOpen &amp;&amp; SomeComponent. When the condition turns false, React unmounts that subtree.
+            When it becomes true again, the component mounts fresh with default local state.
+          </p>
+          <p>
+            This pattern is especially useful for modals, drawers, and transient panels where stale input
+            and old validation messages can create confusion. Instead of manually resetting ten pieces of state,
+            unmounting does the reset for you.
+          </p>
+          <p>
+            It also improves predictability. A newly opened surface always starts in a known state: clean form,
+            clear errors, and fresh effects. The tradeoff is that you lose in-progress values while closed,
+            which is usually correct for short-lived workflows.
+          </p>
+        </article>
+
+        <article id="react-query-invalidate" class="blog-article-card">
+          <span class="blog-tag">React Query</span>
+          <h2>React Query invalidateQueries for fresh data</h2>
+          <p>
+            invalidateQueries is one of the most reliable tools in React Query. After a successful mutation,
+            you mark related query keys as stale and let React Query refetch at the right time.
+          </p>
+          <p>
+            This keeps cache logic declarative. You avoid scattered manual refetch calls and reduce coupling
+            between mutation components and every place data appears.
+          </p>
+          <p>
+            A strong pattern is:
+            perform mutation, await success, invalidate the parent list key and any detail key for edited items.
+            With stable query keys and this invalidation flow, your UI stays synchronized with the server while
+            still getting cache performance.
+          </p>
+        </article>
+
+        <article id="scss-css-tailwind" class="blog-article-card">
+          <span class="blog-tag">Styling</span>
+          <h2>Comparing SCSS, CSS, and Tailwind</h2>
+          <p>
+            Plain CSS is the baseline and is great when a project is small or design complexity is low.
+            It is direct, standards-based, and has zero framework overhead.
+          </p>
+          <p>
+            SCSS adds structure and power through variables, nesting, mixins, and partials.
+            For medium-to-large products with repeated patterns and theme tokens, SCSS can improve maintainability
+            and reduce duplication.
+          </p>
+          <p>
+            Tailwind shifts style decisions into utility classes directly in markup. It speeds iteration,
+            encourages consistency, and can reduce context switching between files.
+            The tradeoff is denser class attributes and a stronger dependency on utility conventions.
+          </p>
+          <p>
+            In practice:
+            CSS for simple sites,
+            SCSS for authored component systems,
+            Tailwind for fast UI composition and design-system utilities.
+            Hybrid approaches are often best.
+          </p>
+        </article>
+
+        <article id="infinite-looping" class="blog-article-card">
+          <span class="blog-tag">Animation</span>
+          <h2>How to achieve infinite looping without glitch</h2>
+          <p>
+            Glitch-free infinite loops usually fail for one reason: mismatch between animation distance and
+            rendered content width. The fix is to duplicate your item sequence and animate by exactly one sequence width.
+          </p>
+          <p>
+            Measure the original sequence width after layout (including margins), clone that sequence once,
+            and animate container translateX from 0 to minus measured width. When it resets, the second sequence
+            is visually identical to the first frame, so the loop appears seamless.
+          </p>
+          <p>
+            For responsive reliability, recompute width on resize and font load changes.
+            Keep speed in pixels per second and derive duration from distance. That creates stable motion across
+            screen sizes and avoids the stutter that comes from hardcoded timing.
+          </p>
+        </article>
+      </div>
+
+      <div class="blogs-cta-wrap">
+        <a class="btn btn-dark" href="index.html#blogs">Back to Portfolio Blogs</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
