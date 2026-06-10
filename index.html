@@ -41,13 +41,13 @@
             <a class="nav-link" href="#education">Education</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#resume">Resume</a>
+            <a class="nav-link" href="pdfs/Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
           </li>
         </ul>
         <a class="logo-button" href="https://github.com/abigayleh" target="_blank" rel="noopener noreferrer">
           <img 
           style="width: 40px; height: auto;"
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/640px-Octicons-mark-github.svg.png" 
+            src="public/images/icons/github.svg" 
             alt="GitHub Logo"
           >
         </a>        
@@ -99,7 +99,7 @@
         <a class="logo-button" href="https://github.com/abigayleh" target="_blank" rel="noopener noreferrer">
           <img 
             style="width: 30px; height: auto;"
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/640px-Octicons-mark-github.svg.png" 
+            src="public/images/icons/github.svg" 
             alt="GitHub Logo"
           >
         </a>        
@@ -902,14 +902,11 @@
               <div class="col-sm-12 col-md-6" style="margin-bottom: 20px;">
                 <img src="images/MUN.png" alt="MUN" style="width: 100%; height: auto;" class="rounded">    
               </div>
-              <div class="col-sm-12 col-md-6 d-flex flex-column text-white justify-content-center" style="font-size: large;">
-                <div class="primary p-3 rounded" style="margin: 0 30px;">
-                  <span>I graduated from Memorial University of Newfoundland with a Bachelor's degree in Computer Engineering.</span>
-                  <br />
-                  <span>During my time at MUN, I gained valuable experience through co-op placements and capstone projects, while deepening my knowledge of various Computer Engineering disciplines.</span>
-                  <br />
-                  <br />
-                  <span>⭐️ I graduated with honors, achieving an overall cumulative average of 80%.</span>                
+              <div class="col-sm-12 col-md-6 d-flex flex-column text-black justify-content-center">
+                <div class="p-4 rounded" style="margin: 0 30px;">
+                  <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem; font-weight: 500; color: #2c3e50;">I graduated from Memorial University of Newfoundland with a Bachelor's degree in Computer Engineering. During my studies, I gained hands-on experience through co-op placements and capstone projects while developing a strong foundation in software development, data structures and algorithms, computer architecture, operating systems, databases, networking, embedded systems, and software engineering principles.</p>
+                  <p style="font-size: 1rem; line-height: 1.7; margin-bottom: 1.5rem; color: #34495e;">Through both academic and practical projects, I strengthened my skills in programming, system design, problem-solving, debugging, and collaborating within technical teams to deliver real-world solutions.</p>
+                  <p style="font-size: 1.1rem; line-height: 1.7; font-weight: 600; color: #6c63ff; margin-bottom: 0;">⭐️ I graduated with honors, achieving an overall cumulative average of 80%.</p>                
                 </div>
               </div>
             </div>
@@ -917,66 +914,64 @@
 
           <div class="w-100 d-flex flex-column align-items-center" style="margin-top: 10px;">
             <span class="title-box">University Projects</span>
-            <div class="text-box d-flex flex-column justify-content-center align-items-center" style="padding: 20px; margin: 0;">
-              <span>
+            <div class="d-flex" style="padding: 20px; margin: 0;">
+              <span style="width: 500px">
                 During my Computer Engineering degree I was able to work on a lot of really interesting projects, varying from technical, website design, to biomedical topics.
                 Here are some of my favorites for you to see some of the stuff I've worked on in University. Click on one to read more about it! 🤓
               </span>
+              <div class="projects-grid">
+                <div class="course-book">
+                  <div class="course-cover">
+                    <img src="images/projectCovers/EIM.png" alt="topics">
+                  </div>
+                  <div class="course-content">
+                    <span>A detailed report analyzing the effects of various MATLAB filters in isolating brain waves to develop a functional brain-computer interface algorithm.</span>
+                    <br />
+                    <span>This project provided an exciting introduction to real-world biomedical applications and was an incredibly rewarding experience!</span>                
+                    <a href="./pdfs/EIMProject.pdf" target="_blank" rel="noopener noreferrer">
+                      <span>Click here to download the full report.</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="course-book">
+                  <div class="course-cover">
+                    <img src="images/projectCovers/insulin.png" alt="topics">
+                  </div>
+                  <div class="course-content">
+                    <span>Another project from my biomedical classes. For this I was required to scoure many medical research papers and get to know on up to date research taking place.</span>
+                    <br />
+                    <span>A super interesting dive into critiqueing research papers and finding flaws, great real use applications.</span>                
+                    <a href="./pdfs/FinalReport.pdf" target="_blank" rel="noopener noreferrer">
+                      <span>Click here to download the full report.</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="course-book">
+                  <div class="course-cover">
+                    <img src="images/projectCovers/frontend.png" alt="topics">
+                  </div>
+                  <div class="course-content">
+                    <span>As part of my first co-op at HYKE, I focused extensively on backend unit testing. I also created a detailed report outlining the best practices for unit testing and explaining its importance.</span>                </div>
+                    <a href="./pdfs/HykeFrontend.pdf" target="_blank" rel="noopener noreferrer">
+                      <span>Click here to download the full report.</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="course-book">
+                  <div class="course-cover">
+                    <img src="images/projectCovers/backend.png" alt="topics">
+                  </div>
+                  <div class="course-content">
+                    <span>As part of my second co-op at HYKE, I worked on transitioning the frontend framework from React to Vue. During this process, we aimed to enhance the reusability of our code as we recreated the base project.</span>
+                    <br />
+                    <span>I also created a report outlining best practices for maintaining a sustainable and long-lasting codebase.</span>                
+                    <a href="./pdfs/HykeBackend.pdf" target="_blank" rel="noopener noreferrer">
+                      <span>Click here to download the full report.</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="d-flex flex-wrap w-100 justify-content-evenly" style="margin: 40px 0;">
-              <div class="course-book">
-                <div class="course-cover">
-                  <img src="images/projectCovers/EIM.png" alt="topics">
-                </div>
-                <div class="course-content">
-                  <span>A detailed report analyzing the effects of various MATLAB filters in isolating brain waves to develop a functional brain-computer interface algorithm.</span>
-                  <br />
-                  <span>This project provided an exciting introduction to real-world biomedical applications and was an incredibly rewarding experience!</span>                
-                  <a href="./pdfs/EIMProject.pdf" download>
-                    <span>Click here to download the full report.</span>
-                  </a>
-                </div>
-              </div>
-              <div class="course-book">
-                <div class="course-cover">
-                  <img src="images/projectCovers/insulin.png" alt="topics">
-                </div>
-                <div class="course-content">
-                  <span>Another project from my biomedical classes. For this I was required to scoure many medical research papers and get to know on up to date research taking place.</span>
-                  <br />
-                  <span>A super interesting dive into critiqueing research papers and finding flaws, great real use applications.</span>                
-                  <a href="./pdfs/FinalReport.pdf" download>
-                    <span>Click here to download the full report.</span>
-                  </a>
-                </div>
-              </div>
-              <div class="course-book">
-                <div class="course-cover">
-                  <img src="images/projectCovers/frontend.png" alt="topics">
-                </div>
-                <div class="course-content">
-                  <span>As part of my first co-op at HYKE, I focused extensively on backend unit testing. I also created a detailed report outlining the best practices for unit testing and explaining its importance.</span>                </div>
-                  <a href="./pdfs/HykeFrontend.pdf" download>
-                    <span>Click here to download the full report.</span>
-                  </a>
-                </div>
-              </div>
-                            <div class="course-book">
-                <div class="course-cover">
-                  <img src="images/projectCovers/backend.png" alt="topics">
-                </div>
-                <div class="course-content">
-                  <span>As part of my second co-op at HYKE, I worked on transitioning the frontend framework from React to Vue. During this process, we aimed to enhance the reusability of our code as we recreated the base project.</span>
-                  <br />
-                  <span>I also created a report outlining best practices for maintaining a sustainable and long-lasting codebase.</span>                
-                  <a href="./pdfs/HykeBackend.pdf" download>
-                    <span>Click here to download the full report.</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div style="height: 100px;"></div>
-          </div>
         </div>
       </div>
     </div>
