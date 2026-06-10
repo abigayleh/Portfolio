@@ -12001,44 +12001,6 @@ html::-webkit-scrollbar {
   justify-content: center;
 }
 
-.mantra {
-  background-color: #fff;
-  width: 30rem !important;
-  height: 4rem;
-  border-radius: 0.2rem;
-  position: relative;
-  margin-bottom: 2rem;
-}
-@media screen and (max-width: 768px) {
-  .mantra {
-    width: 20rem !important;
-    height: 3rem;
-  }
-}
-.mantra div {
-  font-family: "Markazi Text", serif;
-  font-size: larger;
-  top: 0.675rem;
-  left: 0.675rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  background: url('https://www.witf.io/wp-content/uploads/2020/11/iStock-1159238834-1628x1080.jpg') no-repeat center center !important;
-  background-size: cover !important;
-  color: #fff;
-  height: 4rem;
-  width: 30rem;
-  border-radius: 0.2rem;
-}
-@media screen and (max-width: 768px) {
-  .mantra div {
-    width: 20rem;
-    height: 3rem;
-    font-size: medium;
-  }
-}
-
 .title-box {
   width: fit-content;
   color: #202020;
@@ -12148,9 +12110,6 @@ html::-webkit-scrollbar {
   to {
     transform: translateX(-100%);
   }
-}
-.scroll-container-move:hover {
-  animation-play-state: paused;
 }
 
 .past-project-container {
@@ -12297,7 +12256,7 @@ html::-webkit-scrollbar {
 }
 
 .fact-box {
-  background: url('https://www.witf.io/wp-content/uploads/2020/11/iStock-1159238834-1628x1080.jpg') no-repeat center center !important;
+  background: url('public/images/remote/fact-box-background.jpg') no-repeat center center !important;
   background-size: cover !important;
   color: white;
   width: fit-content;
@@ -12330,8 +12289,8 @@ iframe {
 .course-book {
   margin: 0 1rem;
   position: relative;
-  min-width: 250px;
-  height: 340px;
+  height: 300px;
+  width: 220px;
   background-color: #fff;
   border-radius: 10px;
   cursor: pointer;
@@ -12339,12 +12298,6 @@ iframe {
   transform: perspective(2000px);
   transform-style: preserve-3d;
   transition: all 1s ease;
-}
-@media screen and (max-width: 768px) {
-  .course-book {
-    min-width: 200px;
-    height: 290px;
-  }
 }
 
 .course-cover {
@@ -12359,6 +12312,7 @@ iframe {
   transition: all 1s ease;
   display: flex;
   justify-content: center;
+  background-color: white;
 }
 .course-cover div {
   margin-top: 2rem;

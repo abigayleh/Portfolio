@@ -133,39 +133,6 @@ html::-webkit-scrollbar {
   justify-content: center;
 }
 
-.mantra {
-  background-color: $white;
-  width: 30rem !important;
-  height: 4rem;
-  border-radius: 0.2rem;
-  position: relative;
-  margin-bottom: 2rem;
-  @media screen and (max-width: 768px) {
-    width: 20rem !important;
-    height: 3rem;
-  }
-  div {
-    font-family: "Markazi Text", serif;
-    font-size: larger;
-    top: 0.675rem;
-    left: 0.675rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    background-color: $secondary;
-    color: $white;
-    height: 4rem;
-    width: 30rem;
-    border-radius: 0.2rem;
-    @media screen and (max-width: 768px) {
-      width: 20rem;
-      height: 3rem;
-      font-size: medium;
-    }
-  }
-}
-
 .skills {
   background-color: $primary;
 }
@@ -275,10 +242,6 @@ html::-webkit-scrollbar {
   to {
     transform: translateX(-100%);
   }
-}
-
-.scroll-container-move:hover {
-  animation-play-state: paused;
 }
 
 .past-project-container {
@@ -418,7 +381,7 @@ html::-webkit-scrollbar {
 }
 
 .fact-box {
-  background: url('https://www.witf.io/wp-content/uploads/2020/11/iStock-1159238834-1628x1080.jpg') no-repeat center center !important;
+  background: url('public/images/remote/fact-box-background.jpg') no-repeat center center !important;
   background-size: cover !important;
   color: white;
   width: fit-content;
@@ -533,7 +496,6 @@ iframe {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 12px;
   text-wrap: wrap;
   padding: 0 3rem;
   @media screen and (max-width: 768px) {
@@ -542,17 +504,7 @@ iframe {
   }
 
   span {
-    color: black;
-    font-weight: 800;
-    font-size: 16px;
-    margin-bottom: 0.5rem;
-    text-decoration: underline;
-    @media screen and (max-width: 768px) {
-      font-size: 12px;
-    }
-  }
-  ul {
-    text-align: start;
+    font-size: 10px;
   }
 }
 
