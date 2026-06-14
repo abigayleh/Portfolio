@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Create a Glitch-Free Infinite Loop Animation</title>
+    <meta name="description" content="Learn how to build seamless infinite scrolling animations without visual jumps or glitches using duplicated content and precise animation distances.">
+    <link rel="icon" type="image/png" href="../images/logo.png">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/fontawesome.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Lexend", sans-serif;
+            margin: 0;
+            padding: 0 0 2rem;
+            line-height: 1.8;
+            color: #2a2a2a;
+            background: #202020;
+        }
+
+        .blog-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1.25rem;
+        }
+
+        .blog-page-shell {
+            min-height: 100vh;
+            padding-top: 100px;
+        }
+
+        h1, h2, h3 {
+            color: #1f1f1f;
+        }
+
+        p,
+        li {
+            color: #2f2f2f;
+            font-size: 1.02rem;
+        }
+
+        ul,
+        ol {
+            padding-left: 1.25rem;
+        }
+
+        pre {
+            background: #e3e3e3;
+            color: #1f1f1f;
+            border-radius: 8px;
+            padding: 1rem;
+        }
+
+        code {
+            color: #1f1f1f;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1.2rem;
+            text-decoration: none;
+            color: #640aa8;
+            font-weight: 700;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+        <nav class="navbar navbar-expand-lg navbar-dark menu shadow fixed-top" style="height: 100px; overflow: hidden; padding: 0px;">
+            <div class="w-100 h-100 d-flex justify-content-between">
+                <a class="navbar-brand d-flex justify-content-center align-items-center" style="padding-left: 10px;" href="../index.html#home">
+                    <img src="../images/logo.png" alt="Logo image" style="width: 70px; height: auto;">
+        </a>
+                <div class="collapse d-none d-lg-block navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="../index.html#experience">Experience</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../index.html#skills">Skills</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../index.html#pastProjects">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../index.html#blogs">Blogs</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../pdfs/Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
+                    </ul>
+                    <a class="logo-button" href="https://github.com/abigayleh" target="_blank" rel="noopener noreferrer"><img style="width: 40px; height: auto;" src="../public/images/icons/github.svg" alt="GitHub Logo"></a>
+                    <a class="logo-button" href="https://www.linkedin.com/in/abigayle-hickey-7582331b8/" target="_blank" rel="noopener noreferrer"><img class="rounded-circle" style="width: 42px; height: auto;" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="Linkdln Logo"></a>
+                    <button type="button" class="mx-1 rounded-pill btn-rounded" data-bs-toggle="modal" data-bs-target="#contactModal">Contact <span><i class="fas fa-phone-alt"></i></span></button>
+                    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content position-relative"><div class="position-absolute bottom-0 end-0"><img src="../images/rocket.png" alt="Rocket" style="z-index: 2000; width: 300px; height: auto;"></div><div class="modal-header"><h5 class="modal-title" id="contactModalLabel">Let's get the conversation flowing</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body"><form id="contactForm"><div class="mb-3"><label for="name" class="form-label">Name</label><input type="text" class="form-control opacity-75" id="name" placeholder="Your Name" required></div><div class="mb-3"><label for="email" class="form-label">Email</label><input type="email" class="form-control opacity-75" id="email" placeholder="Your Email" required></div><div class="mb-3"><label for="message" class="form-label">Description</label><textarea class="form-control opacity-75" id="message" rows="3" placeholder="Your Message" required></textarea></div><button type="submit" class="btn bg-white w-100" style="color: black;">Send</button></form></div></div></div></div>
+                </div>
+                <div class="mobile-menu" id="navbarSupportedContent">
+                    <a class="logo-button" href="https://github.com/abigayleh" target="_blank" rel="noopener noreferrer"><img style="width: 30px; height: auto;" src="../public/images/icons/github.svg" alt="GitHub Logo"></a>
+                    <a class="logo-button" style="margin-right: 50px;" href="https://www.linkedin.com/in/abigayle-hickey-7582331b8/" target="_blank" rel="noopener noreferrer"><img class="rounded-circle" style="width: 32px; height: auto;" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="Linkdln Logo"></a>
+                    <button type="button" class="rounded-pill btn-rounded" data-bs-toggle="modal" data-bs-target="#contactModal"><span><i class="fas fa-phone-alt"></i></span></button>
+                    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content position-relative"><div class="position-absolute bottom-0 end-0"><img src="../images/rocket.png" alt="Rocket" style="z-index: 2000; width: 300px; height: auto;"></div><div class="modal-header"><h5 class="modal-title" id="contactModalLabel">Let's get the conversation flowing</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body"><form id="contactForm"><div class="mb-3"><label for="name" class="form-label">Name</label><input type="text" class="form-control opacity-75" id="name" placeholder="Your Name" required></div><div class="mb-3"><label for="email" class="form-label">Email</label><input type="email" class="form-control opacity-75" id="email" placeholder="Your Email" required></div><div class="mb-3"><label for="message" class="form-label">Description</label><textarea class="form-control opacity-75" id="message" rows="3" placeholder="Your Message" required></textarea></div><button type="submit" class="btn bg-white w-100">Send</button></form></div></div></div></div>
+        </div>
+      </div>
+    </nav>
+        <div class="background blog-page-shell">
+        <main class="blog-content">
+    <a class="back-link" href="../index.html#blogs">Back to Blogs</a>
+    <article>
+        <header>
+            <h1>How to Create a Glitch-Free Infinite Loop Animation</h1>
+            <p>
+                Infinite scrolling animations are commonly used for logo carousels,
+                testimonials, announcements, and image galleries. While the concept
+                seems simple, many implementations suffer from noticeable jumps,
+                stutters, or glitches when the animation restarts.
+            </p>
+            <p>
+                Fortunately, creating a perfectly seamless loop comes down to one
+                critical principle: ensuring that the animation distance matches the
+                width of the content being animated.
+            </p>
+        </header>
+
+        <section>
+            <h2>Why Infinite Loops Glitch</h2>
+
+            <p>
+                Most looping animations break because the distance traveled does not
+                exactly match the rendered width of the content. Developers often
+                hardcode animation values or rely on percentage-based transforms,
+                which can introduce small discrepancies due to responsive layouts,
+                margins, font loading, or varying content sizes.
+            </p>
+
+            <p>
+                When the animation resets, even a few pixels of mismatch become
+                visible as a sudden jump. This creates the familiar "glitch" users
+                notice in poorly implemented carousels.
+            </p>
+        </section>
+
+        <section>
+            <h2>The Correct Solution</h2>
+
+            <p>
+                The most reliable approach is to duplicate the original sequence of
+                items and animate the container by exactly one sequence width.
+            </p>
+
+            <p>
+                Here's the process:
+            </p>
+
+            <ol>
+                <li>Render your original sequence of items.</li>
+                <li>Duplicate the sequence immediately after it.</li>
+                <li>Measure the width of the original sequence after layout.</li>
+                <li>Animate the container from <code>translateX(0)</code> to <code>translateX(-width)</code>.</li>
+                <li>Allow the animation to restart.</li>
+            </ol>
+
+            <p>
+                Because the duplicated content is identical to the original content,
+                the ending frame perfectly matches the starting frame. When the
+                animation resets, users cannot detect the transition.
+            </p>
+        </section>
+
+        <section>
+            <h2>Why Duplication Works</h2>
+
+            <p>
+                Imagine a row of logos:
+            </p>
+
+            <pre>
+Logo A | Logo B | Logo C | Logo D
+Logo A | Logo B | Logo C | Logo D
+            </pre>
+
+            <p>
+                The animation moves the first sequence completely out of view while
+                bringing the duplicate sequence into place. Once the container has
+                shifted by exactly one sequence width, the visible content is
+                identical to the starting position.
+            </p>
+
+            <p>
+                This makes the reset visually invisible and creates a truly
+                continuous loop.
+            </p>
+        </section>
+
+        <section>
+            <h2>Measure Real Widths, Not Assumptions</h2>
+
+            <p>
+                One of the biggest mistakes developers make is hardcoding animation
+                distances. The actual width of a sequence may change based on:
+            </p>
+
+            <ul>
+                <li>Responsive breakpoints</li>
+                <li>Font loading</li>
+                <li>Content changes</li>
+                <li>Margins and gaps</li>
+                <li>Window resizing</li>
+            </ul>
+
+            <p>
+                Instead of assuming a width, measure the rendered size after layout.
+                This ensures your animation distance always matches the actual
+                content width.
+            </p>
+        </section>
+
+        <section>
+            <h2>Handle Responsive Layouts</h2>
+
+            <p>
+                Modern websites must adapt to different screen sizes, so your
+                measurements should update whenever the layout changes.
+            </p>
+
+            <p>
+                Recalculate the sequence width when:
+            </p>
+
+            <ul>
+                <li>The browser window resizes</li>
+                <li>Fonts finish loading</li>
+                <li>Content is dynamically updated</li>
+                <li>Responsive breakpoints change the layout</li>
+            </ul>
+
+            <p>
+                This prevents loops from becoming misaligned after a resize event.
+            </p>
+        </section>
+
+        <section>
+            <h2>Use Pixels Per Second Instead of Fixed Durations</h2>
+
+            <p>
+                Another common issue is inconsistent animation speed across
+                different screen sizes.
+            </p>
+
+            <p>
+                Instead of setting a fixed duration such as 20 seconds, define a
+                desired speed in pixels per second and calculate the duration based
+                on the measured distance.
+            </p>
+
+            <pre>
+duration = distance / speed
+            </pre>
+
+            <p>
+                For example, if the content width is 2,000 pixels and the desired
+                speed is 100 pixels per second:
+            </p>
+
+            <pre>
+duration = 2000 / 100
+duration = 20 seconds
+            </pre>
+
+            <p>
+                If the content width later changes to 3,000 pixels, the duration
+                automatically adjusts while maintaining the same visual speed.
+            </p>
+        </section>
+
+        <section>
+            <h2>Final Thoughts</h2>
+
+            <p>
+                Glitch-free infinite loops are not about complex animation tricks.
+                They rely on a simple but important principle: the animation
+                distance must exactly match the width of the original content.
+            </p>
+
+            <p>
+                By duplicating your sequence, measuring its actual rendered width,
+                and calculating animation timing dynamically, you can create smooth,
+                seamless loops that remain reliable across devices, screen sizes,
+                and content updates.
+            </p>
+
+            <p>
+                The result is an infinite animation that feels polished,
+                professional, and completely uninterrupted.
+            </p>
+        </section>
+    </article>
+    </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
