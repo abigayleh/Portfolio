@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="leafletTitle leafletDesc">
+  <title id="leafletTitle">Leaflet</title>
+  <desc id="leafletDesc">Stylized green leaf icon for Leaflet mapping library</desc>
+  <defs>
+    <linearGradient id="leafletGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8bd13f"/>
+      <stop offset="100%" stop-color="#2a983f"/>
+    </linearGradient>
+  </defs>
+  <path d="M10 42C10 20 28 8 54 10C52 36 40 54 18 54C13 54 10 49 10 42Z" fill="url(#leafletGradient)"/>
+  <path d="M18 46C28 34 38 24 50 16" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+</svg>
