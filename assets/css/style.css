@@ -12864,7 +12864,7 @@ iframe {
   background-color: #585858;
   color: black;
   padding-top: 20px;
-  background-image: url("./../../images/background.jpeg");
+  background-image: url("./../../public/images/site/background.jpeg");
   background-size: auto;
   background-position: center;
   background-repeat: repeat;
@@ -13219,8 +13219,8 @@ iframe {
 }
 .project-simple-footer img {
   display: block;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   object-fit: contain;
   border-radius: 0.4rem;
   background: rgba(0, 0, 0, 0.03);
