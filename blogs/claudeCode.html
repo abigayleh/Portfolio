@@ -90,6 +90,41 @@ hr {
 .back-link:hover {
   text-decoration: underline;
 }
+
+.cheat-sheet {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background: #e3e3e3;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cheat-sheet th,
+.cheat-sheet td {
+  padding: 0.65rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #cacaca;
+  font-size: 1rem;
+  color: #2f2f2f;
+}
+
+.cheat-sheet th {
+  background: #d0d0d0;
+  font-weight: 700;
+  color: #1f1f1f;
+}
+
+.cheat-sheet tr:last-child td {
+  border-bottom: none;
+}
+
+.cheat-sheet td:first-child {
+  font-family: monospace;
+  white-space: nowrap;
+  color: #640aa8;
+  font-weight: 700;
+}
 </style>
 </head>
 
@@ -649,6 +684,73 @@ If unresolved:
 - No lint errors
 - Summary provided
 </pre>
+
+<hr>
+
+<h2>Claude Code Command Cheat Sheet</h2>
+
+<p>
+These are the most useful slash commands while working in a session.
+</p>
+
+<table class="cheat-sheet">
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>What it does</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>/compact</td>
+      <td>Summarizes the conversation into a compressed context — the single best way to reclaim tokens mid-session without losing progress</td>
+    </tr>
+    <tr>
+      <td>/clear</td>
+      <td>Wipes the entire conversation. Use when starting a genuinely new task and a fresh context is cleaner than compacting</td>
+    </tr>
+    <tr>
+      <td>/init</td>
+      <td>Generates a CLAUDE.md for the current project by scanning the codebase — great starting point before any real work begins</td>
+    </tr>
+    <tr>
+      <td>/review</td>
+      <td>Runs a code review on the current diff or a GitHub PR number — surfaces bugs and simplification opportunities</td>
+    </tr>
+    <tr>
+      <td>/cost</td>
+      <td>Shows total token usage and cost for the current session — useful for spotting when context is getting expensive</td>
+    </tr>
+    <tr>
+      <td>/model</td>
+      <td>Switches the active model mid-session (e.g. drop to Haiku for simple tasks, switch to Opus for hard ones)</td>
+    </tr>
+    <tr>
+      <td>/config</td>
+      <td>Opens interactive configuration for settings like theme, model defaults, and permissions</td>
+    </tr>
+    <tr>
+      <td>/memory</td>
+      <td>Opens memory files for editing — useful for correcting or adding persistent project context</td>
+    </tr>
+    <tr>
+      <td>/doctor</td>
+      <td>Diagnoses environment issues — checks API key, dependencies, and shell setup</td>
+    </tr>
+    <tr>
+      <td>/help</td>
+      <td>Lists all available commands with short descriptions</td>
+    </tr>
+    <tr>
+      <td>Esc</td>
+      <td>Interrupts Claude mid-task — press once to stop the current action, twice to also clear the pending input</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+<code>/compact</code> is the one command most people discover too late. Run it before the context gets unmanageable, not after.
+</blockquote>
 
 <hr>
 
