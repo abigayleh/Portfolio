@@ -45,6 +45,15 @@
 	background: #111;
 }
 
+.project-video-placeholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: rgba(255, 255, 255, 0.3);
+	font-size: 0.85rem;
+	letter-spacing: 0.05em;
+}
+
 .project-simple-header {
 	display: block;
 	padding: 0.7rem 1rem;

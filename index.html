@@ -891,6 +891,19 @@
       </div>
 
       <div class="projects-simple-grid">
+        <button type="button" class="project-simple-card" data-bs-toggle="modal" data-bs-target="#projectModalWhatsThePlan" aria-label="Open What's the Plan details">
+          <span class="project-simple-header">What's the Plan?</span>
+          <div class="project-simple-media project-video-placeholder">
+            <span>Video coming soon</span>
+          </div>
+          <span class="project-simple-footer" aria-label="Tech stack for What's the Plan?">
+            <img src="public/images/tech-stack/react.svg" alt="React" title="React">
+            <img src="public/images/tech-stack/node-js.svg" alt="Node.js" title="Node.js">
+            <img src="public/images/tech-stack/sql-database.png" alt="PostgreSQL" title="PostgreSQL">
+            <img src="public/images/tech-stack/websocket.svg" alt="Socket.io" title="Socket.io">
+          </span>
+        </button>
+
         <button type="button" class="project-simple-card" data-bs-toggle="modal" data-bs-target="#projectModalWhatsForDinner" aria-label="Open What's for Dinner details">
           <span class="project-simple-header">What's for Dinner?</span>
           <video class="project-simple-media" autoplay loop muted playsinline>
@@ -942,6 +955,63 @@
             <img src="public/images/tech-stack/html.svg" alt="HTML" title="HTML">
           </span>
         </button>
+      </div>
+    </div>
+
+    <div class="modal fade" id="projectModalWhatsThePlan" tabindex="-1" aria-labelledby="projectModalWhatsThePlanLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <h5 class="modal-title" id="projectModalWhatsThePlanLabel">What's the Plan?</h5>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>What's the Plan? is a real-time collaborative planning app for groups — friend crews, roommates, trip squads, or work teams. Every group gets a shared calendar, to-do lists, trip itineraries, a notes hub, polls, and group chat, all updating live without a page reload.</p>
+            <p>The app is built around a multi-group model where everything is scoped to a specific group. The calendar layers per-group color coding with recurring events and task due dates. Itineraries include a day-view map with linked calendar banners. Notes use a custom TipTap editor with slash commands, @-mentions, nested pages, and tables — effectively a self-contained Notion-style doc system. Real-time features (chat, polls, presence) run over Socket.io with JWT-authenticated connections and a silent refresh flow so auth interruptions are invisible to the user.</p>
+            <div class="modal-tech-stack" style="margin-top: 1.5rem;">
+              <strong>Tech Stack:</strong>
+              <div class="modal-tech-grid">
+                <div class="modal-tech-chip">
+                  <img src="public/images/tech-stack/react.svg" alt="React">
+                  <span>React 19</span>
+                </div>
+                <div class="modal-tech-chip">
+                  <img src="public/images/tech-stack/typescript.svg" alt="TypeScript">
+                  <span>TypeScript</span>
+                </div>
+                <div class="modal-tech-chip">
+                  <img src="public/images/tech-stack/sass.png" alt="SASS">
+                  <span>SASS</span>
+                </div>
+                <div class="modal-tech-chip">
+                  <img src="public/images/tech-stack/node-js.svg" alt="Node.js">
+                  <span>Node.js / Express</span>
+                </div>
+                <div class="modal-tech-chip">
+                  <img src="public/images/tech-stack/websocket.svg" alt="Socket.io">
+                  <span>Socket.io</span>
+                </div>
+                <div class="modal-tech-chip">
+                  <img src="public/images/tech-stack/sql-database.png" alt="PostgreSQL">
+                  <span>PostgreSQL</span>
+                </div>
+                <div class="modal-tech-chip">
+                  <img src="public/images/tech-stack/jwt-logo.svg" alt="JWT">
+                  <span>JWT Auth</span>
+                </div>
+                <div class="modal-tech-chip">
+                  <img src="public/images/tech-stack/leaflet.svg" alt="Leaflet">
+                  <span>Leaflet</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a class="btn btn-dark" href="https://whatss-the-plan.netlify.app" target="_blank" rel="noopener noreferrer">Visit Website</a>
+          </div>
+        </div>
       </div>
     </div>
 
