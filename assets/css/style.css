@@ -13512,6 +13512,7 @@ iframe {
 }
 .modal-tech-stack .modal-tech-grid {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.65rem;
 }
 @media (max-width: 576px) {
@@ -13523,6 +13524,7 @@ iframe {
   display: flex;
   align-items: center;
   gap: 0.65rem;
+  flex: 1 1 100%;
   background: rgba(255, 255, 255, 0.07);
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 0.65rem;
