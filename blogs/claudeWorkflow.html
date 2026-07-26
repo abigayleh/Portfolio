@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How I Structured My Claude Code Setup: Skills, Agents, Hooks, and Workflows</title>
+<link rel="icon" type="image/png" href="../public/images/site/logo.png">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/fontawesome.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+<style>
+body {
+  font-family: "Lexend", sans-serif;
+  margin: 0;
+  padding: 0 0 2rem;
+  line-height: 1.8;
+  color: #2a2a2a;
+  background: #202020;
+}
+
+.blog-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem;
+}
+
+.blog-page-shell {
+  min-height: 100vh;
+  padding-top: 100px;
+}
+
+h1, h2, h3 {
+  color: #1f1f1f;
+}
+
+p,
+li {
+  color: #2f2f2f;
+  font-size: 1.02rem;
+}
+
+ul,
+ol {
+  padding-left: 1.25rem;
+}
+
+pre {
+  background: #e3e3e3;
+  color: #1f1f1f;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+code {
+  font-family: monospace;
+}
+
+blockquote {
+  border-left: 4px solid #640aa8;
+  padding-left: 1rem;
+  color: #4a4a4a;
+  margin-left: 0;
+}
+
+.highlight {
+  background: #ece6f4;
+  border: 1px solid rgba(100, 10, 168, 0.25);
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+hr {
+  margin: 3rem 0;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 1.2rem;
+  text-decoration: none;
+  color: #640aa8;
+  font-weight: 700;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.file-link {
+  color: #640aa8;
+  font-family: monospace;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.file-link:hover {
+  text-decoration: underline;
+  color: #4a0080;
+}
+
+.section-label {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #fff;
+  background: #640aa8;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.agent-card {
+  background: #e3e3e3;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.agent-card h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
+}
+
+.agent-card p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.hook-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background: #e3e3e3;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.hook-table th,
+.hook-table td {
+  padding: 0.65rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #cacaca;
+  font-size: 0.95rem;
+  color: #2f2f2f;
+}
+
+.hook-table th {
+  background: #d0d0d0;
+  font-weight: 700;
+  color: #1f1f1f;
+}
+
+.hook-table tr:last-child td {
+  border-bottom: none;
+}
+
+.hook-table td:first-child {
+  font-family: monospace;
+  white-space: nowrap;
+  color: #640aa8;
+  font-weight: 700;
+}
+</style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark menu shadow fixed-top" style="height: 100px; overflow: hidden; padding: 0px;">
+  <div class="w-100 h-100 d-flex justify-content-between">
+    <a class="navbar-brand d-flex justify-content-center align-items-center" style="padding-left: 10px;" href="../index.html#home">
+      <img src="../public/images/site/logo.png" alt="Logo image" style="width: 70px; height: auto;">
+    </a>
+    <div class="collapse d-none d-lg-block navbar-collapse justify-content-end" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html#experience">Experience</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html#skills">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html#pastProjects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html#blogs">Blogs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../pdfs/Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+        </li>
+      </ul>
+      <a class="logo-button" href="https://github.com/abigayleh" target="_blank" rel="noopener noreferrer">
+        <img style="width: 40px; height: auto;" src="../public/images/tech-stack/github.svg" alt="GitHub Logo">
+      </a>
+      <a class="logo-button" href="https://www.linkedin.com/in/abigayle-hickey-7582331b8/" target="_blank" rel="noopener noreferrer">
+        <img class="rounded-circle" style="width: 42px; height: auto;" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="Linkdln Logo">
+      </a>
+      <button type="button" class="mx-1 rounded-pill btn-rounded" data-bs-toggle="modal" data-bs-target="#contactModal">
+        Contact
+        <span><i class="fas fa-phone-alt"></i></span>
+      </button>
+      <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content position-relative">
+            <div class="position-absolute bottom-0 end-0">
+              <img src="../public/images/site/rocket.png" alt="Rocket" style="z-index: 2000; width: 300px; height: auto;">
+            </div>
+            <div class="modal-header">
+              <h5 class="modal-title" id="contactModalLabel">Let's get the conversation flowing</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form id="contactForm">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name</label>
+                  <input type="text" class="form-control opacity-75" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control opacity-75" id="email" placeholder="Your Email" required>
+                </div>
+                <div class="mb-3">
+                  <label for="message" class="form-label">Description</label>
+                  <textarea class="form-control opacity-75" id="message" rows="3" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn bg-white w-100" style="color: black;">Send</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mobile-menu" id="navbarSupportedContent">
+      <a class="logo-button" href="https://github.com/abigayleh" target="_blank" rel="noopener noreferrer">
+        <img style="width: 30px; height: auto;" src="../public/images/tech-stack/github.svg" alt="GitHub Logo">
+      </a>
+      <a class="logo-button" style="margin-right: 50px;" href="https://www.linkedin.com/in/abigayle-hickey-7582331b8/" target="_blank" rel="noopener noreferrer">
+        <img class="rounded-circle" style="width: 32px; height: auto;" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="Linkdln Logo">
+      </a>
+      <button type="button" class="rounded-pill btn-rounded" data-bs-toggle="modal" data-bs-target="#contactModal">
+        <span><i class="fas fa-phone-alt"></i></span>
+      </button>
+      <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content position-relative">
+            <div class="position-absolute bottom-0 end-0">
+              <img src="../public/images/site/rocket.png" alt="Rocket" style="z-index: 2000; width: 300px; height: auto;">
+            </div>
+            <div class="modal-header">
+              <h5 class="modal-title" id="contactModalLabel">Let's get the conversation flowing</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form id="contactForm">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name</label>
+                  <input type="text" class="form-control opacity-75" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control opacity-75" id="email" placeholder="Your Email" required>
+                </div>
+                <div class="mb-3">
+                  <label for="message" class="form-label">Description</label>
+                  <textarea class="form-control opacity-75" id="message" rows="3" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn bg-white w-100">Send</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="background blog-page-shell">
+<main class="blog-content">
+
+<a class="back-link" href="../index.html#blogs">Back to Blogs</a>
+
+<h1>How I Structured My Claude Code Setup: Skills, Agents, Hooks, and Workflows</h1>
+
+<p>
+Telling an AI agent to "be careful" doesn't scale. Under enough context pressure, an instruction is a suggestion — the model will route around it with perfectly good intentions. After hitting this pattern one too many times, I decided to stop relying on prose and start enforcing rules in code.
+</p>
+
+<p>
+The result is a Claude Code plugin that packages my entire development pipeline: eight skills that define what Claude can do, five specialized agents that each own a single job, four hooks that block rule-violations at the shell level before Claude can execute them, and a set of shared convention files that all agents read from. None of it is clever. The goal is that every non-negotiable rule is enforced, not requested.
+</p>
+
+<p>
+This post walks through how it's structured and why each piece exists.
+<a class="file-link" href="https://github.com/abigayleh/claude-workflow-plugin" target="_blank" rel="noopener noreferrer">The full plugin is on GitHub.</a>
+</p>
+
+<hr>
+
+<h2>The Core Idea: Enforcement Over Suggestion</h2>
+
+<p>
+There are three layers in this setup, and it's worth being clear about what each one does:
+</p>
+
+<ul>
+  <li><strong>Conventions</strong> — shared markdown files that all agents read. These define what "correct" looks like for security, style, git, state management, and testing. They're the single source of truth.</li>
+  <li><strong>Skills and agents</strong> — procedures and subagents that follow those conventions. Skills define the steps; agents own specific roles.</li>
+  <li><strong>Hooks</strong> — Python scripts that fire before any shell or file write. If the command violates a rule, the hook returns a <code>deny</code> decision the model cannot argue with.</li>
+</ul>
+
+<p>
+The hooks are what make the rest of it credible. Without them, every rule is still just text — something the model might forget or reason its way around.
+</p>
+
+<hr>
+
+<h2>Skills: Repeatable Procedures</h2>
+
+<p>
+A skill is a SKILL.md file that loads when its description matches a task. I have eight:
+</p>
+
+<h3><a class="file-link" href="https://github.com/abigayleh/claude-workflow-plugin/blob/main/skills/ship-feature/SKILL.md" target="_blank" rel="noopener noreferrer">ship-feature</a></h3>
+
+<p>
+The main pipeline. Nine stages, in order:
+</p>
+
+<ol>
+  <li>Create a <code>feat/</code> branch in its own git worktree — the current folder never changes branch</li>
+  <li>Run <code>detect-stack.py</code> to discover what verification commands actually exist</li>
+  <li>Launch <code>code-writer</code> and <code>test-writer</code> in the same message so they run in parallel</li>
+  <li>Run exactly the commands Stage 2 reported — never assume anything that wasn't found</li>
+  <li>Run <code>code-quality-reviewer</code> and <code>ui-checker</code> simultaneously</li>
+  <li>Decide whether there are issues</li>
+  <li>Fix loop capped at 3 attempts: <code>debugger</code> diagnoses → <code>code-writer</code> fixes → back to verification</li>
+  <li>Diff review, commit, rebase, push with <code>--force-with-lease --force-if-includes</code></li>
+  <li>Second review against the rebased branch — what the PR will actually show</li>
+</ol>
+
+<p>
+Stage 9 hands off a <code>gh pr create</code> command and stops. Claude never opens the PR.
+</p>
+
+<h3><a class="file-link" href="https://github.com/abigayleh/claude-workflow-plugin/blob/main/skills/fix-bug/SKILL.md" target="_blank" rel="noopener noreferrer">fix-bug</a></h3>
+
+<p>
+Lighter than <code>ship-feature</code>. The key rule: if <code>debugger</code> can't reproduce the bug, stop. Don't implement a fix for a cause nobody confirmed. Also: the fix must not weaken or delete any existing test. A failing test is a signal, not an obstacle.
+</p>
+
+<h3><a class="file-link" href="https://github.com/abigayleh/claude-workflow-plugin/blob/main/skills/refactor/SKILL.md" target="_blank" rel="noopener noreferrer">refactor</a></h3>
+
+<p>
+Records the baseline before touching anything. Before starting, Claude must name the specific risk in one line — "if you can't name it, you don't understand the code yet." The codewriter changes structure, not behavior, and flags bugs it finds rather than fixing them inline.
+</p>
+
+<h3><a class="file-link" href="https://github.com/abigayleh/claude-workflow-plugin/blob/main/skills/git-workflow/SKILL.md" target="_blank" rel="noopener noreferrer">git-workflow</a></h3>
+
+<p>
+The procedural companion to <a class="file-link" href="https://github.com/abigayleh/claude-workflow-plugin/blob/main/conventions/git.md" target="_blank" rel="noopener noreferrer">conventions/git.md</a>. Always finds the base branch by running <code>default-branch.sh</code> — never assumes <code>main</code>. Covers worktree creation, rebase safety, when to push, and how to clean up.
+</p>
+
+<h3>
+  <a class="file-link" href="https://github.com/abigayleh/claude-workflow-plugin/blob/main/skills/commit-message/SKILL.md" target="_blank" rel="noopener noreferrer">commit-message</a>,&nbsp;
+  <a class="file-link" href="https://github.com/abigayleh/claude-workflow-plugin/blob/main/skills/diff-review/SKILL.md" target="_blank" rel="noopener noreferrer">diff-review</a>,&nbsp;
+  <a class="file-link" href="https://github.com/abigayleh/claude-workflow-plugin/blob/main/skills/dev-verify/SKILL.md" target="_blank" rel="noopener noreferrer">dev-verify</a>,&nbsp;
+  <a class="file-link" href="https://github.com/abigayleh/claude-workflow-plugin/blob/main/skills/env-doctor/SKILL.md" target="_blank" rel="noopener noreferrer">env-doctor</a>
+</h3>
+
+<p>
+<strong>commit-message</strong>: single line, <code>type: summary</code>, no body, no AI attribution. The hook enforces this — it's not optional.
+</p>
+
+<p>
+<strong>diff-review</strong>: a pre-commit checklist covering security (reads from <a class="file-link" href="https://github.com/abigayleh/claude-workflow-plugin/blob/main/conventions/security.md" target="_blank" rel="noopener noreferrer">conventions/security.md</a>), correctness, performance, and scope. If nothing is found, it says so explicitly — silence reads as "not checked."
+</p>
+
+<p>
+<strong>dev-verify</strong>: starts the dev server, hands the user a specific checklist. Does not drive a browser, does not describe what the page looks like. Anything it said about appearance would be invented.
+</p>
+
+<p>
+<strong>env-doctor</strong>: diagnoses environment problems — wrong interpreter, unactivated venv, lockfile drift. Notably: never <code>cat .env</code> into the conversation. Only reads key names.
+</p>
+
+<hr>
+
+<h2>Agents: Separation of Powers</h2>
+
+<p>
+Each agent owns one job. The reviewers and debugger have no <code>Write</code> or <code>Edit</code> tools — this is enforced by both their tool configuration and a hook. The reason is deliberate:
+</p>
+
+<blockquote>
+A reviewer that can edit quietly fixes what it finds, and the finding never reaches the user.
+</blockquote>
+
+<div class="agent-card">
+  <h3><a class="file-link" href="https://github.com/abigayleh/claude-workflow-plugin/blob/main/agents/code-writer.md" target="_blank" rel="noopener noreferrer">code-writer</a></h3>
+  <p>Full read/write access. Reads the codebase before writing anything. Implements the smallest correct change. Never weakens a test to make it pass.</p>
+</div>
+
+<div class="agent-card">
+  <h3><a class="file-link" href="https://github.com/abigayleh/claude-workflow-plugin/blob/main/agents/code-quality-reviewer.md" target="_blank" rel="noopener noreferrer">code-quality-reviewer</a></h3>
+  <p>Read-only. Reads <code>conventions/security.md</code>, <code>conventions/code-style.md</code>, and <code>conventions/state-and-data.md</code> as its authoritative source before reviewing. Outputs a verdict with blocking issues and suggestions.</p>
+</div>
+
+<div class="agent-card">
+  <h3><a class="file-link" href="https://github.com/abigayleh/claude-workflow-plugin/blob/main/agents/debugger.md" target="_blank" rel="noopener noreferrer">debugger</a></h3>
+  <p>Read-only. Must reproduce the bug before proposing a fix. If it can't reproduce, it says so explicitly — a clearly-labelled "I couldn't reproduce this" is worth more than a confident guess presented as a fix.</p>
+</div>
+
+<div class="agent-card">
+  <h3><a class="file-link" href="https://github.com/abigayleh/claude-workflow-plugin/blob/main/agents/test-writer.md" target="_blank" rel="noopener noreferrer">test-writer</a></h3>
+  <p>No <code>Bash</code> tool. No memory. Cannot read the implementation — by design. A test derived by reading the code asserts what the code does, including its bugs. It works only from the spec, launched in parallel with <code>code-writer</code>.</p>
+</div>
+
+<div class="agent-card">
+  <h3><a class="file-link" href="https://github.com/abigayleh/claude-workflow-plugin/blob/main/agents/ui-checker.md" target="_blank" rel="noopener noreferrer">ui-checker</a></h3>
+  <p>Read-only. Cannot see the UI and does not pretend to. Reviews what the code says about layout, responsiveness, accessibility, and state coverage. Produces a "Needs visual confirmation" checklist for the user.</p>
+</div>
+
+<hr>
+
+<h2>Hooks: The Real Enforcement Layer</h2>
+
+<p>
+Hooks are <code>PreToolUse</code> scripts that fire before Claude executes a shell command or file write. They return a <code>deny</code> decision if the command violates a rule. There are four:
+</p>
+
+<table class="hook-table">
+  <thead>
+    <tr>
+      <th>Hook</th>
+      <th>What it blocks</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a class="file-link" href="https://github.com/abigayleh/claude-workflow-plugin/blob/main/hooks/check-commit-msg.py" target="_blank" rel="noopener noreferrer">check-commit-msg.py</a></td>
+      <td>Commits to the base branch, multi-line messages, missing type prefix, bodies via <code>-F</code> or heredoc, command substitution in the message</td>
+    </tr>
+    <tr>
+      <td><a class="file-link" href="https://github.com/abigayleh/claude-workflow-plugin/blob/main/hooks/guard-push-main.py" target="_blank" rel="noopener noreferrer">guard-push-main.py</a></td>
+      <td><code>git push</code> targeting the base branch, including <code>--all</code>, <code>--mirror</code>, and explicit refspecs</td>
+    </tr>
+    <tr>
+      <td><a class="file-link" href="https://github.com/abigayleh/claude-workflow-plugin/blob/main/hooks/guard-merge-main.py" target="_blank" rel="noopener noreferrer">guard-merge-main.py</a></td>
+      <td><code>git merge</code> that would land on the base branch. Tracks the destination, not the argument. Allows <code>--abort</code> and <code>--continue</code>.</td>
+    </tr>
+    <tr>
+      <td><a class="file-link" href="https://github.com/abigayleh/claude-workflow-plugin/blob/main/hooks/guard-agent-writes.py" target="_blank" rel="noopener noreferrer">guard-agent-writes.py</a></td>
+      <td>Read-only agents (<code>code-quality-reviewer</code>, <code>debugger</code>, <code>ui-checker</code>) writing outside their own memory directory. Path traversal resolved with <code>os.path.realpath</code> before comparison.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+All three git hooks are built on a shared <a class="file-link" href="https://github.com/abigayleh/claude-workflow-plugin/blob/main/hooks/_gitcmd.py" target="_blank" rel="noopener noreferrer">_gitcmd.py</a> library that parses compound shell commands, handles <code>cd x && git commit</code> patterns, and tracks branch state across a <code>git switch</code>. They all fail open: if a command can't be parsed, the operation is allowed rather than blocking everything.
+</p>
+
+<hr>
+
+<h2>Conventions: One Source of Truth</h2>
+
+<p>
+The convention files are what all agents read. The key design principle is that no agent should carry its own opinion about what "correct" looks like — it should read the shared file and apply that. When the rule changes, it changes in one place.
+</p>
+
+<ul>
+  <li><a class="file-link" href="https://github.com/abigayleh/claude-workflow-plugin/blob/main/conventions/security.md" target="_blank" rel="noopener noreferrer">security.md</a> — SQL injection, XSS, command injection, path traversal, secrets in logs, auth posture. Shared by <code>diff-review</code> and <code>code-quality-reviewer</code>.</li>
+  <li><a class="file-link" href="https://github.com/abigayleh/claude-workflow-plugin/blob/main/conventions/git.md" target="_blank" rel="noopener noreferrer">git.md</a> — worktrees over branch switching, no commit bodies, base branch detection, rebase safety, push flags.</li>
+  <li><a class="file-link" href="https://github.com/abigayleh/claude-workflow-plugin/blob/main/conventions/code-style.md" target="_blank" rel="noopener noreferrer">code-style.md</a> — optimized for skimming, less code is better, match the codebase before your own defaults, one error-surfacing convention per app.</li>
+  <li><a class="file-link" href="https://github.com/abigayleh/claude-workflow-plugin/blob/main/conventions/state-and-data.md" target="_blank" rel="noopener noreferrer">state-and-data.md</a> — cache is state, optimistic updates belong in the mutation not the component, no update without a rollback, multi-doc writes use transactions or batches.</li>
+  <li><a class="file-link" href="https://github.com/abigayleh/claude-workflow-plugin/blob/main/conventions/testing.md" target="_blank" rel="noopener noreferrer">testing.md</a> — report exactly what ran. Never say "tests pass" when no test runner exists. Never weaken a test to make it pass.</li>
+  <li><a class="file-link" href="https://github.com/abigayleh/claude-workflow-plugin/blob/main/conventions/refactoring.md" target="_blank" rel="noopener noreferrer">refactoring.md</a> — record the baseline first, name the risk before starting, change structure not behavior, ask before large deletions or API-shape changes.</li>
+</ul>
+
+<hr>
+
+<h2>Scripts: What Actually Exists</h2>
+
+<p>
+Two scripts underpin the whole pipeline:
+</p>
+
+<h3><a class="file-link" href="https://github.com/abigayleh/claude-workflow-plugin/blob/main/scripts/detect-stack.py" target="_blank" rel="noopener noreferrer">detect-stack.py</a></h3>
+
+<p>
+Returns JSON describing what verification commands the project <em>actually has</em>. Detects Node, Python, Rust, Go, Ruby, and Java. Reads <code>package.json</code> scripts to avoid treating the npm test placeholder as a real runner. If no test runner is found, it appends:
+</p>
+
+<div class="highlight">
+  <code>"Do not claim tests passed — report exactly which checks ran."</code>
+</div>
+
+<p>
+Every skill that runs verification calls this first. No assumed commands.
+</p>
+
+<h3><a class="file-link" href="https://github.com/abigayleh/claude-workflow-plugin/blob/main/scripts/default-branch.sh" target="_blank" rel="noopener noreferrer">default-branch.sh</a></h3>
+
+<p>
+Finds the base branch from most to least authoritative: remote HEAD symref → local config → network query → probing conventional names. <strong>Exits 3 rather than guessing</strong> when more than one conventional name exists. The git hooks treat exit 3 as ambiguous and fail open. Every skill that references the base branch runs this script first.
+</p>
+
+<hr>
+
+<h2>Installing It</h2>
+
+<p>
+The plugin installs via the Claude Code plugin marketplace:
+</p>
+
+<pre><code>/plugin marketplace add abigaylehickey/claude-workflow-plugin</code></pre>
+
+<p>
+That pulls the skills, agents, hooks, conventions, and scripts into your project's <code>.claude/</code> directory. The README includes a <a class="file-link" href="https://github.com/abigayleh/claude-workflow-plugin/blob/main/README.md" target="_blank" rel="noopener noreferrer">recommended CLAUDE.md drop-in</a> that wires the skills into your project's instructions.
+</p>
+
+<hr>
+
+<h2>What This Looks Like in Practice</h2>
+
+<p>
+When I start a new feature, I type <code>/ship-feature</code> and describe what I want. Claude creates a worktree, probes what checks exist, launches the code-writer and test-writer in parallel, verifies, reviews, and hands me a <code>gh pr create</code> command. I open the PR. I don't merge from the agent side — ever.
+</p>
+
+<p>
+When something breaks, I use <code>/fix-bug</code>. The debugger has to reproduce it before proposing a fix. If it can't, it says so. That single rule has saved me from a lot of confident-but-wrong patches.
+</p>
+
+<p>
+The part I use most is actually the simplest: the commit hook. Every message that doesn't match <code>type: summary</code> on a single line gets denied. After a few weeks of that, single-line commits just become the habit.
+</p>
+
+<p>
+None of this is magic. It's just rules in code instead of rules in prose — and that small distinction turns out to matter a lot.
+</p>
+
+</main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

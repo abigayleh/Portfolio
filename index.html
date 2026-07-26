@@ -35,6 +35,9 @@
             <a class="nav-link" href="#skills">Skills</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="#certifications">Certifications</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="#pastProjects">Projects</a>
           </li>
           <li class="nav-item">
@@ -45,20 +48,23 @@
           </li>
         </ul>
         <a class="logo-button" href="https://github.com/abigayleh" target="_blank" rel="noopener noreferrer">
-          <img 
+          <img
           style="width: 40px; height: auto;"
-            src="public/images/tech-stack/github.svg" 
+            src="public/images/tech-stack/github.svg"
             alt="GitHub Logo"
           >
-        </a>        
+        </a>
         <a class="logo-button" href="https://www.linkedin.com/in/abigayle-hickey-7582331b8/" target="_blank" rel="noopener noreferrer">
-          <img 
-            class="rounded-circle"  
+          <img
+            class="rounded-circle"
             style="width: 42px; height: auto;"
-            src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" 
+            src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
             alt="Linkdln Logo"
           >
-        </a>        
+        </a>
+        <a class="logo-button d-flex align-items-center justify-content-center" href="https://apps.apple.com/ng/developer/abigayle-hickey/id6789945217" target="_blank" rel="noopener noreferrer" style="width: 44px; height: 44px;">
+          <i class="fa-brands fa-app-store" style="font-size: 28px; color: #1c8eff;"></i>
+        </a>
         <button type="button" class="mx-1 rounded-pill btn-rounded" data-bs-toggle="modal" data-bs-target="#contactModal">
           Contact
           <span><i class="fas fa-phone-alt"></i></span>
@@ -97,20 +103,24 @@
       </div>
       <div class="mobile-menu" id="navbarSupportedContent">
         <a class="logo-button" href="https://github.com/abigayleh" target="_blank" rel="noopener noreferrer">
-          <img 
+          <img
             style="width: 30px; height: auto;"
-            src="public/images/tech-stack/github.svg" 
+            src="public/images/tech-stack/github.svg"
             alt="GitHub Logo"
           >
-        </a>        
-        <a class="logo-button" style="margin-right: 50px;" href="https://www.linkedin.com/in/abigayle-hickey-7582331b8/" target="_blank" rel="noopener noreferrer">
-          <img 
-            class="rounded-circle"  
+        </a>
+        <a class="logo-button" href="https://www.linkedin.com/in/abigayle-hickey-7582331b8/" target="_blank" rel="noopener noreferrer">
+          <img
+            class="rounded-circle"
             style="width: 32px; height: auto;"
-            src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" 
+            src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
             alt="Linkdln Logo"
           >
-        </a>        
+        </a>
+        <a class="logo-button d-flex align-items-center justify-content-center" style="margin-right: 50px; width: 36px; height: 36px;" href="https://apps.apple.com/ng/developer/abigayle-hickey/id6789945217" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-app-store" style="font-size: 22px; color: #1c8eff;"></i>
+        </a>
+
         <button type="button" class="rounded-pill btn-rounded" data-bs-toggle="modal" data-bs-target="#contactModal">
           <span><i class="fas fa-phone-alt"></i></span>
         </button>
@@ -845,6 +855,33 @@
       </div>
     </div>
   </section>
+  <!-- Certifications -->
+  <section id="certifications" class="background certifications">
+    <div class="container">
+      <div class="row text-center">
+        <h1 class="display-3 fw-bold">Certifications</h1>
+        <div class="heading-line mb-2"></div>
+      </div>
+      <div class="cert-grid">
+        <a class="cert-card" href="public/certificates/cert-claude-code.pdf" target="_blank" rel="noopener noreferrer">
+          <span class="cert-issuer">ANTHROPIC</span>
+          <h3 class="cert-title">Claude Code in Action</h3>
+          <span class="cert-link">View Certificate</span>
+        </a>
+        <a class="cert-card" href="public/certificates/cert-subagents.pdf" target="_blank" rel="noopener noreferrer">
+          <span class="cert-issuer">ANTHROPIC</span>
+          <h3 class="cert-title">Introduction to Subagents</h3>
+          <span class="cert-link">View Certificate</span>
+        </a>
+        <a class="cert-card" href="public/certificates/cert-agent-skills.pdf" target="_blank" rel="noopener noreferrer">
+          <span class="cert-issuer">ANTHROPIC</span>
+          <h3 class="cert-title">Introduction to Agent Skills</h3>
+          <span class="cert-link">View Certificate</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- Past Projects -->
   <section id="pastProjects" class="background past-projects">
     <div class="container">
@@ -1086,6 +1123,15 @@
       </div>
 
       <div class="blogs-grid">
+        <a class="blog-card blog-card-button" href="blogs/claudeWorkflow.html" aria-label="Open Claude Code workflow plugin blog">
+          <span class="blog-tag">Claude Code</span>
+          <h3>How I Structured My Claude Code Setup: Skills, Agents, Hooks, and Workflows</h3>
+          <p>
+            How I built a plugin to enforce my development pipeline — skills, specialized agents, PreToolUse hooks, and shared convention files.
+          </p>
+          <span class="blog-link">Read full blog</span>
+        </a>
+
         <a class="blog-card blog-card-button" href="blogs/claudeCode.html" aria-label="Open Claude Code mastery blog">
           <span class="blog-tag">Claude Code</span>
           <h3>Claude Code Mastery: Save Tokens, Avoid Loops, and Build Faster</h3>
