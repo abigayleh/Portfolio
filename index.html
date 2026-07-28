@@ -891,8 +891,11 @@
       </div>
 
       <div class="projects-simple-grid">
-        <button type="button" class="project-simple-card" data-bs-toggle="modal" data-bs-target="#projectModalWhatsThePlan" aria-label="Open What's the Plan details">
-          <span class="project-simple-header">What's the Plan?</span>
+        <div class="project-simple-card" role="button" tabindex="0" data-bs-toggle="modal" data-bs-target="#projectModalWhatsThePlan" aria-label="Open What's the Plan details">
+          <div class="project-simple-header">
+            <span>What's the Plan?</span>
+            <a class="project-card-link" href="https://whatss-the-plan.netlify.app/demo" target="_blank" rel="noopener noreferrer" title="Visit website" onclick="event.stopPropagation()" aria-label="Visit What's the Plan? website"><i class="fas fa-external-link-alt"></i></a>
+          </div>
           <video class="project-simple-media" autoplay loop muted playsinline>
             <source src="public/videos/WTPVideo.mp4" type="video/mp4">
           </video>
@@ -902,10 +905,13 @@
             <img src="public/images/tech-stack/sql-database.png" alt="PostgreSQL" title="PostgreSQL">
             <img src="public/images/tech-stack/websocket.svg" alt="Socket.io" title="Socket.io">
           </span>
-        </button>
+        </div>
 
-        <button type="button" class="project-simple-card" data-bs-toggle="modal" data-bs-target="#projectModalWhatsForDinner" aria-label="Open What's for Dinner details">
-          <span class="project-simple-header">What's for Dinner?</span>
+        <div class="project-simple-card" role="button" tabindex="0" data-bs-toggle="modal" data-bs-target="#projectModalWhatsForDinner" aria-label="Open What's for Dinner details">
+          <div class="project-simple-header">
+            <span>What's for Dinner?</span>
+            <a class="project-card-link" href="https://whats-for-dinnner.netlify.app/demo" target="_blank" rel="noopener noreferrer" title="Visit website" onclick="event.stopPropagation()" aria-label="Visit What's for Dinner? website"><i class="fas fa-external-link-alt"></i></a>
+          </div>
           <video class="project-simple-media" autoplay loop muted playsinline>
             <source src="public/videos/dinnerVideo.mp4" type="video/mp4">
           </video>
@@ -915,10 +921,13 @@
             <img src="public/images/tech-stack/react-query.svg" alt="TanStack React Query" title="TanStack React Query">
             <img src="public/images/tech-stack/sass.png" alt="SASS" title="SASS">
           </span>
-        </button>
+        </div>
 
-        <button type="button" class="project-simple-card" data-bs-toggle="modal" data-bs-target="#projectModalAIChatbot" aria-label="Open AI Chatbot details">
-          <span class="project-simple-header">AI Chatbot</span>
+        <div class="project-simple-card" role="button" tabindex="0" data-bs-toggle="modal" data-bs-target="#projectModalAIChatbot" aria-label="Open AI Chatbot details">
+          <div class="project-simple-header">
+            <span>AI Chatbot</span>
+            <a class="project-card-link" href="https://aichatbothelper.netlify.app" target="_blank" rel="noopener noreferrer" title="Visit website" onclick="event.stopPropagation()" aria-label="Visit AI Chatbot website"><i class="fas fa-external-link-alt"></i></a>
+          </div>
           <video class="project-simple-media" autoplay loop muted playsinline>
             <source src="public/videos/AIChatbot.mov" type="video/mp4">
           </video>
@@ -928,10 +937,13 @@
             <img src="public/images/tech-stack/next-js.svg" alt="Next.js" title="Next.js">
             <img src="public/images/tech-stack/typescript.svg" alt="TypeScript" title="TypeScript">
           </span>
-        </button>
+        </div>
 
-        <button type="button" class="project-simple-card" data-bs-toggle="modal" data-bs-target="#projectModalJinStay" aria-label="Open JinStay details">
-          <span class="project-simple-header">JinStay</span>
+        <div class="project-simple-card" role="button" tabindex="0" data-bs-toggle="modal" data-bs-target="#projectModalJinStay" aria-label="Open JinStay details">
+          <div class="project-simple-header">
+            <span>JinStay</span>
+            <a class="project-card-link" href="https://jinstay.netlify.app/home" target="_blank" rel="noopener noreferrer" title="Visit website" onclick="event.stopPropagation()" aria-label="Visit JinStay website"><i class="fas fa-external-link-alt"></i></a>
+          </div>
           <video class="project-simple-media" autoplay loop muted playsinline>
             <source src="public/videos/JinStayVideo.mp4" type="video/mp4">
           </video>
@@ -941,10 +953,13 @@
             <img src="public/images/tech-stack/tailwindcss.svg" alt="TailwindCSS" title="TailwindCSS">
             <img src="public/images/tech-stack/leaflet.svg" alt="Leaflet" title="Leaflet">
           </span>
-        </button>
+        </div>
 
-        <button type="button" class="project-simple-card" data-bs-toggle="modal" data-bs-target="#projectModalWaggle" aria-label="Open Waggle details">
-          <span class="project-simple-header">Waggle</span>
+        <div class="project-simple-card" role="button" tabindex="0" data-bs-toggle="modal" data-bs-target="#projectModalWaggle" aria-label="Open Waggle details">
+          <div class="project-simple-header">
+            <span>Waggle</span>
+            <a class="project-card-link" href="https://waggle-2-0.web.app" target="_blank" rel="noopener noreferrer" title="Visit website" onclick="event.stopPropagation()" aria-label="Visit Waggle website"><i class="fas fa-external-link-alt"></i></a>
+          </div>
           <video class="project-simple-media" autoplay loop muted playsinline>
             <source src="public/videos/waggleVideo.mov" type="video/mp4">
           </video>
@@ -954,7 +969,7 @@
             <img src="public/images/tech-stack/swarm-robotics.jpg" alt="Swarm Robotics" title="Swarm Robotics">
             <img src="public/images/tech-stack/html.svg" alt="HTML" title="HTML">
           </span>
-        </button>
+        </div>
       </div>
     </div>
 
@@ -1261,6 +1276,11 @@
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
    <script>
      document.querySelectorAll('.project-simple-footer img').forEach(el => new bootstrap.Tooltip(el));
+     document.querySelectorAll('.project-simple-card[role="button"]').forEach(el => {
+       el.addEventListener('keydown', e => {
+         if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); el.click(); }
+       });
+     });
    </script>
        <!-- EmailJS Library -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
