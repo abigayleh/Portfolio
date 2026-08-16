@@ -956,6 +956,22 @@
           </span>
         </div>
 
+        <div class="project-simple-card" role="button" tabindex="0" data-bs-toggle="modal" data-bs-target="#projectModalInsulinPump" aria-label="Open Insulin Pump Simulator details">
+          <div class="project-simple-header">
+            <span>Insulin Pump Simulator</span>
+            <a class="project-card-link" href="https://github.com/abigayleh/insulin-pump" target="_blank" rel="noopener noreferrer" title="View on GitHub" onclick="event.stopPropagation()" aria-label="View Insulin Pump Simulator on GitHub"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+          <video class="project-simple-media" autoplay loop muted playsinline>
+            <source src="public/videos/insulin-pump-sim.mp4" type="video/mp4">
+          </video>
+          <span class="project-simple-footer" aria-label="Tech stack for Insulin Pump Simulator">
+            <img src="public/images/tech-stack/cplusplus.svg" alt="C++17" title="C++17">
+            <img src="public/images/tech-stack/qt.svg" alt="Qt 6" title="Qt 6">
+            <img src="public/images/tech-stack/cmake.svg" alt="CMake" title="CMake">
+            <img src="public/images/tech-stack/googletest.svg" alt="GoogleTest" title="GoogleTest">
+          </span>
+        </div>
+
         <div class="project-simple-card" role="button" tabindex="0" data-bs-toggle="modal" data-bs-target="#projectModalAIChatbot" aria-label="Open AI Chatbot details">
           <div class="project-simple-header">
             <span>AI Chatbot</span>
@@ -1096,6 +1112,47 @@
           </div>
           <div class="modal-footer">
             <a class="btn btn-dark" href="https://whats-for-dinnner.netlify.app/demo" target="_blank" rel="noopener noreferrer">Visit Website</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="projectModalInsulinPump" tabindex="-1" aria-labelledby="projectModalInsulinPumpLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <h5 class="modal-title" id="projectModalInsulinPumpLabel">Insulin Pump Simulator</h5>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Insulin Pump Simulator is a desktop application that simulates an ambulatory insulin pump, modelled on t:slim X2 and MiniMed 780G class devices. It covers basal scheduling, bolus calculation, insulin-on-board tracking, and a simulated hardware layer for battery, reservoir, motor, and CGM. It is a simulation only &mdash; not a medical device.</p>
+            <p>The project demonstrates safety-critical engineering practice in a domain where a defect is a patient injury. Clinical quantities are strongly typed, so a naked number will not compile, and every delivery must pass through a safety monitor that owns the only means of authorising the motor &mdash; making a bypass a compile error rather than a review finding. The pump fails safe, and every safety limit has a test proving it rejects.</p>
+            <div class="modal-tech-stack" style="margin-top: 1.5rem;">
+              <strong>Tech Stack:</strong>
+              <div class="modal-tech-grid">
+                <div class="modal-tech-chip">
+                  <img src="public/images/tech-stack/cplusplus.svg" alt="C++17">
+                  <span>C++17</span>
+                </div>
+                <div class="modal-tech-chip">
+                  <img src="public/images/tech-stack/qt.svg" alt="Qt 6">
+                  <span>Qt 6</span>
+                </div>
+                <div class="modal-tech-chip">
+                  <img src="public/images/tech-stack/cmake.svg" alt="CMake">
+                  <span>CMake</span>
+                </div>
+                <div class="modal-tech-chip">
+                  <img src="public/images/tech-stack/googletest.svg" alt="GoogleTest">
+                  <span>GoogleTest</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a class="btn btn-dark" href="https://github.com/abigayleh/insulin-pump" target="_blank" rel="noopener noreferrer">View on GitHub</a>
           </div>
         </div>
       </div>
